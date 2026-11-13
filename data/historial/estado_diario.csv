@@ -1,0 +1,4 @@
+fecha,preparacion,recuperacion_h,vo2max,carga_aguda,carga_optima_min,carga_optima_max,hrv_semana_ms,fc_reposo,body_battery_cargado,z2_desde,z2_hasta,z4_desde,pred_5k_seg,pred_10k_seg,pred_media_seg,pred_maraton_seg
+2026-11-10,13,35.4,53.8,252,202,378,45,53,39,116,135,155,1290,2792,6320,14137
+2026-11-11,43,,53.8,362,290,543,46,51,77,115,133,154,1290,2792,6320,14137
+2026-11-13,61,3.1,53.8,231,277,519,47,48,72,115,133,154,1297,2809,6356,14204

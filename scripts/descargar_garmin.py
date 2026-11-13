@@ -77,7 +77,11 @@ def bajar_dia(g, dia: date, forzar: bool):
     carpeta.mkdir(parents=True, exist_ok=True)
     d = dia.isoformat()
     ok, fallos = 0, []
-    for nombre, (metodo, llamar) in FUENTES.items():
+    fuentes = dict(FUENTES)
+    if dia == date.today():
+        # Las predicciones de carrera solo existen "a hoy": se guardan en el día en que se bajan.
+        fuentes["predicciones"] = ("get_race_predictions", lambda f, d: f())
+    for nombre, (metodo, llamar) in fuentes.items():
         archivo = carpeta / f"{nombre}.json"
         if archivo.exists() and not forzar:
             continue

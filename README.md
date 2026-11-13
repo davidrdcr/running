@@ -22,6 +22,9 @@ data/
   predicciones.csv       tiempos predichos por Garmin
   consejo.json           recomendación del día
   meta.json              fecha de la última actualización
+  historial/
+    estado_diario.csv    una fila por día con preparación, carga, zonas y predicciones (lo escribe Claude)
+    consejos.json        todas las recomendaciones diarias de Claude
   actividades/
     indice.csv           lista de actividades con .FIT procesado
     <id>.csv             un registro por segundo: lat, lon, distancia, velocidad, ritmo, FC,

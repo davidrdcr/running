@@ -1,0 +1,20 @@
+[
+ {
+  "fecha": "2026-11-12",
+  "titulo": "Jueves: descanso activo, caminata 30–40 min en zona 1 (FC bajo 115 lpm)",
+  "que_hacer": "Mañana no corras. Camina 30–40 min a paso cómodo, con la FC bajo 115 lpm (zona 1), o haz tu rutina de fuerza corta si te provoca. La próxima carrera, el viernes o sábado: rodaje suave de 40 min en zona 2, 115–133 lpm, alternando 4 min de trote con 1 min de caminata para que la FC no se te suba.",
+  "por_que": "Hoy corriste 7 km (tu salida más larga hasta ahora) y el último km fue a tope: 4 min en zona 5, hasta 188 lpm. Llevas varias noches durmiendo poco (historial de sueño 'malo' para Garmin) y tu preparación de esta mañana estaba en 43/100. Un día sin correr deja que ese esfuerzo se asimile.",
+  "antes": "Si caminas, hazlo a cualquier hora; no necesitas comer nada especial. Lo más importante es esta noche: intenta acostarte antes de la 1:00 y dormir 7 h.",
+  "despues": "Estira pantorrillas y cuádriceps 5–10 min. Mantén la proteína en las comidas y toma agua durante el día.",
+  "si_no": "Si mañana te despiertas con piernas pesadas o dormiste menos de 5 h, ni siquiera camines a propósito: descanso total y acuéstate temprano."
+ },
+ {
+  "fecha": "2026-11-13",
+  "titulo": "Viernes: rodaje suave de 45 min en zona 2 (115–133 lpm)",
+  "que_hacer": "Calienta 10 min caminando rápido y luego trotando muy suave, en zona 1 (FC bajo 115 lpm). Después, 30 min de trote en zona 2, entre 115 y 133 lpm: si pasas de 133, camina hasta bajar a unos 120 y vuelve a trotar. Cierra con 5 min caminando, bajo 115 lpm.",
+  "por_que": "Dormiste bien anoche (6,6 h, puntaje 84) y tu preparación está en 61/100, así que hoy te toca correr. Aun así, tu historial de sueño de la semana sigue siendo malo, y Garmin marca déficit de trabajo aeróbico suave: casi todas tus carreras se van a zona 4–5. Hoy te conviene sumar minutos en zona 2, no velocidad.",
+  "antes": "Si corres en la mañana, come algo ligero 60–90 min antes (un plátano o pan con algo) y toma un vaso de agua. Ponte la alerta de FC del reloj en 133 lpm para que te avise.",
+  "despues": "Estira pantorrillas, isquios y cuádriceps 5–10 min. Come algo con proteína en la hora siguiente y trata de acostarte antes de la 1:00: el sueño acumulado es lo que más te está frenando.",
+  "si_no": "Si te sientes pesado o con la garganta irritada, cambia el rodaje por una caminata de 30–40 min en zona 1 (FC bajo 115 lpm) y deja la carrera para mañana."
+ }
+]
