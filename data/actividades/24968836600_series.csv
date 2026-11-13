@@ -1,0 +1,10 @@
+serie,tipo,inicio,duracion_s,repeticiones,peso_kg,ejercicio,codigo_categoria
+1,activa,16:09:45,100.1,26,10.0,elevaciones laterales,14
+2,descanso,16:11:25,128.8,,,,
+3,activa,16:13:34,126.1,21,10.0,elevaciones laterales,14
+4,descanso,16:15:40,9.7,,,,
+5,activa,16:15:50,16.1,0,10.0,sin identificar,65534
+6,descanso,16:16:06,160.4,,,,
+7,activa,16:18:46,87.5,27,10.0,elevaciones laterales,14
+8,descanso,16:20:14,41.9,,,,
+9,activa,16:20:56,6.7,0,10.0,sin identificar,65534

@@ -1,0 +1,7 @@
+id,inicio,deporte,registros,vueltas,series,gps,columnas
+24950486212,2026-11-03 06:24,running,1329,2,0,1,seg|hora|lat|lon|distancia_m|velocidad_m_s|ritmo_seg_km|fc|cadencia_spm|altitud_m|potencia_w|oscilacion_vertical_mm|ratio_vertical|contacto_suelo_ms|longitud_zancada_mm|temperatura_c|desempeno
+24968836600,2026-11-04 16:09,training,369,0,9,0,seg|hora|distancia_m|fc
+24971005169,2026-11-04 22:21,running,1716,1,0,1,seg|hora|lat|lon|distancia_m|velocidad_m_s|ritmo_seg_km|fc|cadencia_spm|altitud_m|potencia_w|oscilacion_vertical_mm|ratio_vertical|contacto_suelo_ms|longitud_zancada_mm|temperatura_c|desempeno
+25015092030,2026-11-08 20:28,running,1783,1,0,1,seg|hora|lat|lon|distancia_m|velocidad_m_s|ritmo_seg_km|fc|cadencia_spm|altitud_m|potencia_w|oscilacion_vertical_mm|ratio_vertical|contacto_suelo_ms|longitud_zancada_mm|temperatura_c|desempeno
+25029503788,2026-11-10 05:43,training,392,0,8,0,seg|hora|distancia_m|fc
+25050170539,2026-11-11 21:05,running,2991,3,0,1,seg|hora|lat|lon|distancia_m|velocidad_m_s|ritmo_seg_km|fc|cadencia_spm|altitud_m|potencia_w|oscilacion_vertical_mm|ratio_vertical|contacto_suelo_ms|longitud_zancada_mm|temperatura_c|desempeno

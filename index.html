@@ -138,6 +138,7 @@ footer{margin-top:24px;color:var(--text-muted);font-size:12px}
 
 <section class="card" style="margin-top:16px">
   <h2>Actividades</h2>
+  <div class="sub">Toca una actividad para ver el mapa y todos sus datos segundo a segundo</div>
   <div class="scroll"><table id="tAct"></table></div>
 </section>
 
@@ -288,7 +289,7 @@ function bar(id, labels, data, color, label, unit){
     document.getElementById('tPred').innerHTML = '<tr><th>Distancia</th><th class="n">Tiempo</th><th class="n">Ritmo</th></tr>' +
       pred.map(p => `<tr><td>${esc(p.distancia)}</td><td class="n">${esc(p.tiempo)}</td><td class="n">${ritmo(p.ritmo_seg_km)}</td></tr>`).join('');
     document.getElementById('tAct').innerHTML = '<tr><th>Fecha</th><th>Hora</th><th>Actividad</th><th class="n">Km</th><th class="n">Min</th><th class="n">Ritmo</th><th class="n">FC prom</th><th class="n">FC máx</th><th class="n">kcal</th></tr>' +
-      [...acts].reverse().map(a => `<tr><td>${esc(fmtFecha(a.fecha))}</td><td>${esc(a.hora)}</td><td>${esc(a.tipo === 'carrera' ? 'Carrera · ' + a.nombre : a.nombre)}</td><td class="n">${a.km ?? '—'}</td><td class="n">${a.minutos}</td><td class="n">${a.ritmo_seg_km ? ritmo(a.ritmo_seg_km) : '—'}</td><td class="n">${a.fc_prom}</td><td class="n">${a.fc_max}</td><td class="n">${a.calorias}</td></tr>`).join('');
+      [...acts].reverse().map(a => `<tr><td>${esc(fmtFecha(a.fecha))}</td><td>${esc(a.hora)}</td><td><a href="actividad.html?id=${a.id}" style="color:var(--series-1)">${esc(a.tipo === 'carrera' ? 'Carrera · ' + a.nombre : a.nombre)}</a></td><td class="n">${a.km ?? '—'}</td><td class="n">${a.minutos}</td><td class="n">${a.ritmo_seg_km ? ritmo(a.ritmo_seg_km) : '—'}</td><td class="n">${a.fc_prom}</td><td class="n">${a.fc_max}</td><td class="n">${a.calorias}</td></tr>`).join('');
     document.getElementById('tDias').innerHTML = '<tr><th>Fecha</th><th>Dormir</th><th>Despertar</th><th class="n">Sueño h</th><th class="n">Siesta h</th><th class="n">Puntaje</th><th class="n">HRV</th><th class="n">FC rep.</th><th class="n">Pasos</th></tr>' +
       [...dias].reverse().map(d => `<tr><td>${esc(fmtFecha(d.fecha))}</td><td>${d.acostarse ?? '—'}</td><td>${d.levantarse ?? '—'}</td><td class="n">${d.sueno_h ?? '—'}</td><td class="n">${d.siesta_h ?? '—'}</td><td class="n">${d.sueno_puntaje ?? '—'}</td><td class="n">${d.hrv_ms ?? '—'}</td><td class="n">${d.fc_reposo ?? '—'}</td><td class="n">${d.pasos !== null ? d.pasos.toLocaleString('es-PE') : '—'}</td></tr>`).join('');
   } catch (e) {

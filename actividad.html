@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Actividad · Entrenamiento Garmin</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏃</text></svg>">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{
+  color-scheme:light;
+  --bg:#f5f5f3; --surface-1:#fcfcfb; --border:#e4e3df;
+  --text-primary:#0b0b0b; --text-secondary:#52514e; --text-muted:#7a7975; --grid:#ecebe7;
+  --series-1:#2a78d6;
+  --z1:#a3a29c; --z2:#2a78d6; --z3:#1baf7a; --z4:#eb6834; --z5:#e34948;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    color-scheme:dark;
+    --bg:#121211; --surface-1:#1a1a19; --border:#2c2c2a;
+    --text-primary:#f0efec; --text-secondary:#c3c2b7; --text-muted:#8f8e86; --grid:#2a2a28;
+    --series-1:#3987e5;
+    --z1:#8f8e86; --z2:#3987e5; --z3:#199e70; --z4:#d95926; --z5:#e66767;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text-primary);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:1100px;margin:0 auto;padding:20px 16px 48px}
+a{color:var(--series-1)}
+header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px}
+h1{font-size:22px;margin:0}
+h2{font-size:16px;margin:0 0 4px}
+.sub{color:var(--text-secondary);font-size:13px}
+select{font:inherit;padding:6px 10px;border-radius:8px;border:1px solid var(--border);background:var(--surface-1);color:var(--text-primary);max-width:100%}
+.card{background:var(--surface-1);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:16px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-bottom:16px}
+.tile{background:var(--surface-1);border:1px solid var(--border);border-radius:12px;padding:10px 14px}
+.tile .lbl{font-size:13px;color:var(--text-secondary)}
+.tile .val{font-size:24px;font-weight:650;line-height:1.2;margin-top:2px}
+.tile .val small{font-size:13px;font-weight:500;color:var(--text-secondary)}
+#mapa{height:380px;border-radius:8px;margin-top:8px;z-index:0}
+.leyenda{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:8px;font-size:13px;color:var(--text-secondary)}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block;vertical-align:middle;margin-right:4px}
+.charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,480px),1fr));gap:16px}
+.charts .card{margin:0}
+.chartbox{position:relative;height:200px;margin-top:6px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--border);white-space:nowrap}
+th{font-weight:600;color:var(--text-secondary);font-size:12px}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+.scroll{overflow-x:auto}
+.err{color:#d03b3b}
+.descargas a{margin-right:16px;font-size:14px}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div>
+    <div class="sub"><a href="./">← Volver al dashboard</a></div>
+    <h1 id="titulo">Actividad</h1>
+    <div class="sub" id="subtitulo"></div>
+  </div>
+  <select id="selector" aria-label="Elegir actividad"></select>
+</header>
+
+<section class="tiles" id="tiles"></section>
+
+<section class="card" id="cardMapa">
+  <h2>Recorrido</h2>
+  <div class="sub">Coloreado por zona de FC. Pasa el cursor por los gráficos para ver dónde ibas.</div>
+  <div id="mapa"></div>
+  <div class="leyenda" id="leyenda"></div>
+</section>
+
+<section class="charts" id="charts"></section>
+
+<section class="card" style="margin-top:16px" id="cardVueltas">
+  <h2>Vueltas</h2>
+  <div class="scroll"><table id="tVueltas"></table></div>
+</section>
+
+<section class="card" id="cardSeries">
+  <h2>Series</h2>
+  <div class="scroll"><table id="tSeries"></table></div>
+</section>
+
+<section class="card">
+  <h2>Datos crudos</h2>
+  <div class="descargas" id="descargas"></div>
+</section>
+</main>
+
+<script>
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const bust = '?v=' + Date.now();
+async function csv(path){
+  const res = await fetch(path + bust); if (!res.ok) throw new Error('No se encontró ' + path);
+  const t = await res.text(); const [head, ...rows] = t.trim().split('\n'); const cols = head.split(',');
+  return rows.map(r => { const v = r.split(','); const o = {}; cols.forEach((c,i)=>{ const x=(v[i]??'').trim(); o[c] = x==='' ? null : (/^-?\d+(\.\d+)?$/.test(x) ? +x : x); }); return o; });
+}
+const ritmo = s => s ? `${Math.floor(s/60)}:${String(Math.round(s%60)).padStart(2,'0')}` : '—';
+const dur = s => { s=Math.round(s); const h=Math.floor(s/3600), m=Math.floor(s%3600/60), x=s%60; return (h?h+':'+String(m).padStart(2,'0'):m)+':'+String(x).padStart(2,'0'); };
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+let mapa, marcador, charts = [];
+
+(async () => {
+  try {
+    const [indice, resumen, hoyArr] = await Promise.all([csv('data/actividades/indice.csv'), csv('data/actividades.csv'), csv('data/hoy.csv')]);
+    const hoy = hoyArr[0] || {};
+    const porId = Object.fromEntries(resumen.map(a => [String(a.id), a]));
+    const sel = document.getElementById('selector');
+    const lista = [...indice].reverse();
+    sel.innerHTML = lista.map(i => { const a = porId[i.id] || {}; const nom = a.tipo === 'carrera' ? `Carrera · ${a.nombre}` : (a.nombre || i.deporte); return `<option value="${i.id}">${esc(i.inicio)} · ${esc(nom)}${a.km ? ' · ' + a.km + ' km' : ''}</option>`; }).join('');
+    const pedido = new URLSearchParams(location.search).get('id');
+    const primero = pedido && lista.some(i => i.id == pedido) ? pedido : (lista.find(i => i.gps == 1) || lista[0]).id;
+    sel.value = primero;
+    sel.onchange = () => { history.replaceState(null, '', '?id=' + sel.value); cargar(sel.value, porId[sel.value], hoy); };
+    cargar(primero, porId[primero], hoy);
+  } catch (e) { document.getElementById('titulo').innerHTML = `<span class="err">${esc(e.message)}</span>`; }
+})();
+
+function zonaDe(fc, hoy){
+  if (fc == null) return 0;
+  const z2 = hoy.z2_desde, z3 = hoy.z2_hasta + 1, z4 = hoy.z4_desde, z5 = hoy.z5_desde || Math.round(z4 + (z4 - z3) * 1.0);
+  return fc < z2 ? 1 : fc < z3 ? 2 : fc < z4 ? 3 : fc < z5 ? 4 : 5;
+}
+
+async function cargar(id, res, hoy){
+  charts.forEach(c => c.destroy()); charts = [];
+  const [rec, vueltas, series, sesion] = await Promise.all([
+    csv(`data/actividades/${id}.csv`),
+    csv(`data/actividades/${id}_vueltas.csv`).catch(() => []),
+    csv(`data/actividades/${id}_series.csv`).catch(() => []),
+    fetch(`data/actividades/${id}_sesion.json${bust}`).then(r => r.json()).catch(() => ({}))
+  ]);
+  res = res || {};
+  document.getElementById('titulo').textContent = res.tipo === 'carrera' ? `Carrera · ${res.nombre}` : (res.nombre || sesion.sport || 'Actividad');
+  const ini = sesion.start_time ? new Date(sesion.start_time) : null;
+  document.getElementById('subtitulo').textContent = ini ? ini.toLocaleString('es-PE', {dateStyle:'full', timeStyle:'short', timeZone:'America/Lima'}) : '';
+
+  // Tiles
+  const t = [];
+  const add = (l, v, u='') => { if (v !== null && v !== undefined && v !== '') t.push(`<div class="tile"><div class="lbl">${l}</div><div class="val">${v} <small>${u}</small></div></div>`); };
+  if (sesion.total_distance) add('Distancia', (sesion.total_distance/1000).toFixed(2), 'km');
+  if (sesion.total_timer_time) add('Tiempo', dur(sesion.total_timer_time));
+  if (sesion.total_distance && sesion.total_timer_time) add('Ritmo medio', ritmo(sesion.total_timer_time / sesion.total_distance * 1000), '/km');
+  add('FC media', sesion.avg_heart_rate, 'lpm'); add('FC máx', sesion.max_heart_rate, 'lpm');
+  if (sesion.avg_running_cadence || sesion.avg_cadence) add('Cadencia', Math.round(((sesion.avg_running_cadence || sesion.avg_cadence) + (sesion.avg_fractional_cadence || 0)) * 2), 'ppm');
+  add('Potencia', sesion.avg_power, 'W');
+  add('Desnivel +', sesion.total_ascent, 'm');
+  add('Calorías', sesion.total_calories, 'kcal');
+  if (sesion.total_training_effect != null) add('Efecto aeróbico', (+sesion.total_training_effect).toFixed(1), '/5');
+  if (sesion.total_anaerobic_training_effect != null) add('Efecto anaeróbico', (+sesion.total_anaerobic_training_effect).toFixed(1), '/5');
+  if (sesion.training_load_peak != null) add('Carga', Math.round(sesion.training_load_peak));
+  add('Temp. media', sesion.avg_temperature, '°C');
+  document.getElementById('tiles').innerHTML = t.join('');
+
+  // Mapa
+  const conGps = rec.filter(r => r.lat != null && r.lon != null);
+  document.getElementById('cardMapa').style.display = conGps.length ? '' : 'none';
+  if (conGps.length) {
+    if (!mapa) {
+      mapa = L.map('mapa', {scrollWheelZoom:false});
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom:19, attribution:'© OpenStreetMap'}).addTo(mapa);
+    }
+    mapa.eachLayer(l => { if (!(l instanceof L.TileLayer)) mapa.removeLayer(l); });
+    let tramo = [], zona = null;
+    const pinta = () => { if (tramo.length > 1) L.polyline(tramo, {color:css('--z' + (zona || 1)), weight:5, opacity:.95}).addTo(mapa); };
+    conGps.forEach(r => { const z = zonaDe(r.fc, hoy) || 1; if (z !== zona) { pinta(); tramo = tramo.length ? [tramo[tramo.length-1]] : []; zona = z; } tramo.push([r.lat, r.lon]); });
+    pinta();
+    const linea = conGps.map(r => [r.lat, r.lon]);
+    L.circleMarker(linea[0], {radius:6, color:'#fff', weight:2, fillColor:'#0ca30c', fillOpacity:1}).addTo(mapa).bindTooltip('Inicio');
+    L.circleMarker(linea[linea.length-1], {radius:6, color:'#fff', weight:2, fillColor:'#d03b3b', fillOpacity:1}).addTo(mapa).bindTooltip('Fin');
+    marcador = L.circleMarker(linea[0], {radius:7, color:'#fff', weight:2, fillColor:'#111', fillOpacity:1}).addTo(mapa);
+    mapa.fitBounds(L.latLngBounds(linea), {padding:[20,20]});
+    setTimeout(() => mapa.invalidateSize(), 50);
+    const z2 = hoy.z2_desde, z3 = hoy.z2_hasta + 1, z4 = hoy.z4_desde;
+    document.getElementById('leyenda').innerHTML = [`Zona 1 (&lt;${z2})`, `Zona 2 (${z2}–${z3-1})`, `Zona 3 (${z3}–${z4-1})`, `Zona 4 (≥${z4})`, 'Zona 5'].map((s,i) => `<span><span class="dot" style="background:var(--z${i+1})"></span>${s}</span>`).join('');
+  }
+
+  // Gráficos
+  const xKm = Math.max(0, ...rec.map(r => r.distancia_m || 0)) > 200;
+  const xs = rec.map(r => xKm ? (r.distancia_m ?? 0) / 1000 : r.seg / 60);
+  const metricas = [
+    ['fc', 'Frecuencia cardíaca', 'lpm', v => v],
+    ['ritmo_seg_km', 'Ritmo', 'min/km', v => v, {reverse:true, fmt:ritmo, suave:15, tope:900}],
+    ['cadencia_spm', 'Cadencia', 'pasos/min', v => v, {suave:5, min:100}],
+    ['altitud_m', 'Altitud', 'm', v => v],
+    ['potencia_w', 'Potencia', 'W', v => v, {suave:5}],
+    ['longitud_zancada_mm', 'Longitud de zancada', 'm', v => v / 1000, {suave:10, dec:2}],
+    ['oscilacion_vertical_mm', 'Oscilación vertical', 'cm', v => v / 10, {suave:10, dec:1}],
+    ['ratio_vertical', 'Ratio vertical', '%', v => v, {suave:10, dec:1}],
+    ['contacto_suelo_ms', 'Tiempo de contacto con el suelo', 'ms', v => v, {suave:10}],
+    ['balance_contacto', 'Balance de contacto (izq.)', '%', v => v, {suave:10, dec:1}],
+    ['respiracion_rpm', 'Frecuencia respiratoria', 'resp/min', v => v, {dec:1}],
+    ['desempeno', 'Condición de rendimiento', '', v => v],
+    ['temperatura_c', 'Temperatura del reloj', '°C', v => v],
+  ];
+  const cont = document.getElementById('charts'); cont.innerHTML = '';
+  metricas.forEach(([k, nombre, unidad, f, op = {}]) => {
+    let ys = rec.map(r => r[k] == null ? null : f(r[k]));
+    if (op.tope) ys = ys.map(v => v != null && v > op.tope ? null : v);
+    if (op.min) ys = ys.map(v => v != null && v < op.min ? null : v);
+    if (ys.filter(v => v != null).length < 5) return;
+    if (op.suave) { const w = op.suave; ys = ys.map((v,i) => { if (v == null) return null; let s=0,n=0; for (let j=Math.max(0,i-w); j<=Math.min(ys.length-1,i+w); j++) if (ys[j]!=null){s+=ys[j];n++;} return n ? s/n : null; }); }
+    const div = document.createElement('div'); div.className = 'card';
+    const prom = ys.filter(v => v != null); const media = prom.reduce((a,b)=>a+b,0)/prom.length;
+    const fmt = op.fmt || (v => v.toFixed(op.dec ?? 0));
+    div.innerHTML = `<h2>${nombre}</h2><div class="sub">Promedio ${fmt(media)} ${unidad} · eje X en ${xKm ? 'km' : 'minutos'}</div><div class="chartbox"><canvas></canvas></div>`;
+    cont.appendChild(div);
+    const grid = css('--grid'), txt = css('--text-secondary');
+    const ch = new Chart(div.querySelector('canvas'), {
+      type:'line',
+      data:{labels:xs, datasets:[{data:ys, borderColor:k==='fc'?css('--z4'):css('--series-1'), borderWidth:1.5, pointRadius:0, pointHoverRadius:4, spanGaps:false, tension:0}]},
+      options:{responsive:true, maintainAspectRatio:false, animation:false, interaction:{mode:'index', intersect:false},
+        plugins:{legend:{display:false}, tooltip:{backgroundColor:css('--surface-1'), titleColor:css('--text-primary'), bodyColor:css('--text-primary'), borderColor:css('--border'), borderWidth:1,
+          callbacks:{title: it => xKm ? `km ${(+it[0].label).toFixed(2)}` : `min ${(+it[0].label).toFixed(1)}`, label: c => `${nombre}: ${fmt(c.parsed.y)} ${unidad}`}}},
+        onHover: (e, els) => { if (!marcador || !els.length) return; const r = rec[els[0].index]; if (r && r.lat != null) marcador.setLatLng([r.lat, r.lon]); },
+        scales:{x:{type:'linear', grid:{display:false}, ticks:{color:txt, maxTicksLimit:8, callback:v => xKm ? v.toFixed(1) : Math.round(v)}, border:{color:grid}},
+                y:{reverse:!!op.reverse, grid:{color:grid}, ticks:{color:txt, maxTicksLimit:5, callback:v => op.fmt ? op.fmt(v) : (op.dec ? v.toFixed(op.dec) : v)}, border:{display:false}}}}
+    });
+    charts.push(ch);
+  });
+
+  // Vueltas
+  document.getElementById('cardVueltas').style.display = vueltas.length ? '' : 'none';
+  document.getElementById('tVueltas').innerHTML = '<tr><th>#</th><th>Inicio</th><th class="n">Distancia</th><th class="n">Tiempo</th><th class="n">Ritmo</th><th class="n">FC prom</th><th class="n">FC máx</th><th class="n">Cadencia</th><th class="n">Potencia</th><th class="n">Desnivel +</th></tr>' +
+    vueltas.map(v => `<tr><td>${v.vuelta}</td><td>${v.inicio ?? ''}</td><td class="n">${v.distancia_m != null ? (v.distancia_m/1000).toFixed(2)+' km' : '—'}</td><td class="n">${v.tiempo_s != null ? dur(v.tiempo_s) : '—'}</td><td class="n">${v.ritmo_seg_km ? ritmo(v.ritmo_seg_km)+' /km' : '—'}</td><td class="n">${v.fc_prom ?? '—'}</td><td class="n">${v.fc_max ?? '—'}</td><td class="n">${v.cadencia_spm ?? '—'}</td><td class="n">${v.potencia_w ?? '—'}</td><td class="n">${v.desnivel_pos_m ?? '—'}</td></tr>`).join('');
+
+  // Series de fuerza
+  document.getElementById('cardSeries').style.display = series.length ? '' : 'none';
+  document.getElementById('tSeries').innerHTML = '<tr><th>#</th><th>Tipo</th><th>Inicio</th><th>Ejercicio (según el reloj)</th><th class="n">Reps</th><th class="n">Peso</th><th class="n">Duración</th></tr>' +
+    series.map(s => `<tr><td>${s.serie}</td><td>${s.tipo}</td><td>${s.inicio ?? ''}</td><td>${esc(s.ejercicio ?? '')}</td><td class="n">${s.repeticiones ?? ''}</td><td class="n">${s.peso_kg != null ? s.peso_kg + ' kg' : ''}</td><td class="n">${s.duracion_s != null ? dur(s.duracion_s) : ''}</td></tr>`).join('');
+
+  document.getElementById('descargas').innerHTML = `<a href="raw/fit/${id}.fit" download>Archivo .FIT original</a><a href="data/actividades/${id}.csv" download>CSV segundo a segundo</a>` +
+    (vueltas.length ? `<a href="data/actividades/${id}_vueltas.csv" download>CSV de vueltas</a>` : '') +
+    (series.length ? `<a href="data/actividades/${id}_series.csv" download>CSV de series</a>` : '') +
+    `<a href="data/actividades/${id}_sesion.json" download>Resumen completo (JSON)</a>`;
+}
+</script>
+</body>
+</html>

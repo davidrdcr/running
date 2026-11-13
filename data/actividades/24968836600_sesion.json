@@ -1,0 +1,97 @@
+{
+ "timestamp": "2026-11-04T21:09:45+00:00",
+ "start_time": "2026-11-04T21:09:45+00:00",
+ "total_elapsed_time": 682.698,
+ "total_timer_time": 677.244,
+ "total_distance": 0.0,
+ "total_cycles": 74,
+ "unknown_78": 336501,
+ "unknown_110": "Fuerza",
+ "avg_left_power_phase": [
+  null,
+  null,
+  null,
+  null
+ ],
+ "avg_left_power_phase_peak": [
+  null,
+  null,
+  null,
+  null
+ ],
+ "avg_right_power_phase": [
+  null,
+  null,
+  null,
+  null
+ ],
+ "avg_right_power_phase_peak": [
+  null,
+  null,
+  null,
+  null
+ ],
+ "avg_power_position": [
+  null,
+  null
+ ],
+ "max_power_position": [
+  null,
+  null
+ ],
+ "enhanced_avg_speed": 0.0,
+ "unknown_152": 74000,
+ "unknown_168": 320148,
+ "message_index": 0,
+ "total_calories": 66,
+ "first_lap_index": 0,
+ "num_laps": 9,
+ "unknown_151": 5,
+ "unknown_178": 129,
+ "unknown_196": 16,
+ "event": "session",
+ "event_type": "stop",
+ "sport": "training",
+ "sub_sport": "strength_training",
+ "avg_heart_rate": 104,
+ "max_heart_rate": 139,
+ "total_training_effect": 0.4,
+ "trigger": "activity_end",
+ "unknown_81": 0,
+ "avg_cadence_position": [
+  null,
+  null
+ ],
+ "max_cadence_position": [
+  null,
+  null
+ ],
+ "total_anaerobic_training_effect": 0.0,
+ "unknown_138": [
+  18,
+  0
+ ],
+ "unknown_184": 0,
+ "unknown_188": 0,
+ "_deporte": {
+  "name": "Fuerza",
+  "unknown_10": [
+   248,
+   252,
+   0,
+   null
+  ],
+  "sport": "training",
+  "sub_sport": "strength_training",
+  "unknown_5": 1,
+  "unknown_6": 0,
+  "unknown_9": 0,
+  "unknown_13": 0,
+  "unknown_19": [
+   null,
+   null,
+   null
+  ],
+  "unknown_21": 1
+ }
+}
