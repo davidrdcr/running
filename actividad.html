@@ -13,7 +13,7 @@
   color-scheme:light;
   --bg:#f5f5f3; --surface-1:#fcfcfb; --border:#e4e3df;
   --text-primary:#0b0b0b; --text-secondary:#52514e; --text-muted:#7a7975; --grid:#ecebe7;
-  --series-1:#2a78d6;
+  --series-1:#2a78d6; --accent-bg:#eaf2fc;
   --z1:#a3a29c; --z2:#2a78d6; --z3:#1baf7a; --z4:#eb6834; --z5:#e34948;
 }
 @media (prefers-color-scheme:dark){
@@ -21,7 +21,7 @@
     color-scheme:dark;
     --bg:#121211; --surface-1:#1a1a19; --border:#2c2c2a;
     --text-primary:#f0efec; --text-secondary:#c3c2b7; --text-muted:#8f8e86; --grid:#2a2a28;
-    --series-1:#3987e5;
+    --series-1:#3987e5; --accent-bg:#1b2a3d;
     --z1:#8f8e86; --z2:#3987e5; --z3:#199e70; --z4:#d95926; --z5:#e66767;
   }
 }
@@ -53,6 +53,14 @@ td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
 .scroll{overflow-x:auto}
 .err{color:#d03b3b}
 .descargas a{margin-right:16px;font-size:14px}
+.coach{background:var(--accent-bg);}
+.coach h2{font-size:18px;margin-bottom:6px}
+.coach .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:12px}
+.coach .lbl{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--text-secondary);margin-bottom:2px}
+.coach ul{margin:4px 0 0;padding-left:18px}
+.coach li{margin:2px 0}
+.coach .datos{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:12px;font-size:14px}
+.coach .datos b{font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -66,6 +74,8 @@ td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
   <select id="selector" aria-label="Elegir actividad"></select>
 </header>
 
+<section class="card coach" id="coach" style="display:none"></section>
+
 <section class="tiles" id="tiles"></section>
 
 <section class="card" id="cardMapa">
@@ -77,7 +87,12 @@ td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
 
 <section class="charts" id="charts"></section>
 
-<section class="card" style="margin-top:16px" id="cardVueltas">
+<section class="card" style="margin-top:16px" id="cardKm">
+  <h2>Por kilómetro</h2>
+  <div class="scroll"><table id="tKm"></table></div>
+</section>
+
+<section class="card" id="cardVueltas">
   <h2>Vueltas</h2>
   <div class="scroll"><table id="tVueltas"></table></div>
 </section>
@@ -131,12 +146,25 @@ function zonaDe(fc, hoy){
 
 async function cargar(id, res, hoy){
   charts.forEach(c => c.destroy()); charts = [];
-  const [rec, vueltas, series, sesion] = await Promise.all([
+  const [rec, vueltas, series, sesion, kms, analisis] = await Promise.all([
     csv(`data/actividades/${id}.csv`),
     csv(`data/actividades/${id}_vueltas.csv`).catch(() => []),
     csv(`data/actividades/${id}_series.csv`).catch(() => []),
-    fetch(`data/actividades/${id}_sesion.json${bust}`).then(r => r.json()).catch(() => ({}))
+    fetch(`data/actividades/${id}_sesion.json${bust}`).then(r => r.json()).catch(() => ({})),
+    csv(`data/actividades/${id}_km.csv`).catch(() => []),
+    fetch(`data/analisis/${id}.json${bust}`).then(r => r.ok ? r.json() : null).catch(() => null)
   ]);
+  const co = document.getElementById('coach');
+  if (analisis) {
+    co.style.display = '';
+    co.innerHTML = `<div class="sub">Análisis del entrenador</div><h2>${esc(analisis.veredicto)}</h2><p style="margin:0">${esc(analisis.resumen)}</p>
+      <div class="cols">
+        <div><div class="lbl">Lo bueno</div><ul>${(analisis.lo_bueno||[]).map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
+        <div><div class="lbl">A mejorar</div><ul>${(analisis.a_mejorar||[]).map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
+      </div>
+      <div class="datos">${(analisis.datos||[]).map(d => `<span>${esc(d.etiqueta)}: <b>${esc(d.valor)}</b></span>`).join('')}</div>
+      ${analisis.para_la_proxima ? `<p style="margin:12px 0 0"><b>Para la próxima:</b> ${esc(analisis.para_la_proxima)}</p>` : ''}`;
+  } else { co.style.display = 'none'; }
   res = res || {};
   document.getElementById('titulo').textContent = res.tipo === 'carrera' ? `Carrera · ${res.nombre}` : (res.nombre || sesion.sport || 'Actividad');
   const ini = sesion.start_time ? new Date(sesion.start_time) : null;
@@ -226,8 +254,13 @@ async function cargar(id, res, hoy){
     charts.push(ch);
   });
 
+  // Por km
+  document.getElementById('cardKm').style.display = kms.length > 1 ? '' : 'none';
+  document.getElementById('tKm').innerHTML = '<tr><th>Km</th><th class="n">Ritmo</th><th class="n">FC prom</th><th class="n">FC máx</th><th class="n">Cadencia</th><th class="n">Desnivel</th></tr>' +
+    kms.map(k => `<tr><td>${k.km}</td><td class="n">${ritmo(k.ritmo_seg_km)} /km</td><td class="n">${k.fc_prom ?? '—'}</td><td class="n">${k.fc_max ?? '—'}</td><td class="n">${k.cadencia_spm ?? '—'}</td><td class="n">${k.desnivel_m != null ? (k.desnivel_m > 0 ? '+' : '') + k.desnivel_m + ' m' : '—'}</td></tr>`).join('');
+
   // Vueltas
-  document.getElementById('cardVueltas').style.display = vueltas.length ? '' : 'none';
+  document.getElementById('cardVueltas').style.display = vueltas.length > 1 ? '' : 'none';
   document.getElementById('tVueltas').innerHTML = '<tr><th>#</th><th>Inicio</th><th class="n">Distancia</th><th class="n">Tiempo</th><th class="n">Ritmo</th><th class="n">FC prom</th><th class="n">FC máx</th><th class="n">Cadencia</th><th class="n">Potencia</th><th class="n">Desnivel +</th></tr>' +
     vueltas.map(v => `<tr><td>${v.vuelta}</td><td>${v.inicio ?? ''}</td><td class="n">${v.distancia_m != null ? (v.distancia_m/1000).toFixed(2)+' km' : '—'}</td><td class="n">${v.tiempo_s != null ? dur(v.tiempo_s) : '—'}</td><td class="n">${v.ritmo_seg_km ? ritmo(v.ritmo_seg_km)+' /km' : '—'}</td><td class="n">${v.fc_prom ?? '—'}</td><td class="n">${v.fc_max ?? '—'}</td><td class="n">${v.cadencia_spm ?? '—'}</td><td class="n">${v.potencia_w ?? '—'}</td><td class="n">${v.desnivel_pos_m ?? '—'}</td></tr>`).join('');
 

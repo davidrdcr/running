@@ -8,6 +8,7 @@ Página: https://davidrdcr.github.io/running/
 ```
 index.html               dashboard principal
 actividad.html           vista de cada actividad (mapa + datos segundo a segundo)
+plan.html                plan hacia la Maratón de Lima (23 may 2027): semana actual, volumen, fases, zonas y fuentes
 dia.html                 vista de cada día (FC 24 h, estrés, Body Battery, sueño por fases, HRV, respiración)
 raw/fit/<id>.fit         archivos .FIT originales tal como salen del reloj (fuente de verdad)
 raw/actividades/<id>.json  resumen de cada actividad según Garmin Connect (nombre, tipo, etc.)
@@ -23,6 +24,9 @@ data/
   predicciones.csv       tiempos predichos por Garmin
   consejo.json           recomendación del día
   meta.json              fecha de la última actualización
+  analisis/<id>.json     análisis del entrenador de cada carrera (lo escribe Claude)
+  tendencia.json         evolución a largo plazo (lo escribe Claude en cada revisión del plan)
+  plan/plan.json         plan de maratón semana a semana (lo revisa Claude solo en las fechas de revisión)
   historial/
     estado_diario.csv    una fila por día con preparación, carga, zonas y predicciones (lo escribe Claude)
     consejos.json        todas las recomendaciones diarias de Claude
@@ -32,6 +36,7 @@ data/
                          cadencia, altitud, potencia, oscilación y ratio vertical, contacto
                          con el suelo, longitud de zancada, temperatura, condición de rendimiento
     <id>_vueltas.csv     vueltas (laps)
+    <id>_km.csv          parciales por kilómetro
     <id>_series.csv      series de fuerza (reps, peso, ejercicio)
     <id>_sesion.json     todos los campos del resumen de la sesión del .FIT
 scripts/

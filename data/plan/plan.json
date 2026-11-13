@@ -1,0 +1,1927 @@
+{
+ "creado": "2026-11-13",
+ "version": 1,
+ "objetivo": {
+  "carrera": "Maratón adidas RÍMAC Lima 42K",
+  "fecha": "2027-05-23",
+  "lugar": "Lima (salida en Miraflores)",
+  "meta": "Terminar fuerte y sin lesiones. Meta tentativa: 3:55–4:10 (5:35–5:55 /km). Se fija en abril con la media maratón de prueba.",
+  "nota_meta": "La predicción de Garmin (3:56) supone un volumen que aún no tienes: con ~15 km/semana hoy, cualquier meta se define con datos reales del bloque específico."
+ },
+ "punto_de_partida": "Al 13 nov 2026: ~15 km/semana en 3 salidas de 4–7 km, casi todas en zona 4–5; VO2max 53,8; FC en reposo 48–53 lpm; sueño medio 4,5 h.",
+ "zonas": [
+  {
+   "nombre": "Suave",
+   "fc": "bajo 145 lpm",
+   "uso": "Rodajes y largos (≈80% del tiempo). Debes poder hablar en frases completas."
+  },
+  {
+   "nombre": "Ritmo maratón",
+   "fc": "148–158 lpm",
+   "uso": "Tramos específicos desde la semana 17."
+  },
+  {
+   "nombre": "Umbral",
+   "fc": "160–168 lpm",
+   "uso": "Bloques de 6–25 min, una vez por semana desde la semana 9."
+  },
+  {
+   "nombre": "Intervalos",
+   "fc": "170+ lpm",
+   "uso": "Repeticiones de 1–1,6 km en la fase específica."
+  }
+ ],
+ "nota_zonas": "Provisionales: estimadas con tus salidas rápidas (FC de 165–170 sostenida ~20 min). Se recalibran con el test de umbral del jueves 19 de noviembre. Estas zonas, no las de Garmin por % de FC máxima, son las que usa el plan.",
+ "fases": [
+  {
+   "nombre": "Base aeróbica",
+   "semanas": [
+    1,
+    8
+   ],
+   "objetivo": "Pasar de ~15 a ~30 km por semana casi todo en suave, crear el hábito de 3–4 salidas y fuerza 2 veces por semana. Es la fase que más va a cambiar tu eficiencia."
+  },
+  {
+   "nombre": "Construcción",
+   "semanas": [
+    9,
+    16
+   ],
+   "objetivo": "Subir a 45–47 km por semana, alargar el largo hasta 22 km y meter una sesión de umbral semanal. Test de 10K en la semana 12."
+  },
+  {
+   "nombre": "Específica",
+   "semanas": [
+    17,
+    24
+   ],
+   "objetivo": "Volumen máximo de ~60 km, largos de 24 a 30 km con tramos a ritmo maratón, intervalos y una media maratón de prueba en la semana 20."
+  },
+  {
+   "nombre": "Afinamiento",
+   "semanas": [
+    25,
+    27
+   ],
+   "objetivo": "Bajar el volumen ~25%, ~45% y ~75% manteniendo toques de intensidad, para llegar fresco el 23 de mayo."
+  }
+ ],
+ "revisiones": [
+  "2026-11-19",
+  "2026-12-13",
+  "2027-01-10",
+  "2027-02-07",
+  "2027-03-07",
+  "2027-04-04",
+  "2027-05-02"
+ ],
+ "regla_revision": "El plan se revisa solo en estas fechas (fin de cada bloque o después de un test), o antes si hay lesión, enfermedad o más de una semana sin entrenar. Las recomendaciones diarias adaptan la sesión del día a tu recuperación, pero no cambian el plan.",
+ "principios": [
+  {
+   "titulo": "80/20: la mayor parte suave",
+   "texto": "Los fondistas de nivel hacen ~80% de su entrenamiento a baja intensidad y ~20% fuerte; los programas polarizados mejoran más el rendimiento que los centrados en intensidad media. Hoy tú haces lo contrario.",
+   "fuente": "Seiler y Kjerland 2006, Scand J Med Sci Sports; Stöggl y Sperlich 2014, Front Physiol; Haugen et al. 2022, Sports Med Open"
+  },
+  {
+   "titulo": "Subir la carga de a poco",
+   "texto": "Los saltos bruscos de carga (carga aguda muy por encima de la crónica) se asocian a más lesiones; en corredores novatos, aumentos semanales mayores al 30% elevan el riesgo. El plan sube ~10% por semana con una semana de descarga cada 4.",
+   "fuente": "Gabbett 2016, Br J Sports Med; Nielsen et al. 2014, J Orthop Sports Phys Ther"
+  },
+  {
+   "titulo": "Fuerza 2 veces por semana",
+   "texto": "El entrenamiento de fuerza pesada o pliométrica mejora la economía de carrera (gastas menos energía al mismo ritmo) sin aumentar el peso corporal.",
+   "fuente": "Balsalobre-Fernández et al. 2016, J Strength Cond Res"
+  },
+  {
+   "titulo": "Afinamiento de 2–3 semanas",
+   "texto": "El rendimiento mejora más reduciendo el volumen 40–60% en ~2 semanas, manteniendo la intensidad y la frecuencia de salidas.",
+   "fuente": "Bosquet et al. 2007, Med Sci Sports Exerc"
+  },
+  {
+   "titulo": "Carbohidratos en carrera",
+   "texto": "En una maratón, tomar 60–90 g de carbohidrato por hora retrasa la fatiga; el intestino se entrena, por eso los geles se practican en los largos desde enero.",
+   "fuente": "Jeukendrup 2014, Sports Med"
+  },
+  {
+   "titulo": "Dormir es entrenar",
+   "texto": "Dormir poco reduce el rendimiento de resistencia y se asocia a más lesiones en deportistas; ampliar el sueño mejora el rendimiento. Con 4,5 h de media, es tu mayor margen de mejora.",
+   "fuente": "Mah et al. 2011, Sleep; Milewski et al. 2014, J Pediatr Orthop; Fullagar et al. 2015, Sports Med"
+  },
+  {
+   "titulo": "Especificidad del día de carrera",
+   "texto": "La maratón de Lima sale a las 5:30: desde marzo los largos se hacen temprano, con el mismo desayuno, zapatillas y geles del día de la carrera.",
+   "fuente": "Principio de especificidad"
+  }
+ ],
+ "semanas": [
+  {
+   "semana": 1,
+   "inicio": "2026-11-16",
+   "fin": "2026-11-22",
+   "fase": "Base aeróbica",
+   "descarga": false,
+   "km": 18,
+   "largo_km": 8,
+   "sesiones": [
+    {
+     "fecha": "2026-11-16",
+     "dia": "lun",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 35 min",
+     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2026-11-17",
+     "dia": "mar",
+     "tipo": "suave",
+     "km": 4,
+     "titulo": "Rodaje suave 4 km",
+     "detalle": "4 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2026-11-18",
+     "dia": "mié",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2026-11-19",
+     "dia": "jue",
+     "tipo": "calidad",
+     "km": 6,
+     "titulo": "Test de umbral 30 min",
+     "detalle": "15 min suaves de calentamiento. Luego 30 min al máximo esfuerzo que puedas sostener de forma pareja (como una carrera de 30 min, sin salir fuerte). Pulsa vuelta a los 10 min: la FC media de los últimos 20 min es tu FC de umbral. Con ese dato recalibro todas las zonas. 10 min suaves de vuelta a la calma."
+    },
+    {
+     "fecha": "2026-11-20",
+     "dia": "vie",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 30 min",
+     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2026-11-21",
+     "dia": "sáb",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2026-11-22",
+     "dia": "dom",
+     "tipo": "largo",
+     "km": 8,
+     "titulo": "Largo 8 km",
+     "detalle": "8 km en FC bajo 145 lpm, ritmo conversacional."
+    }
+   ]
+  },
+  {
+   "semana": 2,
+   "inicio": "2026-11-23",
+   "fin": "2026-11-29",
+   "fase": "Base aeróbica",
+   "descarga": false,
+   "km": 20.0,
+   "largo_km": 9,
+   "sesiones": [
+    {
+     "fecha": "2026-11-23",
+     "dia": "lun",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 35 min",
+     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2026-11-24",
+     "dia": "mar",
+     "tipo": "suave",
+     "km": 5.5,
+     "titulo": "Rodaje suave 5.5 km",
+     "detalle": "5.5 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2026-11-25",
+     "dia": "mié",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2026-11-26",
+     "dia": "jue",
+     "tipo": "suave",
+     "km": 5.5,
+     "titulo": "Rodaje suave 5.5 km",
+     "detalle": "5.5 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+    },
+    {
+     "fecha": "2026-11-27",
+     "dia": "vie",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 30 min",
+     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2026-11-28",
+     "dia": "sáb",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2026-11-29",
+     "dia": "dom",
+     "tipo": "largo",
+     "km": 9,
+     "titulo": "Largo 9 km",
+     "detalle": "9 km en FC bajo 145 lpm, ritmo conversacional."
+    }
+   ]
+  },
+  {
+   "semana": 3,
+   "inicio": "2026-11-30",
+   "fin": "2026-12-06",
+   "fase": "Base aeróbica",
+   "descarga": false,
+   "km": 23.0,
+   "largo_km": 10,
+   "sesiones": [
+    {
+     "fecha": "2026-11-30",
+     "dia": "lun",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 35 min",
+     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2026-12-01",
+     "dia": "mar",
+     "tipo": "suave",
+     "km": 6.5,
+     "titulo": "Rodaje suave 6.5 km",
+     "detalle": "6.5 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2026-12-02",
+     "dia": "mié",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2026-12-03",
+     "dia": "jue",
+     "tipo": "suave",
+     "km": 6.5,
+     "titulo": "Rodaje suave 6.5 km",
+     "detalle": "6.5 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+    },
+    {
+     "fecha": "2026-12-04",
+     "dia": "vie",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 30 min",
+     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2026-12-05",
+     "dia": "sáb",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2026-12-06",
+     "dia": "dom",
+     "tipo": "largo",
+     "km": 10,
+     "titulo": "Largo 10 km",
+     "detalle": "10 km en FC bajo 145 lpm, ritmo conversacional."
+    }
+   ]
+  },
+  {
+   "semana": 4,
+   "inicio": "2026-12-07",
+   "fin": "2026-12-13",
+   "fase": "Base aeróbica",
+   "descarga": true,
+   "km": 18,
+   "largo_km": 8,
+   "sesiones": [
+    {
+     "fecha": "2026-12-07",
+     "dia": "lun",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 35 min",
+     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2026-12-08",
+     "dia": "mar",
+     "tipo": "suave",
+     "km": 5,
+     "titulo": "Rodaje suave 5 km",
+     "detalle": "5 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2026-12-09",
+     "dia": "mié",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2026-12-10",
+     "dia": "jue",
+     "tipo": "suave",
+     "km": 5,
+     "titulo": "Rodaje suave 5 km",
+     "detalle": "5 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+    },
+    {
+     "fecha": "2026-12-11",
+     "dia": "vie",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 30 min",
+     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2026-12-12",
+     "dia": "sáb",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2026-12-13",
+     "dia": "dom",
+     "tipo": "largo",
+     "km": 8,
+     "titulo": "Largo 8 km",
+     "detalle": "8 km en FC bajo 145 lpm, ritmo conversacional. Semana de descarga: termina con ganas de más."
+    }
+   ]
+  },
+  {
+   "semana": 5,
+   "inicio": "2026-12-14",
+   "fin": "2026-12-20",
+   "fase": "Base aeróbica",
+   "descarga": false,
+   "km": 25,
+   "largo_km": 11,
+   "sesiones": [
+    {
+     "fecha": "2026-12-14",
+     "dia": "lun",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 35 min",
+     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2026-12-15",
+     "dia": "mar",
+     "tipo": "suave",
+     "km": 5,
+     "titulo": "Rodaje suave 5 km",
+     "detalle": "5 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2026-12-16",
+     "dia": "mié",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2026-12-17",
+     "dia": "jue",
+     "tipo": "suave",
+     "km": 5,
+     "titulo": "Rodaje suave 5 km",
+     "detalle": "5 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+    },
+    {
+     "fecha": "2026-12-18",
+     "dia": "vie",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 30 min",
+     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2026-12-19",
+     "dia": "sáb",
+     "tipo": "suave",
+     "km": 4,
+     "titulo": "Rodaje suave 4 km",
+     "detalle": "4 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2026-12-20",
+     "dia": "dom",
+     "tipo": "largo",
+     "km": 11,
+     "titulo": "Largo 11 km",
+     "detalle": "11 km en FC bajo 145 lpm, ritmo conversacional."
+    }
+   ]
+  },
+  {
+   "semana": 6,
+   "inicio": "2026-12-21",
+   "fin": "2026-12-27",
+   "fase": "Base aeróbica",
+   "descarga": false,
+   "km": 28,
+   "largo_km": 12,
+   "sesiones": [
+    {
+     "fecha": "2026-12-21",
+     "dia": "lun",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 35 min",
+     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2026-12-22",
+     "dia": "mar",
+     "tipo": "suave",
+     "km": 6,
+     "titulo": "Rodaje suave 6 km",
+     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2026-12-23",
+     "dia": "mié",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2026-12-24",
+     "dia": "jue",
+     "tipo": "suave",
+     "km": 6,
+     "titulo": "Rodaje suave 6 km",
+     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+    },
+    {
+     "fecha": "2026-12-25",
+     "dia": "vie",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 30 min",
+     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2026-12-26",
+     "dia": "sáb",
+     "tipo": "suave",
+     "km": 4,
+     "titulo": "Rodaje suave 4 km",
+     "detalle": "4 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2026-12-27",
+     "dia": "dom",
+     "tipo": "largo",
+     "km": 12,
+     "titulo": "Largo 12 km",
+     "detalle": "12 km en FC bajo 145 lpm, ritmo conversacional."
+    }
+   ]
+  },
+  {
+   "semana": 7,
+   "inicio": "2026-12-28",
+   "fin": "2027-01-03",
+   "fase": "Base aeróbica",
+   "descarga": false,
+   "km": 31,
+   "largo_km": 13,
+   "sesiones": [
+    {
+     "fecha": "2026-12-28",
+     "dia": "lun",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 35 min",
+     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2026-12-29",
+     "dia": "mar",
+     "tipo": "suave",
+     "km": 7,
+     "titulo": "Rodaje suave 7 km",
+     "detalle": "7 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2026-12-30",
+     "dia": "mié",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2026-12-31",
+     "dia": "jue",
+     "tipo": "suave",
+     "km": 6,
+     "titulo": "Rodaje suave 6 km",
+     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+    },
+    {
+     "fecha": "2027-01-01",
+     "dia": "vie",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 30 min",
+     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2027-01-02",
+     "dia": "sáb",
+     "tipo": "suave",
+     "km": 5,
+     "titulo": "Rodaje suave 5 km",
+     "detalle": "5 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2027-01-03",
+     "dia": "dom",
+     "tipo": "largo",
+     "km": 13,
+     "titulo": "Largo 13 km",
+     "detalle": "13 km en FC bajo 145 lpm, ritmo conversacional."
+    }
+   ]
+  },
+  {
+   "semana": 8,
+   "inicio": "2027-01-04",
+   "fin": "2027-01-10",
+   "fase": "Base aeróbica",
+   "descarga": true,
+   "km": 24,
+   "largo_km": 10,
+   "sesiones": [
+    {
+     "fecha": "2027-01-04",
+     "dia": "lun",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 35 min",
+     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2027-01-05",
+     "dia": "mar",
+     "tipo": "suave",
+     "km": 5,
+     "titulo": "Rodaje suave 5 km",
+     "detalle": "5 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2027-01-06",
+     "dia": "mié",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2027-01-07",
+     "dia": "jue",
+     "tipo": "suave",
+     "km": 5,
+     "titulo": "Rodaje suave 5 km",
+     "detalle": "5 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+    },
+    {
+     "fecha": "2027-01-08",
+     "dia": "vie",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 30 min",
+     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2027-01-09",
+     "dia": "sáb",
+     "tipo": "suave",
+     "km": 4,
+     "titulo": "Rodaje suave 4 km",
+     "detalle": "4 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2027-01-10",
+     "dia": "dom",
+     "tipo": "largo",
+     "km": 10,
+     "titulo": "Largo 10 km",
+     "detalle": "10 km en FC bajo 145 lpm, ritmo conversacional. Semana de descarga."
+    }
+   ]
+  },
+  {
+   "semana": 9,
+   "inicio": "2027-01-11",
+   "fin": "2027-01-17",
+   "fase": "Construcción",
+   "descarga": false,
+   "km": 33,
+   "largo_km": 14,
+   "sesiones": [
+    {
+     "fecha": "2027-01-11",
+     "dia": "lun",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 35 min",
+     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2027-01-12",
+     "dia": "mar",
+     "tipo": "calidad",
+     "km": 7,
+     "titulo": "Umbral 3 × 6 min",
+     "detalle": "15 min suaves de calentamiento. 3 × 6 min en umbral, FC 160–168 lpm, con 2 min de trote suave entre bloques. 10 min suaves de vuelta a la calma."
+    },
+    {
+     "fecha": "2027-01-13",
+     "dia": "mié",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2027-01-14",
+     "dia": "jue",
+     "tipo": "suave",
+     "km": 6,
+     "titulo": "Rodaje suave 6 km",
+     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+    },
+    {
+     "fecha": "2027-01-15",
+     "dia": "vie",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 30 min",
+     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2027-01-16",
+     "dia": "sáb",
+     "tipo": "suave",
+     "km": 6,
+     "titulo": "Rodaje suave 6 km",
+     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2027-01-17",
+     "dia": "dom",
+     "tipo": "largo",
+     "km": 14,
+     "titulo": "Largo 14 km",
+     "detalle": "14 km en FC bajo 145 lpm, ritmo conversacional."
+    }
+   ]
+  },
+  {
+   "semana": 10,
+   "inicio": "2027-01-18",
+   "fin": "2027-01-24",
+   "fase": "Construcción",
+   "descarga": false,
+   "km": 36,
+   "largo_km": 16,
+   "sesiones": [
+    {
+     "fecha": "2027-01-18",
+     "dia": "lun",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 35 min",
+     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2027-01-19",
+     "dia": "mar",
+     "tipo": "calidad",
+     "km": 8,
+     "titulo": "Umbral 3 × 8 min",
+     "detalle": "15 min suaves de calentamiento. 3 × 8 min en umbral, FC 160–168 lpm, con 2 min de trote suave entre bloques. 10 min suaves de vuelta a la calma."
+    },
+    {
+     "fecha": "2027-01-20",
+     "dia": "mié",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2027-01-21",
+     "dia": "jue",
+     "tipo": "suave",
+     "km": 6,
+     "titulo": "Rodaje suave 6 km",
+     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+    },
+    {
+     "fecha": "2027-01-22",
+     "dia": "vie",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 30 min",
+     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2027-01-23",
+     "dia": "sáb",
+     "tipo": "suave",
+     "km": 6,
+     "titulo": "Rodaje suave 6 km",
+     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2027-01-24",
+     "dia": "dom",
+     "tipo": "largo",
+     "km": 16,
+     "titulo": "Largo 16 km",
+     "detalle": "16 km en FC bajo 145 lpm, ritmo conversacional. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45."
+    }
+   ]
+  },
+  {
+   "semana": 11,
+   "inicio": "2027-01-25",
+   "fin": "2027-01-31",
+   "fase": "Construcción",
+   "descarga": false,
+   "km": 39,
+   "largo_km": 17,
+   "sesiones": [
+    {
+     "fecha": "2027-01-25",
+     "dia": "lun",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 35 min",
+     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2027-01-26",
+     "dia": "mar",
+     "tipo": "calidad",
+     "km": 8,
+     "titulo": "Umbral 4 × 8 min",
+     "detalle": "15 min suaves de calentamiento. 4 × 8 min en umbral, FC 160–168 lpm, con 2 min de trote suave entre bloques. 10 min suaves de vuelta a la calma."
+    },
+    {
+     "fecha": "2027-01-27",
+     "dia": "mié",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2027-01-28",
+     "dia": "jue",
+     "tipo": "suave",
+     "km": 7,
+     "titulo": "Rodaje suave 7 km",
+     "detalle": "7 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+    },
+    {
+     "fecha": "2027-01-29",
+     "dia": "vie",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 30 min",
+     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2027-01-30",
+     "dia": "sáb",
+     "tipo": "suave",
+     "km": 7,
+     "titulo": "Rodaje suave 7 km",
+     "detalle": "7 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2027-01-31",
+     "dia": "dom",
+     "tipo": "largo",
+     "km": 17,
+     "titulo": "Largo 17 km",
+     "detalle": "17 km en FC bajo 145 lpm, ritmo conversacional. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45."
+    }
+   ]
+  },
+  {
+   "semana": 12,
+   "inicio": "2027-02-01",
+   "fin": "2027-02-07",
+   "fase": "Construcción",
+   "descarga": true,
+   "km": 30,
+   "largo_km": 0,
+   "sesiones": [
+    {
+     "fecha": "2027-02-01",
+     "dia": "lun",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 35 min",
+     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2027-02-02",
+     "dia": "mar",
+     "tipo": "suave",
+     "km": 6,
+     "titulo": "Rodaje suave 6 km",
+     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+    },
+    {
+     "fecha": "2027-02-03",
+     "dia": "mié",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2027-02-04",
+     "dia": "jue",
+     "tipo": "calidad",
+     "km": 6,
+     "titulo": "Activación 3 × 3 min",
+     "detalle": "15 min suaves de calentamiento. 3 × 3 min en umbral, FC 160–168 lpm con 2 min suaves. 10 min suaves de vuelta a la calma."
+    },
+    {
+     "fecha": "2027-02-05",
+     "dia": "vie",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 30 min",
+     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2027-02-06",
+     "dia": "sáb",
+     "tipo": "suave",
+     "km": 4,
+     "titulo": "Rodaje suave 4 km",
+     "detalle": "4 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2027-02-07",
+     "dia": "dom",
+     "tipo": "calidad",
+     "km": 14,
+     "titulo": "Test 10K",
+     "detalle": "15 min suaves de calentamiento. 10 km a tope parejo (primer km controlado, último el más rápido). Sirve para medir tu progreso y recalibrar ritmos. Si hay una carrera de 10K cerca de esta fecha, úsala. 10 min suaves de vuelta a la calma."
+    }
+   ]
+  },
+  {
+   "semana": 13,
+   "inicio": "2027-02-08",
+   "fin": "2027-02-14",
+   "fase": "Construcción",
+   "descarga": false,
+   "km": 41,
+   "largo_km": 19,
+   "sesiones": [
+    {
+     "fecha": "2027-02-08",
+     "dia": "lun",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 35 min",
+     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2027-02-09",
+     "dia": "mar",
+     "tipo": "calidad",
+     "km": 9,
+     "titulo": "Umbral 2 × 15 min",
+     "detalle": "15 min suaves de calentamiento. 2 × 15 min en umbral, FC 160–168 lpm, con 2 min de trote suave entre bloques. 10 min suaves de vuelta a la calma."
+    },
+    {
+     "fecha": "2027-02-10",
+     "dia": "mié",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2027-02-11",
+     "dia": "jue",
+     "tipo": "suave",
+     "km": 7,
+     "titulo": "Rodaje suave 7 km",
+     "detalle": "7 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+    },
+    {
+     "fecha": "2027-02-12",
+     "dia": "vie",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 30 min",
+     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2027-02-13",
+     "dia": "sáb",
+     "tipo": "suave",
+     "km": 6,
+     "titulo": "Rodaje suave 6 km",
+     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2027-02-14",
+     "dia": "dom",
+     "tipo": "largo",
+     "km": 19,
+     "titulo": "Largo 19 km",
+     "detalle": "19 km en FC bajo 145 lpm, ritmo conversacional. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45."
+    }
+   ]
+  },
+  {
+   "semana": 14,
+   "inicio": "2027-02-15",
+   "fin": "2027-02-21",
+   "fase": "Construcción",
+   "descarga": false,
+   "km": 44,
+   "largo_km": 21,
+   "sesiones": [
+    {
+     "fecha": "2027-02-15",
+     "dia": "lun",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 35 min",
+     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2027-02-16",
+     "dia": "mar",
+     "tipo": "calidad",
+     "km": 10,
+     "titulo": "Umbral 3 × 12 min",
+     "detalle": "15 min suaves de calentamiento. 3 × 12 min en umbral, FC 160–168 lpm, con 2 min de trote suave entre bloques. 10 min suaves de vuelta a la calma."
+    },
+    {
+     "fecha": "2027-02-17",
+     "dia": "mié",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2027-02-18",
+     "dia": "jue",
+     "tipo": "suave",
+     "km": 7,
+     "titulo": "Rodaje suave 7 km",
+     "detalle": "7 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+    },
+    {
+     "fecha": "2027-02-19",
+     "dia": "vie",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 30 min",
+     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2027-02-20",
+     "dia": "sáb",
+     "tipo": "suave",
+     "km": 6,
+     "titulo": "Rodaje suave 6 km",
+     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2027-02-21",
+     "dia": "dom",
+     "tipo": "largo",
+     "km": 21,
+     "titulo": "Largo 21 km",
+     "detalle": "21 km en FC bajo 145 lpm, ritmo conversacional. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45."
+    }
+   ]
+  },
+  {
+   "semana": 15,
+   "inicio": "2027-02-22",
+   "fin": "2027-02-28",
+   "fase": "Construcción",
+   "descarga": false,
+   "km": 47,
+   "largo_km": 22,
+   "sesiones": [
+    {
+     "fecha": "2027-02-22",
+     "dia": "lun",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 35 min",
+     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2027-02-23",
+     "dia": "mar",
+     "tipo": "calidad",
+     "km": 10,
+     "titulo": "Umbral continuo 25 min",
+     "detalle": "15 min suaves de calentamiento. 25 min seguidos en umbral, FC 160–168 lpm. 10 min suaves de vuelta a la calma."
+    },
+    {
+     "fecha": "2027-02-24",
+     "dia": "mié",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2027-02-25",
+     "dia": "jue",
+     "tipo": "suave",
+     "km": 8,
+     "titulo": "Rodaje suave 8 km",
+     "detalle": "8 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+    },
+    {
+     "fecha": "2027-02-26",
+     "dia": "vie",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 30 min",
+     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2027-02-27",
+     "dia": "sáb",
+     "tipo": "suave",
+     "km": 7,
+     "titulo": "Rodaje suave 7 km",
+     "detalle": "7 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2027-02-28",
+     "dia": "dom",
+     "tipo": "largo",
+     "km": 22,
+     "titulo": "Largo 22 km",
+     "detalle": "22 km en FC bajo 145 lpm, ritmo conversacional. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45."
+    }
+   ]
+  },
+  {
+   "semana": 16,
+   "inicio": "2027-03-01",
+   "fin": "2027-03-07",
+   "fase": "Construcción",
+   "descarga": true,
+   "km": 37,
+   "largo_km": 16,
+   "sesiones": [
+    {
+     "fecha": "2027-03-01",
+     "dia": "lun",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 35 min",
+     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2027-03-02",
+     "dia": "mar",
+     "tipo": "calidad",
+     "km": 8,
+     "titulo": "Umbral 3 × 8 min",
+     "detalle": "15 min suaves de calentamiento. 3 × 8 min en umbral, FC 160–168 lpm, con 2 min de trote suave entre bloques. 10 min suaves de vuelta a la calma."
+    },
+    {
+     "fecha": "2027-03-03",
+     "dia": "mié",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2027-03-04",
+     "dia": "jue",
+     "tipo": "suave",
+     "km": 7,
+     "titulo": "Rodaje suave 7 km",
+     "detalle": "7 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+    },
+    {
+     "fecha": "2027-03-05",
+     "dia": "vie",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 30 min",
+     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2027-03-06",
+     "dia": "sáb",
+     "tipo": "suave",
+     "km": 6,
+     "titulo": "Rodaje suave 6 km",
+     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2027-03-07",
+     "dia": "dom",
+     "tipo": "largo",
+     "km": 16,
+     "titulo": "Largo 16 km",
+     "detalle": "16 km en FC bajo 145 lpm, ritmo conversacional. Semana de descarga."
+    }
+   ]
+  },
+  {
+   "semana": 17,
+   "inicio": "2027-03-08",
+   "fin": "2027-03-14",
+   "fase": "Específica",
+   "descarga": false,
+   "km": 50,
+   "largo_km": 24,
+   "sesiones": [
+    {
+     "fecha": "2027-03-08",
+     "dia": "lun",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 30 min",
+     "detalle": "30 min: mantenimiento: sentadilla, peso muerto rumano, elevación de talones, plancha; 2–3 series de 5–6 repeticiones pesadas. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2027-03-09",
+     "dia": "mar",
+     "tipo": "calidad",
+     "km": 10,
+     "titulo": "Intervalos 5 × 1 km",
+     "detalle": "15 min suaves de calentamiento. 5 × 1 km en intervalos, FC 170+ lpm al final de cada repetición, con 2–3 min de trote muy suave entre repeticiones. 10 min suaves de vuelta a la calma."
+    },
+    {
+     "fecha": "2027-03-10",
+     "dia": "mié",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2027-03-11",
+     "dia": "jue",
+     "tipo": "calidad",
+     "km": 10,
+     "titulo": "Ritmo maratón 6 km",
+     "detalle": "15 min suaves de calentamiento. 6 km a ritmo maratón, FC 148–158 lpm. 10 min suaves de vuelta a la calma."
+    },
+    {
+     "fecha": "2027-03-12",
+     "dia": "vie",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2027-03-13",
+     "dia": "sáb",
+     "tipo": "suave",
+     "km": 6,
+     "titulo": "Rodaje suave 6 km",
+     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2027-03-14",
+     "dia": "dom",
+     "tipo": "largo",
+     "km": 24,
+     "titulo": "Largo 24 km",
+     "detalle": "24 km en FC bajo 145 lpm, ritmo conversacional. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45. Sal entre 5:30 y 6:00, como el día de la maratón, con el mismo desayuno que piensas usar."
+    }
+   ]
+  },
+  {
+   "semana": 18,
+   "inicio": "2027-03-15",
+   "fin": "2027-03-21",
+   "fase": "Específica",
+   "descarga": false,
+   "km": 53,
+   "largo_km": 25,
+   "sesiones": [
+    {
+     "fecha": "2027-03-15",
+     "dia": "lun",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 30 min",
+     "detalle": "30 min: mantenimiento: sentadilla, peso muerto rumano, elevación de talones, plancha; 2–3 series de 5–6 repeticiones pesadas. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2027-03-16",
+     "dia": "mar",
+     "tipo": "calidad",
+     "km": 11,
+     "titulo": "Intervalos 6 × 1 km",
+     "detalle": "15 min suaves de calentamiento. 6 × 1 km en intervalos, FC 170+ lpm al final de cada repetición, con 2–3 min de trote muy suave entre repeticiones. 10 min suaves de vuelta a la calma."
+    },
+    {
+     "fecha": "2027-03-17",
+     "dia": "mié",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2027-03-18",
+     "dia": "jue",
+     "tipo": "calidad",
+     "km": 11,
+     "titulo": "Ritmo maratón 8 km",
+     "detalle": "15 min suaves de calentamiento. 8 km a ritmo maratón, FC 148–158 lpm. 10 min suaves de vuelta a la calma."
+    },
+    {
+     "fecha": "2027-03-19",
+     "dia": "vie",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2027-03-20",
+     "dia": "sáb",
+     "tipo": "suave",
+     "km": 6,
+     "titulo": "Rodaje suave 6 km",
+     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2027-03-21",
+     "dia": "dom",
+     "tipo": "largo",
+     "km": 25,
+     "titulo": "Largo 25 km",
+     "detalle": "25 km en FC bajo 145 lpm, ritmo conversacional. Los últimos 5 km a ritmo maratón, FC 148–158 lpm. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45. Sal entre 5:30 y 6:00, como el día de la maratón, con el mismo desayuno que piensas usar."
+    }
+   ]
+  },
+  {
+   "semana": 19,
+   "inicio": "2027-03-22",
+   "fin": "2027-03-28",
+   "fase": "Específica",
+   "descarga": false,
+   "km": 56,
+   "largo_km": 27,
+   "sesiones": [
+    {
+     "fecha": "2027-03-22",
+     "dia": "lun",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 30 min",
+     "detalle": "30 min: mantenimiento: sentadilla, peso muerto rumano, elevación de talones, plancha; 2–3 series de 5–6 repeticiones pesadas. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2027-03-23",
+     "dia": "mar",
+     "tipo": "calidad",
+     "km": 12,
+     "titulo": "Umbral 2 × 20 min",
+     "detalle": "15 min suaves de calentamiento. 2 × 20 min en umbral, FC 160–168 lpm, con 2 min de trote suave entre bloques. 10 min suaves de vuelta a la calma."
+    },
+    {
+     "fecha": "2027-03-24",
+     "dia": "mié",
+     "tipo": "suave",
+     "km": 5,
+     "titulo": "Rodaje suave 5 km",
+     "detalle": "5 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2027-03-25",
+     "dia": "jue",
+     "tipo": "suave",
+     "km": 6,
+     "titulo": "Rodaje suave 6 km",
+     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+    },
+    {
+     "fecha": "2027-03-26",
+     "dia": "vie",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2027-03-27",
+     "dia": "sáb",
+     "tipo": "suave",
+     "km": 6,
+     "titulo": "Rodaje suave 6 km",
+     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2027-03-28",
+     "dia": "dom",
+     "tipo": "largo",
+     "km": 27,
+     "titulo": "Largo 27 km",
+     "detalle": "27 km en FC bajo 145 lpm, ritmo conversacional. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45. Sal entre 5:30 y 6:00, como el día de la maratón, con el mismo desayuno que piensas usar."
+    }
+   ]
+  },
+  {
+   "semana": 20,
+   "inicio": "2027-03-29",
+   "fin": "2027-04-04",
+   "fase": "Específica",
+   "descarga": true,
+   "km": 44,
+   "largo_km": 0,
+   "sesiones": [
+    {
+     "fecha": "2027-03-29",
+     "dia": "lun",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 30 min",
+     "detalle": "30 min: mantenimiento: sentadilla, peso muerto rumano, elevación de talones, plancha; 2–3 series de 5–6 repeticiones pesadas. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2027-03-30",
+     "dia": "mar",
+     "tipo": "calidad",
+     "km": 9,
+     "titulo": "Intervalos 4 × 1 km",
+     "detalle": "15 min suaves de calentamiento. 4 × 1 km en intervalos, FC 170+ lpm al final de cada repetición, con 2–3 min de trote muy suave entre repeticiones. 10 min suaves de vuelta a la calma."
+    },
+    {
+     "fecha": "2027-03-31",
+     "dia": "mié",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2027-04-01",
+     "dia": "jue",
+     "tipo": "calidad",
+     "km": 8,
+     "titulo": "Ritmo maratón 3 km",
+     "detalle": "15 min suaves de calentamiento. 3 km a ritmo maratón, FC 148–158 lpm. 10 min suaves de vuelta a la calma."
+    },
+    {
+     "fecha": "2027-04-02",
+     "dia": "vie",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2027-04-03",
+     "dia": "sáb",
+     "tipo": "suave",
+     "km": 4,
+     "titulo": "Rodaje suave 4 km",
+     "detalle": "4 km en FC bajo 145 lpm, ritmo conversacional. Solo para soltar piernas."
+    },
+    {
+     "fecha": "2027-04-04",
+     "dia": "dom",
+     "tipo": "calidad",
+     "km": 23,
+     "titulo": "Media maratón de prueba",
+     "detalle": "21,1 km como ensayo general: ritmo objetivo, desayuno, zapatillas, geles y hora de salida iguales al día de la maratón. Con este resultado fijamos el ritmo de la maratón. Sal entre 5:30 y 6:00, como el día de la maratón, con el mismo desayuno que piensas usar."
+    }
+   ]
+  },
+  {
+   "semana": 21,
+   "inicio": "2027-04-05",
+   "fin": "2027-04-11",
+   "fase": "Específica",
+   "descarga": false,
+   "km": 56,
+   "largo_km": 28,
+   "sesiones": [
+    {
+     "fecha": "2027-04-05",
+     "dia": "lun",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 30 min",
+     "detalle": "30 min: mantenimiento: sentadilla, peso muerto rumano, elevación de talones, plancha; 2–3 series de 5–6 repeticiones pesadas. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2027-04-06",
+     "dia": "mar",
+     "tipo": "suave",
+     "km": 8,
+     "titulo": "Rodaje suave 8 km",
+     "detalle": "8 km en FC bajo 145 lpm, ritmo conversacional. Recuperación de la media maratón."
+    },
+    {
+     "fecha": "2027-04-07",
+     "dia": "mié",
+     "tipo": "suave",
+     "km": 5,
+     "titulo": "Rodaje suave 5 km",
+     "detalle": "5 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2027-04-08",
+     "dia": "jue",
+     "tipo": "calidad",
+     "km": 10,
+     "titulo": "Umbral 3 × 10 min",
+     "detalle": "15 min suaves de calentamiento. 3 × 10 min en umbral, FC 160–168 lpm, con 2 min de trote suave entre bloques. 10 min suaves de vuelta a la calma."
+    },
+    {
+     "fecha": "2027-04-09",
+     "dia": "vie",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2027-04-10",
+     "dia": "sáb",
+     "tipo": "suave",
+     "km": 5,
+     "titulo": "Rodaje suave 5 km",
+     "detalle": "5 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2027-04-11",
+     "dia": "dom",
+     "tipo": "largo",
+     "km": 28,
+     "titulo": "Largo 28 km",
+     "detalle": "28 km en FC bajo 145 lpm, ritmo conversacional. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45. Sal entre 5:30 y 6:00, como el día de la maratón, con el mismo desayuno que piensas usar."
+    }
+   ]
+  },
+  {
+   "semana": 22,
+   "inicio": "2027-04-12",
+   "fin": "2027-04-18",
+   "fase": "Específica",
+   "descarga": false,
+   "km": 60,
+   "largo_km": 30,
+   "sesiones": [
+    {
+     "fecha": "2027-04-12",
+     "dia": "lun",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 30 min",
+     "detalle": "30 min: mantenimiento: sentadilla, peso muerto rumano, elevación de talones, plancha; 2–3 series de 5–6 repeticiones pesadas. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2027-04-13",
+     "dia": "mar",
+     "tipo": "calidad",
+     "km": 12,
+     "titulo": "Intervalos 5 × 1,6 km",
+     "detalle": "15 min suaves de calentamiento. 5 × 1,6 km en intervalos, FC 170+ lpm al final de cada repetición, con 2–3 min de trote muy suave entre repeticiones. 10 min suaves de vuelta a la calma."
+    },
+    {
+     "fecha": "2027-04-14",
+     "dia": "mié",
+     "tipo": "suave",
+     "km": 6,
+     "titulo": "Rodaje suave 6 km",
+     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2027-04-15",
+     "dia": "jue",
+     "tipo": "suave",
+     "km": 6,
+     "titulo": "Rodaje suave 6 km",
+     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2027-04-16",
+     "dia": "vie",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2027-04-17",
+     "dia": "sáb",
+     "tipo": "suave",
+     "km": 6,
+     "titulo": "Rodaje suave 6 km",
+     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2027-04-18",
+     "dia": "dom",
+     "tipo": "largo",
+     "km": 30,
+     "titulo": "Largo 30 km",
+     "detalle": "30 km en FC bajo 145 lpm, ritmo conversacional. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45. Sal entre 5:30 y 6:00, como el día de la maratón, con el mismo desayuno que piensas usar."
+    }
+   ]
+  },
+  {
+   "semana": 23,
+   "inicio": "2027-04-19",
+   "fin": "2027-04-25",
+   "fase": "Específica",
+   "descarga": false,
+   "km": 63,
+   "largo_km": 26,
+   "sesiones": [
+    {
+     "fecha": "2027-04-19",
+     "dia": "lun",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 30 min",
+     "detalle": "30 min: mantenimiento: sentadilla, peso muerto rumano, elevación de talones, plancha; 2–3 series de 5–6 repeticiones pesadas. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2027-04-20",
+     "dia": "mar",
+     "tipo": "calidad",
+     "km": 12,
+     "titulo": "Umbral 2 × 20 min",
+     "detalle": "15 min suaves de calentamiento. 2 × 20 min en umbral, FC 160–168 lpm, con 2 min de trote suave entre bloques. 10 min suaves de vuelta a la calma."
+    },
+    {
+     "fecha": "2027-04-21",
+     "dia": "mié",
+     "tipo": "suave",
+     "km": 7,
+     "titulo": "Rodaje suave 7 km",
+     "detalle": "7 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2027-04-22",
+     "dia": "jue",
+     "tipo": "suave",
+     "km": 10,
+     "titulo": "Rodaje suave 10 km",
+     "detalle": "10 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+    },
+    {
+     "fecha": "2027-04-23",
+     "dia": "vie",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2027-04-24",
+     "dia": "sáb",
+     "tipo": "suave",
+     "km": 8,
+     "titulo": "Rodaje suave 8 km",
+     "detalle": "8 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2027-04-25",
+     "dia": "dom",
+     "tipo": "largo",
+     "km": 26,
+     "titulo": "Largo 26 km",
+     "detalle": "26 km en FC bajo 145 lpm, ritmo conversacional. Los km 8 a 24 a ritmo maratón, FC 148–158 lpm: el ensayo más importante del plan. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45. Sal entre 5:30 y 6:00, como el día de la maratón, con el mismo desayuno que piensas usar."
+    }
+   ]
+  },
+  {
+   "semana": 24,
+   "inicio": "2027-04-26",
+   "fin": "2027-05-02",
+   "fase": "Específica",
+   "descarga": false,
+   "km": 60,
+   "largo_km": 30,
+   "sesiones": [
+    {
+     "fecha": "2027-04-26",
+     "dia": "lun",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 30 min",
+     "detalle": "30 min: mantenimiento: sentadilla, peso muerto rumano, elevación de talones, plancha; 2–3 series de 5–6 repeticiones pesadas. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2027-04-27",
+     "dia": "mar",
+     "tipo": "calidad",
+     "km": 11,
+     "titulo": "Intervalos 6 × 1 km",
+     "detalle": "15 min suaves de calentamiento. 6 × 1 km en intervalos, FC 170+ lpm al final de cada repetición, con 2–3 min de trote muy suave entre repeticiones. 10 min suaves de vuelta a la calma."
+    },
+    {
+     "fecha": "2027-04-28",
+     "dia": "mié",
+     "tipo": "suave",
+     "km": 6,
+     "titulo": "Rodaje suave 6 km",
+     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2027-04-29",
+     "dia": "jue",
+     "tipo": "suave",
+     "km": 8,
+     "titulo": "Rodaje suave 8 km",
+     "detalle": "8 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2027-04-30",
+     "dia": "vie",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2027-05-01",
+     "dia": "sáb",
+     "tipo": "suave",
+     "km": 5,
+     "titulo": "Rodaje suave 5 km",
+     "detalle": "5 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2027-05-02",
+     "dia": "dom",
+     "tipo": "largo",
+     "km": 30,
+     "titulo": "Largo 30 km",
+     "detalle": "30 km en FC bajo 145 lpm, ritmo conversacional. Último largo. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45. Sal entre 5:30 y 6:00, como el día de la maratón, con el mismo desayuno que piensas usar."
+    }
+   ]
+  },
+  {
+   "semana": 25,
+   "inicio": "2027-05-03",
+   "fin": "2027-05-09",
+   "fase": "Afinamiento",
+   "descarga": false,
+   "km": 45,
+   "largo_km": 21,
+   "sesiones": [
+    {
+     "fecha": "2027-05-03",
+     "dia": "lun",
+     "tipo": "fuerza",
+     "km": 0,
+     "titulo": "Fuerza 20 min",
+     "detalle": "20 min: solo activación: movilidad, puente de glúteo, plancha, elevación de talones; sin cargas pesadas. Pesado pero con buena técnica, sin llegar al fallo."
+    },
+    {
+     "fecha": "2027-05-04",
+     "dia": "mar",
+     "tipo": "calidad",
+     "km": 10,
+     "titulo": "Umbral 3 × 2 km",
+     "detalle": "15 min suaves de calentamiento. 3 × 2 km en umbral, FC 160–168 lpm con 2 min suaves. 10 min suaves de vuelta a la calma."
+    },
+    {
+     "fecha": "2027-05-05",
+     "dia": "mié",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2027-05-06",
+     "dia": "jue",
+     "tipo": "calidad",
+     "km": 9,
+     "titulo": "Ritmo maratón 5 km",
+     "detalle": "15 min suaves de calentamiento. 5 km a ritmo maratón, FC 148–158 lpm. 10 min suaves de vuelta a la calma."
+    },
+    {
+     "fecha": "2027-05-07",
+     "dia": "vie",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2027-05-08",
+     "dia": "sáb",
+     "tipo": "suave",
+     "km": 5,
+     "titulo": "Rodaje suave 5 km",
+     "detalle": "5 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2027-05-09",
+     "dia": "dom",
+     "tipo": "largo",
+     "km": 21,
+     "titulo": "Largo 21 km",
+     "detalle": "21 km en FC bajo 145 lpm, ritmo conversacional. Los km 8 a 18 a ritmo maratón, FC 148–158 lpm. Sal entre 5:30 y 6:00, como el día de la maratón, con el mismo desayuno que piensas usar."
+    }
+   ]
+  },
+  {
+   "semana": 26,
+   "inicio": "2027-05-10",
+   "fin": "2027-05-16",
+   "fase": "Afinamiento",
+   "descarga": false,
+   "km": 34,
+   "largo_km": 16,
+   "sesiones": [
+    {
+     "fecha": "2027-05-10",
+     "dia": "lun",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2027-05-11",
+     "dia": "mar",
+     "tipo": "calidad",
+     "km": 8,
+     "titulo": "Umbral 4 × 1 km",
+     "detalle": "15 min suaves de calentamiento. 4 × 1 km en umbral, FC 160–168 lpm con 2 min suaves. 10 min suaves de vuelta a la calma."
+    },
+    {
+     "fecha": "2027-05-12",
+     "dia": "mié",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2027-05-13",
+     "dia": "jue",
+     "tipo": "calidad",
+     "km": 7,
+     "titulo": "Ritmo maratón 4 km",
+     "detalle": "15 min suaves de calentamiento. 4 km a ritmo maratón, FC 148–158 lpm. 10 min suaves de vuelta a la calma."
+    },
+    {
+     "fecha": "2027-05-14",
+     "dia": "vie",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2027-05-15",
+     "dia": "sáb",
+     "tipo": "suave",
+     "km": 3,
+     "titulo": "Rodaje suave 3 km",
+     "detalle": "3 km en FC bajo 145 lpm, ritmo conversacional."
+    },
+    {
+     "fecha": "2027-05-16",
+     "dia": "dom",
+     "tipo": "largo",
+     "km": 16,
+     "titulo": "Largo 16 km",
+     "detalle": "16 km en FC bajo 145 lpm, ritmo conversacional. Suave, sin forzar."
+    }
+   ]
+  },
+  {
+   "semana": 27,
+   "inicio": "2027-05-17",
+   "fin": "2027-05-23",
+   "fase": "Afinamiento",
+   "descarga": false,
+   "km": 56.2,
+   "largo_km": 42.2,
+   "sesiones": [
+    {
+     "fecha": "2027-05-17",
+     "dia": "lun",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2027-05-18",
+     "dia": "mar",
+     "tipo": "calidad",
+     "km": 6,
+     "titulo": "Activación 3 × 1 km",
+     "detalle": "10 min suaves, 3 × 1 km a ritmo maratón, FC 148–158 lpm con 2 min suaves, 5 min de vuelta a la calma."
+    },
+    {
+     "fecha": "2027-05-19",
+     "dia": "mié",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2027-05-20",
+     "dia": "jue",
+     "tipo": "suave",
+     "km": 5,
+     "titulo": "Rodaje suave 5 km",
+     "detalle": "5 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+    },
+    {
+     "fecha": "2027-05-21",
+     "dia": "vie",
+     "tipo": "descanso",
+     "km": 0,
+     "titulo": "Descanso",
+     "detalle": "Descanso total o caminata suave. Prioridad: dormir 7 h o más."
+    },
+    {
+     "fecha": "2027-05-22",
+     "dia": "sáb",
+     "tipo": "suave",
+     "km": 3,
+     "titulo": "Rodaje suave 3 km",
+     "detalle": "3 km en FC bajo 145 lpm, ritmo conversacional. Solo 15–20 min para soltar piernas. Recoge el kit, prepara todo y acuéstate temprano."
+    },
+    {
+     "fecha": "2027-05-23",
+     "dia": "dom",
+     "tipo": "carrera",
+     "km": 42.2,
+     "titulo": "MARATÓN DE LIMA 42K",
+     "detalle": "Salida 5:30 desde el Parque Kennedy (confirmar con la organización). Desayuno ~3 h antes (pan, plátano, miel; lo mismo que ensayaste). Primeros 10 km 5–10 s/km más lentos que el ritmo objetivo, luego parejo; 60–90 g de carbohidrato por hora. Si a partir del km 30 te queda energía, acelera."
+    }
+   ]
+  }
+ ]
+}

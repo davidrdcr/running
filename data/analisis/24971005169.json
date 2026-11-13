@@ -1,0 +1,43 @@
+{
+ "fecha": "2026-11-04",
+ "veredicto": "Segundo esfuerzo duro en menos de 40 horas, de noche y después de fuerza: el último km pasó la factura.",
+ "resumen": "5,3 km a 5:24/km con 165 lpm de media y 25 minutos en zona 4–5. Venías del tempo del día anterior y de una sesión de fuerza a las 16:09. Los primeros 4 km fueron parejos (5:19–5:44) pero el km 5 cayó a 6:30 con 170 lpm. Terminaste a las 22:50 y esa noche dormiste 2,8 h.",
+ "lo_bueno": [
+  "Mantuviste la mecánica estable aun con fatiga (cadencia 166–170, zancada ~1,09 m).",
+  "Supiste bajar el ritmo en lugar de forzar el final."
+ ],
+ "a_mejorar": [
+  "Dos sesiones intensas seguidas no dejan que el cuerpo asimile la primera.",
+  "Correr fuerte a las 22:20 te activa y recorta el sueño, que ya venía corto.",
+  "Desacople de 10,6%: señal de que la base aeróbica todavía es lo que más hay que construir."
+ ],
+ "datos": [
+  {
+   "etiqueta": "Ritmo medio",
+   "valor": "5:24 /km"
+  },
+  {
+   "etiqueta": "FC media / máx",
+   "valor": "165 / 182 lpm"
+  },
+  {
+   "etiqueta": "Zona 4–5",
+   "valor": "25,3 de 28,5 min"
+  },
+  {
+   "etiqueta": "Desacople",
+   "valor": "10,6%"
+  },
+  {
+   "etiqueta": "Horas desde la sesión anterior",
+   "valor": "~40 h"
+  },
+  {
+   "etiqueta": "Sueño después",
+   "valor": "2,8 h"
+  }
+ ],
+ "para_la_proxima": "Después de un día duro, el siguiente es suave o descanso. Y si corres de noche, que sea suave para no robarle horas al sueño.",
+ "id": "24971005169",
+ "escrito": "2026-11-13"
+}

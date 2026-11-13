@@ -1,0 +1,15 @@
+{
+ "fecha": "2026-11-13",
+ "periodo": "3 al 13 de noviembre de 2026 (11 días con el reloj)",
+ "titulo": "Aún es pronto para decir que mejoras, pero ya hay dos señales buenas y un freno muy claro",
+ "texto": "Con 11 días de datos esto es tu línea de base, no una tendencia. Lo prometedor: corres igual de rápido con menos pulso y tu FC en reposo va bajando. Lo que te frena no es el entrenamiento sino el sueño, y que casi todo lo corres demasiado fuerte. Si en diciembre duermes más y el 80% de tus salidas es suave, la mejora se va a notar en los números.",
+ "puntos": [
+  {"tendencia": "mejora", "titulo": "Eficiencia", "texto": "El 8 de noviembre corriste a 5:14/km con 158 lpm; el 3 de noviembre, a 5:16/km con 166 lpm. Mismo ritmo con 8 lpm menos: ~5% más eficiente."},
+  {"tendencia": "mejora", "titulo": "FC en reposo", "texto": "De 53–56 lpm en los primeros días a 48–49 lpm en los últimos. Ojo: las primeras noches con un reloj nuevo suelen ser menos precisas."},
+  {"tendencia": "estable", "titulo": "VO2max", "texto": "53,3 → 53,8. Cambios menores a 0,5 son ruido; hay que mirarlo en bloques de 4–6 semanas."},
+  {"tendencia": "alerta", "titulo": "Sueño", "texto": "4,5 h de media; 7 de 11 noches bajo 5 h y ninguna de 7 h. Es tu mayor limitante: con este sueño, el cuerpo no termina de asimilar el entrenamiento."},
+  {"tendencia": "alerta", "titulo": "Intensidad", "texto": "3 de tus 4 carreras fueron casi enteras en zona 4–5: el 56% de tu tiempo corriendo fue fuerte. La meta del plan es ~80% suave."},
+  {"tendencia": "estable", "titulo": "Volumen", "texto": "~15 km por semana en 3 salidas de 4–7 km. Es un buen punto de partida: el plan lo lleva a ~30 km en enero."}
+ ],
+ "proxima_revision": "2026-12-13"
+}

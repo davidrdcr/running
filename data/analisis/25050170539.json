@@ -1,0 +1,44 @@
+{
+ "fecha": "2026-11-11",
+ "veredicto": "Tu primer rodaje de verdad y tu salida más larga, pero el sprint final la convirtió en una sesión mixta.",
+ "resumen": "7 km en total: los primeros 5,9 km a 7:30/km con 144 lpm de media, exactamente el tipo de trabajo que más necesitas. Después, un último km a 4:38/km llegando a 188 lpm (tu FC más alta registrada). Ese km elevó el efecto anaeróbico a 2,7 y a la mañana siguiente tu preparación estaba en 2/100.",
+ "lo_bueno": [
+  "7 km: tu salida más larga hasta ahora, casi 50 minutos en movimiento.",
+  "43 min en zona 3 con FC estable (134–148 lpm): por fin un esfuerzo aeróbico de verdad.",
+  "Desacople de 8% incluso con el sprint: el tramo suave fue el más eficiente de todas tus salidas."
+ ],
+ "a_mejorar": [
+  "El km final a tope no aporta a la maratón y te costó un día de recuperación.",
+  "A ritmo suave la cadencia bajó a 157–160: con pasos más cortos y rápidos (165+) se carga menos la pierna.",
+  "Los km 4 y 5 a 7:50–8:45 sugieren pausas o caminata: está bien, pero mejor planificarlas (p. ej. 1 min caminando cada 10)."
+ ],
+ "datos": [
+  {
+   "etiqueta": "Distancia",
+   "valor": "7,0 km (récord)"
+  },
+  {
+   "etiqueta": "Tramo suave",
+   "valor": "5,9 km a 7:30, 144 lpm"
+  },
+  {
+   "etiqueta": "Último km",
+   "valor": "4:38 /km, máx 188 lpm"
+  },
+  {
+   "etiqueta": "Efecto aeróbico / anaeróbico",
+   "valor": "3,1 / 2,7"
+  },
+  {
+   "etiqueta": "Cadencia en tramo suave",
+   "valor": "157–160 ppm"
+  },
+  {
+   "etiqueta": "Preparación al día siguiente",
+   "valor": "2 / 100"
+  }
+ ],
+ "para_la_proxima": "Si al final te provoca velocidad, haz 4–6 progresivos de 20 segundos con recuperación completa, no un kilómetro a fondo.",
+ "id": "25050170539",
+ "escrito": "2026-11-13"
+}

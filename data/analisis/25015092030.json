@@ -1,0 +1,43 @@
+{
+ "fecha": "2026-11-08",
+ "veredicto": "La mejor de tus carreras rápidas: el mismo ritmo que el 3 de noviembre con 8 lpm menos.",
+ "resumen": "5,6 km a 5:14/km con 158 lpm de media. Comparado con el 3 de noviembre (5:16/km a 166 lpm), corriste igual de rápido con el corazón bastante más tranquilo: unos 5% más eficiente. Entre el km 2 y el 3 bajaste el ritmo a 5:43 y la FC cayó de 169 a 153: buen control.",
+ "lo_bueno": [
+  "Mejor relación ritmo/FC de todas tus salidas rápidas hasta ahora.",
+  "Regulaste a mitad de carrera en lugar de pelear contra la fatiga.",
+  "Solo 0,6 min en zona 5 (frente a 4–5 min en las anteriores)."
+ ],
+ "a_mejorar": [
+  "Sigue siendo un esfuerzo de zona 4 (21 de 30 min): no cuenta como rodaje suave.",
+  "Desacople de 11,5%: la base aeróbica aún tiene mucho margen."
+ ],
+ "datos": [
+  {
+   "etiqueta": "Ritmo medio",
+   "valor": "5:14 /km"
+  },
+  {
+   "etiqueta": "FC media / máx",
+   "valor": "158 / 178 lpm"
+  },
+  {
+   "etiqueta": "Zona 4–5",
+   "valor": "21,6 de 29,6 min"
+  },
+  {
+   "etiqueta": "Frente al 3 nov",
+   "valor": "mismo ritmo, −8 lpm"
+  },
+  {
+   "etiqueta": "Desacople",
+   "valor": "11,5%"
+  },
+  {
+   "etiqueta": "Cadencia",
+   "valor": "~170 ppm"
+  }
+ ],
+ "para_la_proxima": "Guarda esta salida como referencia de tu ritmo de umbral. En el plan, este tipo de esfuerzo aparece una vez por semana como mucho, no en cada salida.",
+ "id": "25015092030",
+ "escrito": "2026-11-13"
+}

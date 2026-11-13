@@ -1,0 +1,43 @@
+{
+ "fecha": "2026-11-03",
+ "veredicto": "Un tempo disfrazado de rodaje: corto, rápido y con el corazón en zona 4–5 casi todo el tiempo.",
+ "resumen": "4,2 km a 5:16/km con 166 lpm de media; 20 de los 22 minutos fueron en zona 4–5. Saliste a 4:52 el primer km y terminaste a 5:37 con la FC 23 lpm más alta: el ritmo cayó mientras el corazón subía. Además venías de dormir 3,1 h y corriste a las 6:24.",
+ "lo_bueno": [
+  "Cadencia sólida para tu nivel (168–172 pasos/min) y contacto con el suelo de ~256 ms: la mecánica no es el problema.",
+  "Efecto aeróbico 3,7: el estímulo fue real."
+ ],
+ "a_mejorar": [
+  "Salida demasiado rápida: el km 1 fue 45 s más rápido que el km 4.",
+  "Desacople cardíaco de 14% (eficiencia de la primera mitad frente a la segunda). En un esfuerzo aeróbico bien dosificado debería quedar bajo 5%.",
+  "Correr fuerte con 3 h de sueño sube el costo de la sesión y el riesgo de lesión."
+ ],
+ "datos": [
+  {
+   "etiqueta": "Ritmo medio",
+   "valor": "5:16 /km"
+  },
+  {
+   "etiqueta": "FC media / máx",
+   "valor": "166 / 178 lpm"
+  },
+  {
+   "etiqueta": "Zona 4–5",
+   "valor": "20,3 de 22,1 min"
+  },
+  {
+   "etiqueta": "Desacople",
+   "valor": "14%"
+  },
+  {
+   "etiqueta": "Cadencia",
+   "valor": "~170 ppm"
+  },
+  {
+   "etiqueta": "Sueño previo",
+   "valor": "3,1 h"
+  }
+ ],
+ "para_la_proxima": "Si el objetivo es rodar, el primer km debe ser el más lento de la salida. Si es un tempo, que sea a propósito y con buen sueño.",
+ "id": "24950486212",
+ "escrito": "2026-11-13"
+}

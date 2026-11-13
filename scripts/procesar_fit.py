@@ -133,6 +133,30 @@ def procesar(ruta: Path):
         w = csv.DictWriter(fh, fieldnames=usadas, extrasaction="ignore", lineterminator="\n")
         w.writeheader()
         w.writerows(filas)
+    # Parciales por kilómetro (solo si hubo distancia)
+    kms, km, ini, fcs, cads, alt0 = [], 1, None, [], [], None
+    for fl in filas:
+        dist = fl["distancia_m"]
+        if dist in ("", None):
+            continue
+        if ini is None:
+            ini, alt0 = fl, fl["altitud_m"]
+        if fl["fc"] != "":
+            fcs.append(fl["fc"])
+        if fl["cadencia_spm"] not in ("", None) and fl["cadencia_spm"] > 120:
+            cads.append(fl["cadencia_spm"])
+        if dist >= km * 1000:
+            seg = fl["seg"] - ini["seg"]
+            kms.append({"km": km, "tiempo_s": seg, "ritmo_seg_km": seg,
+                        "fc_prom": round(sum(fcs) / len(fcs)) if fcs else "", "fc_max": max(fcs) if fcs else "",
+                        "cadencia_spm": round(sum(cads) / len(cads)) if cads else "",
+                        "desnivel_m": r(fl["altitud_m"] - alt0, 0) if fl["altitud_m"] not in ("", None) and alt0 not in ("", None) else ""})
+            km, ini, fcs, cads, alt0 = km + 1, fl, [], [], fl["altitud_m"]
+    if kms:
+        with open(SALIDA / f"{act_id}_km.csv", "w", newline="") as fh:
+            w = csv.DictWriter(fh, fieldnames=list(kms[0].keys()), lineterminator="\n")
+            w.writeheader()
+            w.writerows(kms)
     if vueltas:
         with open(SALIDA / f"{act_id}_vueltas.csv", "w", newline="") as fh:
             w = csv.DictWriter(fh, fieldnames=list(vueltas[0].keys()), lineterminator="\n")

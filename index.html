@@ -62,6 +62,12 @@ td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
 details{margin-top:8px}
 summary{cursor:pointer;color:var(--text-secondary);font-size:13px}
 .err{color:var(--critical)}
+.evo h2{font-size:18px}
+.puntos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:10px 18px;margin-top:12px}
+.punto{font-size:14px}
+.punto b{display:inline-flex;align-items:center;gap:6px}
+.ico{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;font-size:12px;color:#fff;font-weight:700}
+.plan-hoy{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:baseline}
 footer{margin-top:24px;color:var(--text-muted);font-size:12px}
 </style>
 </head>
@@ -77,10 +83,14 @@ footer{margin-top:24px;color:var(--text-muted);font-size:12px}
 
 <section class="card consejo" id="consejo"><div class="sub">Cargando…</div></section>
 
+<section class="card" id="planCard" style="display:none"></section>
+
 <section class="tiles" id="tiles"></section>
 
+<section class="card evo" id="evo" style="display:none"></section>
+
 <section class="card">
-  <h2>Tus zonas de FC (lpm)</h2>
+  <h2>Tus zonas de FC para entrenar (lpm)</h2>
   <div class="zonas" id="zonas"></div>
 </section>
 
@@ -241,8 +251,33 @@ function bar(id, labels, data, color, label, unit){
     ];
     document.getElementById('tiles').innerHTML = tiles.map(([l,v,u,n]) => `<div class="tile"><div class="lbl">${l}</div><div class="val">${v} <small>${u}</small></div><div class="note">${n}</div></div>`).join('');
 
-    // Zonas
-    if (hoy.z2_desde) {
+    // Plan y tendencia (opcionales)
+    const [plan, tend] = await Promise.all([
+      fetch('data/plan/plan.json' + bust).then(r => r.ok ? r.json() : null).catch(() => null),
+      fetch('data/tendencia.json' + bust).then(r => r.ok ? r.json() : null).catch(() => null)]);
+    const hoyISO = new Date(Date.now() - 5*3600*1000).toISOString().slice(0,10);
+    if (plan) {
+      const S = plan.semanas; let sem = S.find(x => x.inicio <= hoyISO && hoyISO <= x.fin); const antes = !sem && hoyISO < S[0].inicio;
+      const dias = Math.round((new Date(plan.objetivo.fecha + 'T12:00:00') - new Date(hoyISO + 'T12:00:00')) / 86400000);
+      const ses = sem ? sem.sesiones.find(x => x.fecha === hoyISO) : null;
+      const pc = document.getElementById('planCard'); pc.style.display = '';
+      pc.innerHTML = `<div class="plan-hoy"><h2 style="margin:0">Plan: ${esc(plan.objetivo.carrera)}</h2><span class="sub">faltan ${dias} días</span></div>
+        <div style="margin-top:4px">${sem ? `Semana <b>${sem.semana}</b> de ${S.length} · ${esc(sem.fase)}${sem.descarga ? ' (descarga)' : ''} · ${sem.km} km esta semana. Hoy según el plan: <b>${esc(ses ? ses.titulo : '—')}</b>.` : (antes ? `Empieza el lunes ${new Date(S[0].inicio + 'T12:00:00').toLocaleDateString('es-PE', {day:'numeric', month:'long'})}.` : '')}
+        <a href="plan.html" style="color:var(--series-1)">Ver el plan completo →</a></div>`;
+      // Zonas del plan
+      document.getElementById('zonas').innerHTML = plan.zonas.map(z => `<span><b>${esc(z.nombre)}</b>: ${esc(z.fc)}</span>`).join('') +
+        `<div class="sub" style="flex-basis:100%">${esc(plan.nota_zonas || '')}</div>`;
+    }
+    if (tend) {
+      const ev = document.getElementById('evo'); ev.style.display = '';
+      const ico = {mejora:['↑','--good'], estable:['→','--text-muted'], alerta:['!','--serious'], empeora:['↓','--critical']};
+      ev.innerHTML = `<div class="sub">Tu evolución · vista del entrenador · ${esc(tend.periodo)}</div><h2 style="margin:2px 0 6px">${esc(tend.titulo)}</h2><p style="margin:0">${esc(tend.texto)}</p>
+        <div class="puntos">${tend.puntos.map(p => { const [c, col] = ico[p.tendencia] || ['·','--text-muted']; return `<div class="punto"><b><span class="ico" style="background:var(${col})">${c}</span>${esc(p.titulo)}</b><div>${esc(p.texto)}</div></div>`; }).join('')}</div>
+        <div class="sub" style="margin-top:10px">Próxima revisión: ${new Date(tend.proxima_revision + 'T12:00:00').toLocaleDateString('es-PE', {day:'numeric', month:'long'})}</div>`;
+    }
+
+    // Zonas (Garmin) si no hay plan
+    if (!plan && hoy.z2_desde) {
       const z2 = hoy.z2_desde, z3 = hoy.z2_hasta + 1, z4 = hoy.z4_desde;
       document.getElementById('zonas').innerHTML = `
         <span><span class="dot" style="background:var(--z1)"></span> Zona 1: <b>bajo ${z2}</b></span>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plan maratón · Entrenamiento Garmin</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏁</text></svg>">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{
+  color-scheme:light;
+  --bg:#f5f5f3; --surface-1:#fcfcfb; --border:#e4e3df; --accent-bg:#eaf2fc;
+  --text-primary:#0b0b0b; --text-secondary:#52514e; --text-muted:#7a7975; --grid:#ecebe7;
+  --series-1:#2a78d6; --series-2:#eb6834; --series-3:#1baf7a; --series-4:#eda100; --neutral:#a3a29c;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    color-scheme:dark;
+    --bg:#121211; --surface-1:#1a1a19; --border:#2c2c2a; --accent-bg:#1b2a3d;
+    --text-primary:#f0efec; --text-secondary:#c3c2b7; --text-muted:#8f8e86; --grid:#2a2a28;
+    --series-1:#3987e5; --series-2:#d95926; --series-3:#199e70; --series-4:#c98500; --neutral:#8f8e86;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text-primary);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:1100px;margin:0 auto;padding:20px 16px 48px}
+a{color:var(--series-1)}
+h1{font-size:24px;margin:0}
+h2{font-size:17px;margin:0 0 6px}
+.sub{color:var(--text-secondary);font-size:13px}
+.card{background:var(--surface-1);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:16px}
+.hero{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:flex-end;margin-bottom:16px}
+.cuenta{font-size:40px;font-weight:700;line-height:1}
+.cuenta small{font-size:15px;font-weight:500;color:var(--text-secondary)}
+.semana{background:var(--accent-bg)}
+.dias{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;margin-top:10px}
+.dia{background:var(--surface-1);border:1px solid var(--border);border-radius:10px;padding:8px 10px;font-size:13px;min-height:92px}
+.dia.hoy{outline:2px solid var(--series-1)}
+.dia .d{font-size:12px;color:var(--text-secondary);text-transform:capitalize}
+.dia .t{font-weight:600;margin-top:2px}
+.tag{display:inline-block;font-size:11px;padding:1px 6px;border-radius:999px;margin-top:4px;color:var(--text-secondary);border:1px solid var(--border)}
+.tag::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:4px;vertical-align:middle;background:var(--c,var(--neutral))}
+@media (max-width:760px){ .dias{grid-template-columns:1fr} .dia{min-height:0} }
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px}
+.grid2 .card{margin:0}
+.chartbox{position:relative;height:260px;margin-top:8px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--border);vertical-align:top}
+th{font-weight:600;color:var(--text-secondary);font-size:12px}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+details.sem{border-bottom:1px solid var(--border);padding:8px 0}
+details.sem summary{cursor:pointer;display:flex;gap:10px;flex-wrap:wrap;align-items:baseline}
+details.sem summary b{min-width:90px}
+details.sem .lista{margin:8px 0 4px;display:grid;gap:6px}
+details.sem .ses{font-size:14px}
+details.sem .ses span{color:var(--text-secondary)}
+.fuente{font-size:12px;color:var(--text-muted)}
+.fases{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px}
+.fase{border-left:4px solid var(--c);padding:4px 0 4px 10px}
+</style>
+</head>
+<body>
+<main>
+<div class="sub"><a href="./">← Volver al dashboard</a></div>
+<div class="hero">
+  <div>
+    <h1 id="titulo">Plan maratón</h1>
+    <div class="sub" id="subtitulo"></div>
+  </div>
+  <div class="cuenta" id="cuenta"></div>
+</div>
+
+<section class="card semana" id="semana"></section>
+
+<section class="card">
+  <h2>Kilómetros por semana</h2>
+  <div class="sub">Plan (barras, por fase) frente a lo que realmente corriste (línea). Las semanas de descarga son más cortas a propósito.</div>
+  <div class="chartbox"><canvas id="cVol"></canvas></div>
+</section>
+
+<section class="grid2">
+  <div class="card">
+    <h2>Meta</h2>
+    <p id="meta" style="margin:0"></p>
+    <p class="sub" id="notaMeta" style="margin:8px 0 0"></p>
+    <p class="sub" id="partida" style="margin:8px 0 0"></p>
+  </div>
+  <div class="card">
+    <h2>Zonas del plan</h2>
+    <table id="tZonas"></table>
+    <p class="sub" id="notaZonas" style="margin:8px 0 0"></p>
+  </div>
+</section>
+
+<section class="card" style="margin-top:16px">
+  <h2>Fases</h2>
+  <div class="fases" id="fases"></div>
+</section>
+
+<section class="card">
+  <h2>Todas las semanas</h2>
+  <div id="semanas"></div>
+</section>
+
+<section class="card">
+  <h2>En qué se basa</h2>
+  <div id="principios"></div>
+</section>
+
+<section class="card">
+  <h2>Revisiones del plan</h2>
+  <p class="sub" id="regla" style="margin:0 0 8px"></p>
+  <div id="revisiones"></div>
+</section>
+</main>
+
+<script>
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const bust = '?v=' + Date.now();
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fecha = f => new Date(f + 'T12:00:00');
+const corta = f => fecha(f).toLocaleDateString('es-PE', {day:'numeric', month:'short'});
+const larga = f => fecha(f).toLocaleDateString('es-PE', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
+const hoyISO = new Date(Date.now() - 5*3600*1000).toISOString().slice(0,10);
+const COLOR_FASE = ['--series-1', '--series-3', '--series-2', '--series-4'];
+const COLOR_TIPO = {suave:'--series-1', largo:'--series-3', calidad:'--series-2', fuerza:'--series-4', carrera:'--series-2', descanso:'--neutral'};
+const NOMBRE_TIPO = {suave:'Suave', largo:'Largo', calidad:'Calidad', fuerza:'Fuerza', carrera:'Carrera', descanso:'Descanso'};
+const tag = t => `<span class="tag" style="--c:var(${COLOR_TIPO[t] || '--neutral'})">${NOMBRE_TIPO[t] || t}</span>`;
+
+(async () => {
+  const [plan, acts] = await Promise.all([
+    fetch('data/plan/plan.json' + bust).then(r => r.json()),
+    fetch('data/actividades.csv' + bust).then(r => r.text()).then(t => { const [h, ...rs] = t.trim().split('\n'); const c = h.split(','); return rs.map(r => Object.fromEntries(r.split(',').map((v,i) => [c[i], v]))); })
+  ]);
+  const o = plan.objetivo;
+  document.getElementById('titulo').textContent = o.carrera;
+  document.getElementById('subtitulo').textContent = `${larga(o.fecha)} · ${o.lugar}`;
+  const dias = Math.round((fecha(o.fecha) - fecha(hoyISO)) / 86400000);
+  document.getElementById('cuenta').innerHTML = dias > 0 ? `${dias} <small>días · ${Math.floor(dias/7)} semanas</small>` : (dias === 0 ? '¡Hoy!' : 'Terminada');
+  document.getElementById('meta').textContent = o.meta;
+  document.getElementById('notaMeta').textContent = o.nota_meta || '';
+  document.getElementById('partida').textContent = plan.punto_de_partida || '';
+  document.getElementById('tZonas').innerHTML = '<tr><th>Zona</th><th>FC</th><th>Para qué</th></tr>' + plan.zonas.map(z => `<tr><td><b>${esc(z.nombre)}</b></td><td style="white-space:nowrap">${esc(z.fc)}</td><td>${esc(z.uso)}</td></tr>`).join('');
+  document.getElementById('notaZonas').textContent = plan.nota_zonas || '';
+  document.getElementById('fases').innerHTML = plan.fases.map((f,i) => `<div class="fase" style="--c:var(${COLOR_FASE[i]})"><b>${esc(f.nombre)}</b> <span class="sub">· semanas ${f.semanas[0]}–${f.semanas[1]}</span><div style="font-size:14px;margin-top:2px">${esc(f.objetivo)}</div></div>`).join('');
+
+  // Semana actual
+  const S = plan.semanas;
+  let actual = S.find(s => s.inicio <= hoyISO && hoyISO <= s.fin);
+  const antes = !actual && hoyISO < S[0].inicio;
+  if (!actual) actual = antes ? S[0] : S[S.length - 1];
+  const kmHechos = s => acts.filter(a => a.tipo === 'carrera' && a.fecha >= s.inicio && a.fecha <= s.fin).reduce((t,a) => t + (+a.km || 0), 0);
+  document.getElementById('semana').innerHTML = `
+    <div class="sub">${antes ? `El plan empieza el ${larga(S[0].inicio)}` : 'Esta semana'}</div>
+    <h2 style="margin:2px 0 0">Semana ${actual.semana} de ${S.length} · ${esc(actual.fase)}${actual.descarga ? ' · descarga' : ''}</h2>
+    <div class="sub">${corta(actual.inicio)} – ${corta(actual.fin)} · ${actual.km} km planificados${antes ? '' : ` · ${kmHechos(actual).toFixed(1)} km corridos`}</div>
+    <div class="dias">${actual.sesiones.map(x => `<div class="dia${x.fecha === hoyISO ? ' hoy' : ''}"><div class="d">${x.dia} ${corta(x.fecha)}</div><div class="t">${esc(x.titulo)}</div>${tag(x.tipo)}<div style="margin-top:4px;color:var(--text-secondary)">${esc(x.detalle)}</div></div>`).join('')}</div>`;
+
+  // Gráfico de volumen
+  const faseIdx = s => plan.fases.findIndex(f => f.semanas[0] <= s.semana && s.semana <= f.semanas[1]);
+  const reales = S.map(s => s.inicio <= hoyISO ? +kmHechos(s).toFixed(1) : null);
+  const grid = css('--grid'), txt = css('--text-secondary');
+  new Chart(document.getElementById('cVol'), {
+    data:{labels:S.map(s => `S${s.semana}`), datasets:[
+      {type:'bar', label:'Plan', data:S.map(s => s.km), backgroundColor:S.map(s => css(COLOR_FASE[faseIdx(s)]) + (s.descarga ? '88' : '')), borderRadius:4, borderSkipped:'bottom', maxBarThickness:22, order:2},
+      {type:'line', label:'Real', data:reales, borderColor:css('--text-primary'), backgroundColor:css('--text-primary'), borderWidth:2, pointRadius:4, spanGaps:false, order:1}]},
+    options:{responsive:true, maintainAspectRatio:false, animation:false, interaction:{mode:'index', intersect:false},
+      plugins:{legend:{display:true, labels:{color:txt, usePointStyle:true, boxWidth:8}},
+        tooltip:{backgroundColor:css('--surface-1'), titleColor:css('--text-primary'), bodyColor:css('--text-primary'), borderColor:css('--border'), borderWidth:1,
+          callbacks:{title: it => { const s = S[it[0].dataIndex]; return `Semana ${s.semana} · ${corta(s.inicio)} · ${s.fase}${s.descarga ? ' (descarga)' : ''}`; },
+                     label: c => c.parsed.y == null ? null : `${c.dataset.label}: ${c.parsed.y} km`, afterBody: it => `Largo: ${S[it[0].dataIndex].largo_km || '—'} km`}}},
+      scales:{x:{grid:{display:false}, ticks:{color:txt, autoSkip:true, maxRotation:0}, border:{color:grid}}, y:{beginAtZero:true, grid:{color:grid}, ticks:{color:txt}, border:{display:false}, title:{display:true, text:'km', color:txt}}}}
+  });
+
+  // Todas las semanas
+  document.getElementById('semanas').innerHTML = S.map(s => `
+    <details class="sem"${s.semana === actual.semana ? ' open' : ''}>
+      <summary><b>Semana ${s.semana}</b><span>${corta(s.inicio)} – ${corta(s.fin)}</span><span class="sub">${esc(s.fase)}${s.descarga ? ' · descarga' : ''} · ${s.km} km · largo ${s.largo_km || '—'} km</span></summary>
+      <div class="lista">${s.sesiones.filter(x => x.tipo !== 'descanso').map(x => `<div class="ses"><b style="text-transform:capitalize">${x.dia} ${corta(x.fecha)}</b> · ${esc(x.titulo)} ${tag(x.tipo)}<br><span>${esc(x.detalle)}</span></div>`).join('')}</div>
+    </details>`).join('');
+
+  document.getElementById('principios').innerHTML = plan.principios.map(p => `<div style="margin-bottom:12px"><b>${esc(p.titulo)}.</b> ${esc(p.texto)}<div class="fuente">${esc(p.fuente)}</div></div>`).join('');
+  document.getElementById('regla').textContent = plan.regla_revision;
+  document.getElementById('revisiones').innerHTML = plan.revisiones.map(r => `<span class="tag" style="--c:var(${r <= hoyISO ? '--neutral' : '--series-1'});margin-right:6px">${corta(r)}${r <= hoyISO ? ' ✓' : ''}</span>`).join('');
+})();
+</script>
+</body>
+</html>
