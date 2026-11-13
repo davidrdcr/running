@@ -1,0 +1,5 @@
+serie,tipo,inicio,duracion_s,repeticiones,peso_kg,ejercicio,codigo_categoria
+1,activa,06:00:57,142.5,41,10.0,curl,7
+2,descanso,06:03:20,113.2,,,,
+3,activa,06:05:13,43.9,5,10.0,curl,7
+4,descanso,06:06:03,7.5,,,,
