@@ -39,7 +39,7 @@
     1,
     8
    ],
-   "objetivo": "Pasar de ~15 a ~30 km por semana casi todo en suave, crear el hábito de 3–4 salidas y fuerza 2 veces por semana. Es la fase que más va a cambiar tu eficiencia."
+   "objetivo": "Pasar de ~15 a ~30 km por semana casi todo en suave, crear el hábito de 3–4 salidas, con días reservados para tu fuerza. Es la fase que más va a cambiar tu eficiencia."
   },
   {
    "nombre": "Construcción",
@@ -89,7 +89,7 @@
   },
   {
    "titulo": "Fuerza 2 veces por semana",
-   "texto": "El entrenamiento de fuerza pesada o pliométrica mejora la economía de carrera (gastas menos energía al mismo ritmo) sin aumentar el peso corporal.",
+   "texto": "El entrenamiento de fuerza pesada o pliométrica mejora la economía de carrera (gastas menos energía al mismo ritmo) sin aumentar el peso corporal. El plan reserva los días; la rutina la decides tú.",
    "fuente": "Balsalobre-Fernández et al. 2016, J Strength Cond Res"
   },
   {
@@ -128,8 +128,8 @@
      "dia": "lun",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 35 min",
-     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2026-11-17",
@@ -160,8 +160,8 @@
      "dia": "vie",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 30 min",
-     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2026-11-21",
@@ -195,8 +195,8 @@
      "dia": "lun",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 35 min",
-     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2026-11-24",
@@ -227,8 +227,8 @@
      "dia": "vie",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 30 min",
-     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2026-11-28",
@@ -262,8 +262,8 @@
      "dia": "lun",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 35 min",
-     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2026-12-01",
@@ -294,8 +294,8 @@
      "dia": "vie",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 30 min",
-     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2026-12-05",
@@ -329,8 +329,8 @@
      "dia": "lun",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 35 min",
-     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2026-12-08",
@@ -361,8 +361,8 @@
      "dia": "vie",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 30 min",
-     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2026-12-12",
@@ -396,8 +396,8 @@
      "dia": "lun",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 35 min",
-     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2026-12-15",
@@ -428,8 +428,8 @@
      "dia": "vie",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 30 min",
-     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2026-12-19",
@@ -463,8 +463,8 @@
      "dia": "lun",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 35 min",
-     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2026-12-22",
@@ -495,8 +495,8 @@
      "dia": "vie",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 30 min",
-     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2026-12-26",
@@ -530,8 +530,8 @@
      "dia": "lun",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 35 min",
-     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2026-12-29",
@@ -562,8 +562,8 @@
      "dia": "vie",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 30 min",
-     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2027-01-02",
@@ -597,8 +597,8 @@
      "dia": "lun",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 35 min",
-     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2027-01-05",
@@ -629,8 +629,8 @@
      "dia": "vie",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 30 min",
-     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2027-01-09",
@@ -664,8 +664,8 @@
      "dia": "lun",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 35 min",
-     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2027-01-12",
@@ -696,8 +696,8 @@
      "dia": "vie",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 30 min",
-     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2027-01-16",
@@ -731,8 +731,8 @@
      "dia": "lun",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 35 min",
-     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2027-01-19",
@@ -763,8 +763,8 @@
      "dia": "vie",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 30 min",
-     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2027-01-23",
@@ -798,8 +798,8 @@
      "dia": "lun",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 35 min",
-     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2027-01-26",
@@ -830,8 +830,8 @@
      "dia": "vie",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 30 min",
-     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2027-01-30",
@@ -865,8 +865,8 @@
      "dia": "lun",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 35 min",
-     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2027-02-02",
@@ -897,8 +897,8 @@
      "dia": "vie",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 30 min",
-     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2027-02-06",
@@ -932,8 +932,8 @@
      "dia": "lun",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 35 min",
-     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2027-02-09",
@@ -964,8 +964,8 @@
      "dia": "vie",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 30 min",
-     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2027-02-13",
@@ -999,8 +999,8 @@
      "dia": "lun",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 35 min",
-     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2027-02-16",
@@ -1031,8 +1031,8 @@
      "dia": "vie",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 30 min",
-     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2027-02-20",
@@ -1066,8 +1066,8 @@
      "dia": "lun",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 35 min",
-     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2027-02-23",
@@ -1098,8 +1098,8 @@
      "dia": "vie",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 30 min",
-     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2027-02-27",
@@ -1133,8 +1133,8 @@
      "dia": "lun",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 35 min",
-     "detalle": "35 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2027-03-02",
@@ -1165,8 +1165,8 @@
      "dia": "vie",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 30 min",
-     "detalle": "30 min: sentadilla goblet, peso muerto rumano, zancadas, elevación de talones a una pierna, plancha y puente de glúteo; 3 series de 6–10 repeticiones. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2027-03-06",
@@ -1200,8 +1200,8 @@
      "dia": "lun",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 30 min",
-     "detalle": "30 min: mantenimiento: sentadilla, peso muerto rumano, elevación de talones, plancha; 2–3 series de 5–6 repeticiones pesadas. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2027-03-09",
@@ -1267,8 +1267,8 @@
      "dia": "lun",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 30 min",
-     "detalle": "30 min: mantenimiento: sentadilla, peso muerto rumano, elevación de talones, plancha; 2–3 series de 5–6 repeticiones pesadas. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2027-03-16",
@@ -1334,8 +1334,8 @@
      "dia": "lun",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 30 min",
-     "detalle": "30 min: mantenimiento: sentadilla, peso muerto rumano, elevación de talones, plancha; 2–3 series de 5–6 repeticiones pesadas. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2027-03-23",
@@ -1401,8 +1401,8 @@
      "dia": "lun",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 30 min",
-     "detalle": "30 min: mantenimiento: sentadilla, peso muerto rumano, elevación de talones, plancha; 2–3 series de 5–6 repeticiones pesadas. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2027-03-30",
@@ -1468,8 +1468,8 @@
      "dia": "lun",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 30 min",
-     "detalle": "30 min: mantenimiento: sentadilla, peso muerto rumano, elevación de talones, plancha; 2–3 series de 5–6 repeticiones pesadas. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2027-04-06",
@@ -1535,8 +1535,8 @@
      "dia": "lun",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 30 min",
-     "detalle": "30 min: mantenimiento: sentadilla, peso muerto rumano, elevación de talones, plancha; 2–3 series de 5–6 repeticiones pesadas. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2027-04-13",
@@ -1602,8 +1602,8 @@
      "dia": "lun",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 30 min",
-     "detalle": "30 min: mantenimiento: sentadilla, peso muerto rumano, elevación de talones, plancha; 2–3 series de 5–6 repeticiones pesadas. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2027-04-20",
@@ -1669,8 +1669,8 @@
      "dia": "lun",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 30 min",
-     "detalle": "30 min: mantenimiento: sentadilla, peso muerto rumano, elevación de talones, plancha; 2–3 series de 5–6 repeticiones pesadas. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2027-04-27",
@@ -1736,8 +1736,8 @@
      "dia": "lun",
      "tipo": "fuerza",
      "km": 0,
-     "titulo": "Fuerza 20 min",
-     "detalle": "20 min: solo activación: movilidad, puente de glúteo, plancha, elevación de talones; sin cargas pesadas. Pesado pero con buena técnica, sin llegar al fallo."
+     "titulo": "Fuerza (tu rutina)",
+     "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú."
     },
     {
      "fecha": "2027-05-04",
@@ -1929,6 +1929,10 @@
   {
    "fecha": "2026-11-13",
    "cambios": "Plan inicial (versión 1)."
+  },
+  {
+   "fecha": "2026-11-13",
+   "cambios": "La fuerza queda a cargo de David: el plan solo reserva los días."
   }
  ]
 }
