@@ -10,6 +10,7 @@ index.html               dashboard principal
 actividad.html           vista de cada actividad (mapa + datos segundo a segundo)
 dia.html                 vista de cada día (FC 24 h, estrés, Body Battery, sueño por fases, HRV, respiración)
 raw/fit/<id>.fit         archivos .FIT originales tal como salen del reloj (fuente de verdad)
+raw/actividades/<id>.json  resumen de cada actividad según Garmin Connect (nombre, tipo, etc.)
 raw/dias/AAAA-MM-DD/     respuesta cruda de Garmin por día: FC continua, estrés, Body Battery,
                          sueño por fases, HRV, SpO2, respiración, pasos, pisos, preparación, etc.
 data/
@@ -36,6 +37,8 @@ data/
 scripts/
   procesar_fit.py        regenera data/actividades/ a partir de raw/fit/
   procesar_dias.py       regenera data/dias/ y data/dias_detalle.csv a partir de raw/dias/
+  generar_tablas.py      genera actividades.csv, dias.csv, hoy.csv, predicciones.csv y el historial
+                         a partir de raw/ (lo único que no genera es consejo.json: eso lo escribe Claude)
   descargar_garmin.py    baja de Garmin Connect los días completos y los .FIT nuevos (corre en la PC)
 ```
 

@@ -213,8 +213,9 @@ function bar(id, labels, data, color, label, unit){
 
     // Recomendación
     const c = cons[0];
+    const pendiente = c && hoy.fecha && c.fecha < hoy.fecha;
     document.getElementById('consejo').innerHTML = c ? `
-      <div class="sub">Qué te toca hoy · ${esc(fmtFecha(c.fecha))}</div>
+      <div class="sub">${pendiente ? `Recomendación del ${esc(fmtFecha(c.fecha))} · los datos de hoy ya están arriba: pídele a Claude la de hoy` : `Qué te toca hoy · ${esc(fmtFecha(c.fecha))}`}</div>
       <h2>${esc(c.titulo)}</h2>
       <p>${esc(c.que_hacer)}</p>
       <div class="grid">

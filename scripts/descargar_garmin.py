@@ -106,8 +106,12 @@ def bajar_actividades(g, desde: date, hasta: date):
         acts = g.get_activities_by_date(desde.isoformat(), hasta.isoformat())
     except Exception as e:  # noqa: BLE001
         return 0, [f"lista de actividades: {type(e).__name__}"]
+    ACTS = RAIZ / "raw" / "actividades"
+    ACTS.mkdir(parents=True, exist_ok=True)
     for a in acts:
         aid = a.get("activityId")
+        if aid:
+            (ACTS / f"{aid}.json").write_text(json.dumps(a, ensure_ascii=False, separators=(",", ":")))
         destino = FIT / f"{aid}.fit"
         if not aid or destino.exists():
             continue
@@ -157,9 +161,10 @@ def main():
     if any(FIT.glob("*.fit")):
         subprocess.run([sys.executable, str(RAIZ / "scripts" / "procesar_fit.py")], check=False)
     subprocess.run([sys.executable, str(RAIZ / "scripts" / "procesar_dias.py")], check=False)
+    subprocess.run([sys.executable, str(RAIZ / "scripts" / "generar_tablas.py")], check=False)
 
     if args.push:
-        git("add", "raw", "data/actividades", "data/dias", "data/dias_detalle.csv")
+        git("add", "raw", "data")
         if git("diff", "--cached", "--quiet").returncode != 0:
             git("commit", "-m", f"Datos de Garmin hasta {hasta}")
             r = git("push")
