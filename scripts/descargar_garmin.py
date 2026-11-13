@@ -53,7 +53,7 @@ FUENTES = {
     "fc_reposo":          ("get_rhr_day",                     lambda f, d: f(d)),
     "hidratacion":        ("get_hydration_data",              lambda f, d: f(d)),
     "eventos":            ("get_all_day_events",              lambda f, d: f(d)),
-    "tolerancia_carrera": ("get_running_tolerance",           lambda f, d: f(d)),
+    "tolerancia_carrera": ("get_running_tolerance",           lambda f, d: f(d, d)),
 }
 
 
@@ -152,9 +152,10 @@ def main():
 
     if any(FIT.glob("*.fit")):
         subprocess.run([sys.executable, str(RAIZ / "scripts" / "procesar_fit.py")], check=False)
+    subprocess.run([sys.executable, str(RAIZ / "scripts" / "procesar_dias.py")], check=False)
 
     if args.push:
-        git("add", "raw", "data/actividades")
+        git("add", "raw", "data/actividades", "data/dias", "data/dias_detalle.csv")
         if git("diff", "--cached", "--quiet").returncode != 0:
             git("commit", "-m", f"Datos de Garmin hasta {hasta}")
             r = git("push")

@@ -126,6 +126,16 @@ footer{margin-top:24px;color:var(--text-muted);font-size:12px}
     <div class="chartbox"><canvas id="cMara"></canvas></div>
   </div>
   <div class="card">
+    <h2>Estrés promedio por día</h2>
+    <div class="sub">0–100 según Garmin; más bajo = más relajado</div>
+    <div class="chartbox"><canvas id="cEstres"></canvas></div>
+  </div>
+  <div class="card">
+    <h2>Body Battery por día</h2>
+    <div class="sub">Máximo y mínimo del día (0–100)</div>
+    <div class="chartbox"><canvas id="cBB"></canvas></div>
+  </div>
+  <div class="card">
     <h2>Pasos por día</h2>
     <div class="sub">Solo días completos</div>
     <div class="chartbox"><canvas id="cPasos"></canvas></div>
@@ -144,6 +154,7 @@ footer{margin-top:24px;color:var(--text-muted);font-size:12px}
 
 <section class="card">
   <h2>Días</h2>
+  <div class="sub"><a href="dia.html" style="color:var(--series-1)">Ver el detalle de cada día →</a> FC de las 24 h, estrés, Body Battery, sueño por fases, HRV, respiración y pasos</div>
   <details><summary>Ver tabla completa de sueño, HRV y pasos</summary>
     <div class="scroll"><table id="tDias"></table></div>
   </details>
@@ -285,13 +296,25 @@ function bar(id, labels, data, color, label, unit){
       new Chart(document.getElementById('cMara'), {type:'line', data:{labels:pm.map(d => fmtCorta(d.fecha)), datasets:[{label:'Maratón', data:pm.map(d => d.maraton_seg), borderColor:css('--series-1'), backgroundColor:css('--series-1'), borderWidth:2, pointRadius:5, tension:0}]}, options:o});
       document.getElementById('cMara').parentElement.insertAdjacentHTML('afterend', '<div class="sub">Eje invertido: más arriba = más rápido.</div>'); }
 
+    // Detalle diario (estrés y Body Battery)
+    const det = await csv('data/dias_detalle.csv').catch(() => []);
+    const detOk = det.filter(d => d.estres_prom !== null && d.bb_max !== null);
+    if (detOk.length) {
+      bar('cEstres', detOk.map(d => fmtCorta(d.fecha)), detOk.map(d => d.estres_prom), css('--series-4'), 'Estrés', '');
+      const o = baseOpts(); o.plugins.legend.display = true; o.scales.y.max = 100;
+      o.plugins.tooltip.callbacks = {label: c => `${c.dataset.label}: ${c.parsed.y}`};
+      new Chart(document.getElementById('cBB'), {type:'line', data:{labels:detOk.map(d => fmtCorta(d.fecha)), datasets:[
+        {label:'Máximo', data:detOk.map(d => d.bb_max), borderColor:css('--series-3'), backgroundColor:css('--series-3'), borderWidth:2, pointRadius:4, tension:.25},
+        {label:'Mínimo', data:detOk.map(d => d.bb_min), borderColor:css('--series-2'), backgroundColor:css('--series-2'), borderWidth:2, pointRadius:4, tension:.25}]}, options:o});
+    }
+
     // Tablas
     document.getElementById('tPred').innerHTML = '<tr><th>Distancia</th><th class="n">Tiempo</th><th class="n">Ritmo</th></tr>' +
       pred.map(p => `<tr><td>${esc(p.distancia)}</td><td class="n">${esc(p.tiempo)}</td><td class="n">${ritmo(p.ritmo_seg_km)}</td></tr>`).join('');
     document.getElementById('tAct').innerHTML = '<tr><th>Fecha</th><th>Hora</th><th>Actividad</th><th class="n">Km</th><th class="n">Min</th><th class="n">Ritmo</th><th class="n">FC prom</th><th class="n">FC máx</th><th class="n">kcal</th></tr>' +
       [...acts].reverse().map(a => `<tr><td>${esc(fmtFecha(a.fecha))}</td><td>${esc(a.hora)}</td><td><a href="actividad.html?id=${a.id}" style="color:var(--series-1)">${esc(a.tipo === 'carrera' ? 'Carrera · ' + a.nombre : a.nombre)}</a></td><td class="n">${a.km ?? '—'}</td><td class="n">${a.minutos}</td><td class="n">${a.ritmo_seg_km ? ritmo(a.ritmo_seg_km) : '—'}</td><td class="n">${a.fc_prom}</td><td class="n">${a.fc_max}</td><td class="n">${a.calorias}</td></tr>`).join('');
     document.getElementById('tDias').innerHTML = '<tr><th>Fecha</th><th>Dormir</th><th>Despertar</th><th class="n">Sueño h</th><th class="n">Siesta h</th><th class="n">Puntaje</th><th class="n">HRV</th><th class="n">FC rep.</th><th class="n">Pasos</th></tr>' +
-      [...dias].reverse().map(d => `<tr><td>${esc(fmtFecha(d.fecha))}</td><td>${d.acostarse ?? '—'}</td><td>${d.levantarse ?? '—'}</td><td class="n">${d.sueno_h ?? '—'}</td><td class="n">${d.siesta_h ?? '—'}</td><td class="n">${d.sueno_puntaje ?? '—'}</td><td class="n">${d.hrv_ms ?? '—'}</td><td class="n">${d.fc_reposo ?? '—'}</td><td class="n">${d.pasos !== null ? d.pasos.toLocaleString('es-PE') : '—'}</td></tr>`).join('');
+      [...dias].reverse().map(d => `<tr><td><a href="dia.html?fecha=${d.fecha}" style="color:var(--series-1)">${esc(fmtFecha(d.fecha))}</a></td><td>${d.acostarse ?? '—'}</td><td>${d.levantarse ?? '—'}</td><td class="n">${d.sueno_h ?? '—'}</td><td class="n">${d.siesta_h ?? '—'}</td><td class="n">${d.sueno_puntaje ?? '—'}</td><td class="n">${d.hrv_ms ?? '—'}</td><td class="n">${d.fc_reposo ?? '—'}</td><td class="n">${d.pasos !== null ? d.pasos.toLocaleString('es-PE') : '—'}</td></tr>`).join('');
   } catch (e) {
     document.getElementById('consejo').innerHTML = `<div class="err">No se pudieron cargar los datos: ${esc(e.message)}</div>`;
     console.error(e);

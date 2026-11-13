@@ -8,12 +8,16 @@ Página: https://davidrdcr.github.io/running/
 ```
 index.html               dashboard principal
 actividad.html           vista de cada actividad (mapa + datos segundo a segundo)
+dia.html                 vista de cada día (FC 24 h, estrés, Body Battery, sueño por fases, HRV, respiración)
 raw/fit/<id>.fit         archivos .FIT originales tal como salen del reloj (fuente de verdad)
 raw/dias/AAAA-MM-DD/     respuesta cruda de Garmin por día: FC continua, estrés, Body Battery,
                          sueño por fases, HRV, SpO2, respiración, pasos, pisos, preparación, etc.
 data/
   actividades.csv        resumen por actividad (km, ritmo, FC, minutos por zona)
   dias.csv               resumen por día (sueño, HRV, FC en reposo, pasos, VO2max)
+  dias_detalle.csv       ~45 métricas por día sacadas de raw/dias (estrés, Body Battery, calorías,
+                         minutos de intensidad, fases de sueño, respiración, carga, preparación...)
+  dias/AAAA-MM-DD.json   series del día listas para graficar (minutos desde las 00:00 de Lima)
   hoy.csv                estado del día (preparación, recuperación, carga, zonas)
   predicciones.csv       tiempos predichos por Garmin
   consejo.json           recomendación del día
@@ -28,6 +32,7 @@ data/
     <id>_sesion.json     todos los campos del resumen de la sesión del .FIT
 scripts/
   procesar_fit.py        regenera data/actividades/ a partir de raw/fit/
+  procesar_dias.py       regenera data/dias/ y data/dias_detalle.csv a partir de raw/dias/
   descargar_garmin.py    baja de Garmin Connect los días completos y los .FIT nuevos (corre en la PC)
 ```
 
@@ -36,7 +41,8 @@ scripts/
 ```python
 import pandas as pd
 act = pd.read_csv("data/actividades/25050170539.csv")
-dias = pd.read_csv("data/dias.csv", parse_dates=["fecha"])
+dias = pd.read_csv("data/dias_detalle.csv", parse_dates=["fecha"])
+fc_dia = pd.read_json("raw/dias/2026-11-12/fc.json", typ="series")  # crudo de Garmin
 ```
 
 Los .FIT de `raw/fit/` tienen todo lo que grabó el reloj (también mensajes que el
@@ -50,11 +56,12 @@ Si cambias `scripts/procesar_fit.py`, vuelve a correrlo para regenerar todas las
 Una vez:
 ```bash
 git clone https://github.com/davidrdcr/running ~/proyectos/running
-pip install garminconnect fitparse
-python ~/proyectos/running/scripts/descargar_garmin.py --push
+~/miniconda3/bin/conda create -y -n garmin python=3.12
+~/miniconda3/envs/garmin/bin/pip install garminconnect fitparse
+~/miniconda3/envs/garmin/bin/python ~/proyectos/running/scripts/descargar_garmin.py --push
 ```
 
 Para que corra solo dos veces al día (`crontab -e`):
 ```
-15 9,22 * * * cd ~/proyectos/running && python3 scripts/descargar_garmin.py --push >> ~/datasets/garmin/descarga.log 2>&1
+15 9,22 * * * cd ~/proyectos/running && ~/miniconda3/envs/garmin/bin/python scripts/descargar_garmin.py --push >> ~/datasets/garmin/descarga.log 2>&1
 ```

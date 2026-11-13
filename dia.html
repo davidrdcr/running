@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Día · Entrenamiento Garmin</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{
+  color-scheme:light;
+  --bg:#f5f5f3; --surface-1:#fcfcfb; --border:#e4e3df;
+  --text-primary:#0b0b0b; --text-secondary:#52514e; --text-muted:#7a7975; --grid:#ecebe7;
+  --series-1:#2a78d6; --series-2:#eb6834; --series-3:#1baf7a; --series-4:#eda100;
+  --profundo:#184f95; --ligero:#6da7ec; --rem:#e87ba4; --despierto:#eda100;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    color-scheme:dark;
+    --bg:#121211; --surface-1:#1a1a19; --border:#2c2c2a;
+    --text-primary:#f0efec; --text-secondary:#c3c2b7; --text-muted:#8f8e86; --grid:#2a2a28;
+    --series-1:#3987e5; --series-2:#d95926; --series-3:#199e70; --series-4:#c98500;
+    --profundo:#256abf; --ligero:#86b6ef; --rem:#d55181; --despierto:#c98500;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text-primary);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:1100px;margin:0 auto;padding:20px 16px 48px}
+a{color:var(--series-1)}
+header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px}
+h1{font-size:22px;margin:0}
+h2{font-size:16px;margin:0 0 4px}
+.sub{color:var(--text-secondary);font-size:13px}
+.nav{display:flex;gap:6px;align-items:center}
+select,button{font:inherit;padding:6px 10px;border-radius:8px;border:1px solid var(--border);background:var(--surface-1);color:var(--text-primary)}
+button{cursor:pointer}
+.card{background:var(--surface-1);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:16px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-bottom:16px}
+.tile{background:var(--surface-1);border:1px solid var(--border);border-radius:12px;padding:10px 14px}
+.tile .lbl{font-size:13px;color:var(--text-secondary)}
+.tile .val{font-size:24px;font-weight:650;line-height:1.2;margin-top:2px}
+.tile .val small{font-size:13px;font-weight:500;color:var(--text-secondary)}
+.charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,480px),1fr));gap:16px}
+.charts .card{margin:0}
+.chartbox{position:relative;height:200px;margin-top:6px}
+.chartbox.alto{height:160px}
+.leyenda{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:6px;font-size:13px;color:var(--text-secondary)}
+.dot{width:10px;height:10px;border-radius:2px;display:inline-block;vertical-align:middle;margin-right:4px}
+.vacio{color:var(--text-muted);font-size:14px;padding:12px 0}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div>
+    <div class="sub"><a href="./">← Volver al dashboard</a></div>
+    <h1 id="titulo">Día</h1>
+    <div class="sub">Todo lo que registró el reloj durante el día y la noche</div>
+  </div>
+  <div class="nav">
+    <button id="prev" aria-label="Día anterior">‹</button>
+    <select id="selector" aria-label="Elegir día"></select>
+    <button id="next" aria-label="Día siguiente">›</button>
+  </div>
+</header>
+
+<section class="tiles" id="tiles"></section>
+
+<section class="card" id="cardSueno">
+  <h2>Sueño por fases</h2>
+  <div class="sub" id="suenoSub"></div>
+  <div class="chartbox alto"><canvas id="cHipno"></canvas></div>
+  <div class="leyenda">
+    <span><span class="dot" style="background:var(--profundo)"></span>Profundo</span>
+    <span><span class="dot" style="background:var(--ligero)"></span>Ligero</span>
+    <span><span class="dot" style="background:var(--rem)"></span>REM</span>
+    <span><span class="dot" style="background:var(--despierto)"></span>Despierto</span>
+  </div>
+</section>
+
+<section class="charts" id="chartsSueno"></section>
+<h2 style="margin:20px 0 10px">Las 24 horas</h2>
+<section class="charts" id="charts24"></section>
+</main>
+
+<script>
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const bust = '?v=' + Date.now();
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const hhmm = m => { m = Math.round(m); m = ((m % 1440) + 1440) % 1440; return String(Math.floor(m/60)).padStart(2,'0') + ':' + String(m%60).padStart(2,'0'); };
+let charts = [], dias = [];
+
+function grafico(cont, titulo, sub, puntos, opts = {}){
+  const validos = (puntos || []).filter(p => p[1] != null);
+  const div = document.createElement('div'); div.className = 'card';
+  div.innerHTML = `<h2>${titulo}</h2><div class="sub">${sub}</div>` + (validos.length < 3 ? '<div class="vacio">Sin datos este día.</div>' : '<div class="chartbox"><canvas></canvas></div>');
+  cont.appendChild(div);
+  if (validos.length < 3) return;
+  const grid = css('--grid'), txt = css('--text-secondary');
+  const color = opts.color || css('--series-1');
+  const ds = {data:(puntos).map(p => ({x:p[0], y:p[1]})), borderColor:color, backgroundColor:opts.bar ? color : color + '22', borderWidth:1.5, pointRadius:0, pointHoverRadius:4, spanGaps:opts.spanGaps ?? 6, tension:0, fill:!!opts.fill, stepped:opts.stepped || false};
+  if (opts.bar) { ds.borderRadius = 2; ds.barPercentage = 1; ds.categoryPercentage = 1; }
+  const ch = new Chart(div.querySelector('canvas'), {
+    type: opts.bar ? 'bar' : 'line',
+    data:{datasets:[ds]},
+    options:{responsive:true, maintainAspectRatio:false, animation:false, parsing:true,
+      interaction:{mode:'nearest', axis:'x', intersect:false},
+      plugins:{legend:{display:false}, tooltip:{backgroundColor:css('--surface-1'), titleColor:css('--text-primary'), bodyColor:css('--text-primary'), borderColor:css('--border'), borderWidth:1,
+        callbacks:{title: it => hhmm(it[0].parsed.x), label: c => `${opts.nombre || titulo}: ${c.parsed.y}${opts.unidad ? ' ' + opts.unidad : ''}`}}},
+      scales:{x:{type:'linear', min:opts.xmin ?? 0, max:opts.xmax ?? 1440, grid:{display:false}, border:{color:grid},
+                ticks:{color:txt, stepSize:opts.paso || 180, callback:v => hhmm(v), maxRotation:0, autoSkip:true}},
+              y:{min:opts.ymin, max:opts.ymax, beginAtZero:!!opts.cero, grid:{color:grid}, border:{display:false}, ticks:{color:txt, maxTicksLimit:5}}}}
+  });
+  charts.push(ch);
+}
+
+async function cargar(fecha){
+  charts.forEach(c => c.destroy()); charts = [];
+  document.getElementById('selector').value = fecha;
+  history.replaceState(null, '', '?fecha=' + fecha);
+  const d = await fetch(`data/dias/${fecha}.json${bust}`).then(r => r.json());
+  const f = new Date(fecha + 'T12:00:00');
+  document.getElementById('titulo').textContent = f.toLocaleDateString('es-PE', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
+  const i = dias.indexOf(fecha);
+  document.getElementById('prev').disabled = i <= 0; document.getElementById('next').disabled = i >= dias.length - 1;
+
+  // Tiles
+  const r = d.resumen || {}, s = d.sueno_resumen || {};
+  const t = [];
+  const add = (l, v, u='') => { if (v !== null && v !== undefined && v !== '') t.push(`<div class="tile"><div class="lbl">${l}</div><div class="val">${v} <small>${u}</small></div></div>`); };
+  add('Sueño', s.sueno_h, 'h'); add('Puntaje de sueño', s.sueno_puntaje); add('HRV nocturno', s.hrv_noche, 'ms');
+  add('FC en reposo', r.fc_reposo, 'lpm'); add('FC mín / máx', r.fc_min != null ? `${r.fc_min}–${r.fc_max}` : null, 'lpm');
+  add('Estrés promedio', r.estres_prom); add('Body Battery', r.bb_min != null ? `${r.bb_min}–${r.bb_max}` : null);
+  add('Pasos', r.pasos != null ? r.pasos.toLocaleString('es-PE') : null); add('Calorías', r.kcal_total != null ? Math.round(r.kcal_total).toLocaleString('es-PE') : null, 'kcal');
+  add('Min. intensidad', r.min_moderados != null ? r.min_moderados + 2*(r.min_vigorosos||0) : null); add('Pisos', r.pisos_subidos);
+  add('Respiración despierto', r.resp_despierto, 'rpm');
+  document.getElementById('tiles').innerHTML = t.join('') || '<div class="sub">Sin resumen este día.</div>';
+
+  // Sueño
+  const sn = d.sueno;
+  document.getElementById('cardSueno').style.display = sn ? '' : 'none';
+  const cs = document.getElementById('chartsSueno'); cs.innerHTML = '';
+  if (sn) {
+    document.getElementById('suenoSub').textContent = `De ${hhmm(sn.inicio)} a ${hhmm(sn.fin)} · ${s.sueno_h} h (profundo ${s.profundo_h} h, ligero ${s.ligero_h} h, REM ${s.rem_h} h, despierto ${s.despierto_h} h)`;
+    const nivel = {profundo:0, ligero:1, rem:2, despierto:3}, etiqueta = ['Profundo','Ligero','REM','Despierto'], col = ['--profundo','--ligero','--rem','--despierto'];
+    const ds = sn.fases.map(([a,b,fz]) => ({label:fz, data:[{x:[a,b], y:etiqueta[nivel[fz]]}], backgroundColor:css(col[nivel[fz]] || '--grid'), borderRadius:2, barPercentage:.9, categoryPercentage:1}));
+    const grid = css('--grid'), txt = css('--text-secondary');
+    charts.push(new Chart(document.getElementById('cHipno'), {type:'bar', data:{labels:[...etiqueta].reverse(), datasets:ds},
+      options:{indexAxis:'y', responsive:true, maintainAspectRatio:false, animation:false, grouped:false,
+        plugins:{legend:{display:false}, tooltip:{backgroundColor:css('--surface-1'), titleColor:css('--text-primary'), bodyColor:css('--text-primary'), borderColor:css('--border'), borderWidth:1,
+          callbacks:{title: it => it[0].dataset.label, label: c => `${hhmm(c.raw.x[0])}–${hhmm(c.raw.x[1])} (${Math.round(c.raw.x[1]-c.raw.x[0])} min)`}}},
+        scales:{x:{type:'linear', min:sn.inicio, max:sn.fin, grid:{color:grid}, border:{display:false}, ticks:{color:txt, stepSize:60, callback:v => hhmm(v)}},
+                y:{stacked:true, grid:{display:false}, border:{color:grid}, ticks:{color:txt}}}}}));
+    const o = {xmin:sn.inicio, xmax:sn.fin, paso:60};
+    grafico(cs, 'FC durante el sueño', 'lpm', sn.fc, {...o, color:css('--series-2'), unidad:'lpm', nombre:'FC'});
+    grafico(cs, 'HRV durante el sueño', 'ms, lecturas cada 5 min', sn.hrv, {...o, unidad:'ms', nombre:'HRV'});
+    grafico(cs, 'Respiración durante el sueño', 'respiraciones por minuto', sn.respiracion, {...o, color:css('--series-3'), unidad:'rpm', nombre:'Respiración'});
+    grafico(cs, 'Movimiento durante el sueño', 'nivel de movimiento por minuto (más alto = más inquieto)', sn.movimiento, {...o, color:css('--series-4'), nombre:'Movimiento', fill:true, cero:true});
+  }
+
+  // 24 horas
+  const c24 = document.getElementById('charts24'); c24.innerHTML = '';
+  grafico(c24, 'Frecuencia cardíaca', 'lpm, cada 2 min', d.fc, {color:css('--series-2'), unidad:'lpm', nombre:'FC', spanGaps:false});
+  grafico(c24, 'Estrés', '0–100, cada 3 min (vacío = en actividad o sin reloj)', d.estres, {unidad:'', nombre:'Estrés', ymin:0, ymax:100, bar:true, color:css('--series-4')});
+  grafico(c24, 'Body Battery', '0–100', d.body_battery, {color:css('--series-3'), nombre:'Body Battery', ymin:0, ymax:100, fill:true});
+  grafico(c24, 'Respiración', 'respiraciones por minuto', d.respiracion, {color:css('--series-3'), unidad:'rpm', nombre:'Respiración'});
+  grafico(c24, 'Pasos', 'cada 15 min', (d.pasos || []).map(p => [p[0] + 7.5, p[1]]), {bar:true, nombre:'Pasos', cero:true});
+  if (d.pisos && d.pisos.some(p => p[1] > 0)) grafico(c24, 'Pisos subidos', 'cada 15 min', d.pisos.map(p => [p[0] + 7.5, p[1]]), {bar:true, nombre:'Pisos', cero:true, color:css('--series-4')});
+}
+
+(async () => {
+  dias = await fetch('data/dias/indice.json' + bust).then(r => r.json());
+  const sel = document.getElementById('selector');
+  sel.innerHTML = [...dias].reverse().map(f => `<option value="${f}">${new Date(f + 'T12:00:00').toLocaleDateString('es-PE', {weekday:'short', day:'numeric', month:'short'})}</option>`).join('');
+  sel.onchange = () => cargar(sel.value);
+  document.getElementById('prev').onclick = () => { const i = dias.indexOf(sel.value); if (i > 0) cargar(dias[i-1]); };
+  document.getElementById('next').onclick = () => { const i = dias.indexOf(sel.value); if (i < dias.length - 1) cargar(dias[i+1]); };
+  const pedido = new URLSearchParams(location.search).get('fecha');
+  cargar(dias.includes(pedido) ? pedido : dias[dias.length - 1]);
+})();
+</script>
+</body>
+</html>
