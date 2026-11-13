@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entrenamiento Garmin</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{
+  color-scheme:light;
+  --bg:#f5f5f3; --surface-1:#fcfcfb; --border:#e4e3df;
+  --text-primary:#0b0b0b; --text-secondary:#52514e; --text-muted:#7a7975;
+  --grid:#ecebe7;
+  --series-1:#2a78d6; --series-2:#eb6834; --series-3:#1baf7a; --series-4:#eda100;
+  --z1:#a3a29c; --z2:#2a78d6; --z3:#1baf7a; --z4:#eb6834; --z5:#e34948;
+  --good:#0ca30c; --warning:#fab219; --serious:#ec835a; --critical:#d03b3b;
+  --accent-bg:#eaf2fc;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    color-scheme:dark;
+    --bg:#121211; --surface-1:#1a1a19; --border:#2c2c2a;
+    --text-primary:#f0efec; --text-secondary:#c3c2b7; --text-muted:#8f8e86;
+    --grid:#2a2a28;
+    --series-1:#3987e5; --series-2:#d95926; --series-3:#199e70; --series-4:#c98500;
+    --z1:#8f8e86; --z2:#3987e5; --z3:#199e70; --z4:#d95926; --z5:#e66767;
+    --accent-bg:#1b2a3d;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text-primary);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:1100px;margin:0 auto;padding:20px 16px 48px}
+header{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:16px}
+h1{font-size:24px;margin:0}
+h2{font-size:16px;margin:0 0 4px}
+.sub{color:var(--text-secondary);font-size:13px}
+.card{background:var(--surface-1);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:16px}
+.consejo{background:var(--accent-bg)}
+.consejo h2{font-size:19px;margin-bottom:8px}
+.consejo .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px}
+.consejo .lbl{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--text-secondary)}
+.consejo p{margin:2px 0 0}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px}
+.tile{background:var(--surface-1);border:1px solid var(--border);border-radius:12px;padding:12px 14px}
+.tile .lbl{font-size:13px;color:var(--text-secondary)}
+.tile .val{font-size:28px;font-weight:650;line-height:1.2;margin-top:2px}
+.tile .val small{font-size:14px;font-weight:500;color:var(--text-secondary)}
+.tile .note{font-size:12px;color:var(--text-muted);margin-top:2px}
+.badge{display:inline-flex;align-items:center;gap:4px;font-size:12px;color:var(--text-secondary)}
+.dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+.charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,480px),1fr));gap:16px}
+.charts .card{margin:0}
+.chartbox{position:relative;height:240px;margin-top:8px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--border);white-space:nowrap}
+th{font-weight:600;color:var(--text-secondary);font-size:12px}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+.scroll{overflow-x:auto}
+.zonas{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:6px;font-size:14px}
+.zonas span b{font-variant-numeric:tabular-nums}
+details{margin-top:8px}
+summary{cursor:pointer;color:var(--text-secondary);font-size:13px}
+.err{color:var(--critical)}
+footer{margin-top:24px;color:var(--text-muted);font-size:12px}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div>
+    <h1>Entrenamiento Garmin</h1>
+    <div class="sub">Preparación para la maratón · Forerunner 570</div>
+  </div>
+  <div class="sub" id="actualizado"></div>
+</header>
+
+<section class="card consejo" id="consejo"><div class="sub">Cargando…</div></section>
+
+<section class="tiles" id="tiles"></section>
+
+<section class="card">
+  <h2>Tus zonas de FC (lpm)</h2>
+  <div class="zonas" id="zonas"></div>
+</section>
+
+<section class="charts">
+  <div class="card">
+    <h2>Sueño por noche</h2>
+    <div class="sub">Horas por fase; la fecha es el día en que despertaste</div>
+    <div class="chartbox"><canvas id="cSueno"></canvas></div>
+  </div>
+  <div class="card">
+    <h2>Puntaje de sueño</h2>
+    <div class="sub">0–100 según Garmin</div>
+    <div class="chartbox"><canvas id="cPuntaje"></canvas></div>
+  </div>
+  <div class="card">
+    <h2>HRV nocturno</h2>
+    <div class="sub">Promedio de la noche, en ms</div>
+    <div class="chartbox"><canvas id="cHrv"></canvas></div>
+  </div>
+  <div class="card">
+    <h2>FC en reposo</h2>
+    <div class="sub">lpm, medida durante el sueño</div>
+    <div class="chartbox"><canvas id="cRhr"></canvas></div>
+  </div>
+  <div class="card">
+    <h2>Kilómetros por semana</h2>
+    <div class="sub">Semanas de lunes a domingo</div>
+    <div class="chartbox"><canvas id="cKm"></canvas></div>
+  </div>
+  <div class="card">
+    <h2>Tiempo en cada zona por carrera</h2>
+    <div class="sub">Minutos; la meta es que la zona 2 crezca</div>
+    <div class="chartbox"><canvas id="cZonas"></canvas></div>
+  </div>
+  <div class="card">
+    <h2>Eficiencia aeróbica</h2>
+    <div class="sub">Metros por latido, solo rodajes con FC promedio bajo la zona 4. Más alto = mejor</div>
+    <div class="chartbox"><canvas id="cEfi"></canvas></div>
+  </div>
+  <div class="card">
+    <h2>Predicción de maratón</h2>
+    <div class="sub">Tiempo estimado por Garmin (h:mm)</div>
+    <div class="chartbox"><canvas id="cMara"></canvas></div>
+  </div>
+  <div class="card">
+    <h2>Pasos por día</h2>
+    <div class="sub">Solo días completos</div>
+    <div class="chartbox"><canvas id="cPasos"></canvas></div>
+  </div>
+  <div class="card">
+    <h2>Predicciones de carrera</h2>
+    <div class="scroll"><table id="tPred"></table></div>
+  </div>
+</section>
+
+<section class="card" style="margin-top:16px">
+  <h2>Actividades</h2>
+  <div class="scroll"><table id="tAct"></table></div>
+</section>
+
+<section class="card">
+  <h2>Días</h2>
+  <details><summary>Ver tabla completa de sueño, HRV y pasos</summary>
+    <div class="scroll"><table id="tDias"></table></div>
+  </details>
+</section>
+
+<footer>Datos copiados de Garmin Connect. No es consejo médico.</footer>
+</main>
+
+<script>
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const bust = '?v=' + Date.now();
+async function csv(path){
+  const t = await (await fetch(path + bust)).text();
+  const [head, ...rows] = t.trim().split('\n');
+  const cols = head.split(',');
+  return rows.map(r => { const v = r.split(','); const o = {}; cols.forEach((c,i)=>{ const x = (v[i]??'').trim(); o[c] = x === '' ? null : (isNaN(+x) || /:/.test(x) || /^\d{4}-/.test(x) ? x : +x); }); return o; });
+}
+const num = x => x === null || x === undefined ? null : +x;
+const fmtFecha = f => { const d = new Date(f + 'T12:00:00'); return d.toLocaleDateString('es-PE',{weekday:'short',day:'numeric',month:'short'}); };
+const fmtCorta = f => { const d = new Date(f + 'T12:00:00'); return d.toLocaleDateString('es-PE',{day:'numeric',month:'short'}); };
+const hms = s => { s = Math.round(s); const h = Math.floor(s/3600), m = Math.floor(s%3600/60), x = s%60; return h ? `${h}:${String(m).padStart(2,'0')}:${String(x).padStart(2,'0')}` : `${m}:${String(x).padStart(2,'0')}`; };
+const ritmo = s => s ? `${Math.floor(s/60)}:${String(Math.round(s%60)).padStart(2,'0')} /km` : '—';
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function baseOpts(extra = {}){
+  const grid = css('--grid'), txt = css('--text-secondary');
+  return Object.assign({
+    responsive:true, maintainAspectRatio:false, animation:false,
+    interaction:{mode:'index', intersect:false},
+    plugins:{ legend:{display:false, labels:{color:txt, boxWidth:10, boxHeight:10, usePointStyle:true}},
+      tooltip:{backgroundColor:css('--surface-1'), titleColor:css('--text-primary'), bodyColor:css('--text-primary'), borderColor:css('--border'), borderWidth:1, padding:10} },
+    scales:{ x:{grid:{display:false}, ticks:{color:txt, maxRotation:0, autoSkip:true}, border:{color:grid}},
+             y:{grid:{color:grid}, ticks:{color:txt}, border:{display:false}, beginAtZero:true} }
+  }, extra);
+}
+function line(id, labels, data, color, label, unit, yopts = {}){
+  const o = baseOpts();
+  Object.assign(o.scales.y, yopts);
+  o.plugins.tooltip.callbacks = {label: c => `${label}: ${c.parsed.y}${unit}`};
+  new Chart(document.getElementById(id), {type:'line', data:{labels, datasets:[{label, data, borderColor:color, backgroundColor:color, borderWidth:2, pointRadius:4, pointHoverRadius:6, spanGaps:true, tension:.25}]}, options:o});
+}
+function bar(id, labels, data, color, label, unit){
+  const o = baseOpts();
+  o.plugins.tooltip.callbacks = {label: c => `${label}: ${c.parsed.y.toLocaleString('es-PE')}${unit}`};
+  new Chart(document.getElementById(id), {type:'bar', data:{labels, datasets:[{label, data, backgroundColor:color, borderRadius:4, borderSkipped:'bottom', maxBarThickness:28}]}, options:o});
+}
+
+(async () => {
+  try {
+    const [dias, acts, hoyArr, pred, cons, meta] = await Promise.all([
+      csv('data/dias.csv'), csv('data/actividades.csv'), csv('data/hoy.csv'), csv('data/predicciones.csv'),
+      fetch('data/consejo.json' + bust).then(r => r.json()), fetch('data/meta.json' + bust).then(r => r.json()).catch(() => ({}))
+    ]);
+    const hoy = hoyArr[0] || {};
+    if (meta.actualizado) document.getElementById('actualizado').textContent = 'Actualizado: ' + new Date(meta.actualizado).toLocaleString('es-PE',{dateStyle:'medium', timeStyle:'short', timeZone:'America/Lima'});
+
+    // Recomendación
+    const c = cons[0];
+    document.getElementById('consejo').innerHTML = c ? `
+      <div class="sub">Qué te toca hoy · ${esc(fmtFecha(c.fecha))}</div>
+      <h2>${esc(c.titulo)}</h2>
+      <p>${esc(c.que_hacer)}</p>
+      <div class="grid">
+        <div><div class="lbl">Por qué</div><p>${esc(c.por_que)}</p></div>
+        <div><div class="lbl">Antes</div><p>${esc(c.antes)}</p></div>
+        <div><div class="lbl">Después</div><p>${esc(c.despues)}</p></div>
+        <div><div class="lbl">Si no te sientes bien</div><p>${esc(c.si_no)}</p></div>
+      </div>` : '<div class="sub">Sin recomendación.</div>';
+
+    // Tiles
+    const prep = num(hoy.preparacion);
+    const prepEstado = prep === null ? null : prep >= 75 ? ['good','Alta'] : prep >= 50 ? ['good','Moderada'] : prep >= 25 ? ['warning','Baja'] : ['critical','Muy baja'];
+    const ult = dias[dias.length - 1] || {};
+    const tiles = [
+      ['Preparación', prep ?? '—', '/100', prepEstado ? `<span class="badge"><span class="dot" style="background:var(--${prepEstado[0]})"></span>${prepEstado[1]}</span>` : ''],
+      ['Recuperación pendiente', hoy.recuperacion_h ?? '—', 'h', ''],
+      ['Sueño anoche', ult.sueno_h ?? '—', 'h', ult.sueno_puntaje ? `puntaje ${ult.sueno_puntaje}` : ''],
+      ['VO2max', hoy.vo2max ?? '—', '', ''],
+      ['Carga aguda', hoy.carga_aguda ?? '—', '', hoy.carga_optima_min ? `rango óptimo ${hoy.carga_optima_min}–${hoy.carga_optima_max}` : ''],
+      ['HRV semanal', hoy.hrv_semana_ms ?? '—', 'ms', ''],
+      ['FC en reposo', hoy.fc_reposo ?? '—', 'lpm', ''],
+      ['Body Battery cargado', hoy.body_battery_cargado ?? '—', '', 'durante la noche'],
+    ];
+    document.getElementById('tiles').innerHTML = tiles.map(([l,v,u,n]) => `<div class="tile"><div class="lbl">${l}</div><div class="val">${v} <small>${u}</small></div><div class="note">${n}</div></div>`).join('');
+
+    // Zonas
+    if (hoy.z2_desde) {
+      const z2 = hoy.z2_desde, z3 = hoy.z2_hasta + 1, z4 = hoy.z4_desde;
+      document.getElementById('zonas').innerHTML = `
+        <span><span class="dot" style="background:var(--z1)"></span> Zona 1: <b>bajo ${z2}</b></span>
+        <span><span class="dot" style="background:var(--z2)"></span> Zona 2: <b>${z2}–${z3-1}</b></span>
+        <span><span class="dot" style="background:var(--z3)"></span> Zona 3: <b>${z3}–${z4-1}</b></span>
+        <span><span class="dot" style="background:var(--z4)"></span> Zona 4 o más: <b>desde ${z4}</b></span>`;
+    }
+
+    const L = dias.map(d => fmtCorta(d.fecha));
+
+    // Sueño apilado
+    { const o = baseOpts(); o.plugins.legend.display = true; o.scales.x.stacked = true; o.scales.y.stacked = true;
+      o.plugins.tooltip.callbacks = {label: c => `${c.dataset.label}: ${c.parsed.y ?? 0} h`, footer: items => { const i = items[0].dataIndex; const d = dias[i]; return d.acostarse ? `Dormiste ${d.acostarse}–${d.levantarse} · total ${d.sueno_h} h` : ''; }};
+      const ds = (label, key, color) => ({label, data:dias.map(d => d[key]), backgroundColor:color, borderColor:css('--surface-1'), borderWidth:{top:2}, borderSkipped:'bottom', maxBarThickness:28});
+      new Chart(document.getElementById('cSueno'), {type:'bar', data:{labels:L, datasets:[ds('Profundo','profundo_h',css('--series-1')), ds('Ligero','ligero_h',css('--series-2')), ds('REM','rem_h',css('--series-3')), ds('Siesta','siesta_h',css('--series-4'))]}, options:o}); }
+
+    line('cPuntaje', L, dias.map(d => d.sueno_puntaje), css('--series-1'), 'Puntaje', '', {max:100});
+    line('cHrv', L, dias.map(d => d.hrv_ms), css('--series-1'), 'HRV', ' ms', {beginAtZero:false});
+    line('cRhr', L, dias.map(d => d.fc_reposo), css('--series-1'), 'FC en reposo', ' lpm', {beginAtZero:false});
+
+    const conPasos = dias.filter(d => d.pasos !== null);
+    bar('cPasos', conPasos.map(d => fmtCorta(d.fecha)), conPasos.map(d => d.pasos), css('--series-1'), 'Pasos', '');
+
+    // Km por semana
+    const carreras = acts.filter(a => a.tipo === 'carrera');
+    const lunes = f => { const d = new Date(f + 'T12:00:00'); const k = (d.getDay() + 6) % 7; d.setDate(d.getDate() - k); return d.toISOString().slice(0,10); };
+    const semanas = {};
+    carreras.forEach(a => { const s = lunes(a.fecha); semanas[s] = (semanas[s] || 0) + (a.km || 0); });
+    const sk = Object.keys(semanas).sort();
+    bar('cKm', sk.map(s => 'Sem. ' + fmtCorta(s)), sk.map(s => +semanas[s].toFixed(2)), css('--series-1'), 'Km', ' km');
+
+    // Zonas por carrera
+    { const o = baseOpts(); o.plugins.legend.display = true; o.scales.x.stacked = true; o.scales.y.stacked = true;
+      o.plugins.tooltip.callbacks = {label: c => `${c.dataset.label}: ${c.parsed.y ?? 0} min`};
+      const lab = carreras.map(a => `${fmtCorta(a.fecha)} · ${a.km} km`);
+      const ds = (n) => ({label:'Zona ' + n, data:carreras.map(a => a['z'+n+'_min']), backgroundColor:css('--z'+n), borderColor:css('--surface-1'), borderWidth:{top:2}, borderSkipped:'bottom', maxBarThickness:36});
+      new Chart(document.getElementById('cZonas'), {type:'bar', data:{labels:lab, datasets:[1,2,3,4,5].map(ds)}, options:o}); }
+
+    // Eficiencia
+    { const z4 = hoy.z4_desde || 999;
+      const rod = carreras.filter(a => a.km && a.ritmo_seg_km && a.fc_prom && a.fc_prom < z4);
+      const o = baseOpts(); o.scales.y.beginAtZero = false;
+      o.plugins.tooltip.callbacks = {label: c => { const a = rod[c.dataIndex]; return [`${c.parsed.y.toFixed(2)} m por latido`, `${a.km} km a ${ritmo(a.ritmo_seg_km)}, FC ${a.fc_prom}`]; }};
+      new Chart(document.getElementById('cEfi'), {type:'line', data:{labels:rod.map(a => fmtCorta(a.fecha)), datasets:[{label:'Eficiencia', data:rod.map(a => +((60000/a.ritmo_seg_km)/a.fc_prom).toFixed(3)), borderColor:css('--series-1'), backgroundColor:css('--series-1'), borderWidth:2, pointRadius:5, pointHoverRadius:7, tension:.25}]}, options:o});
+      if (rod.length < 2) document.getElementById('cEfi').parentElement.insertAdjacentHTML('afterend', `<div class="sub">${rod.length} rodaje suave hasta ahora; la tendencia aparecerá con más.</div>`); }
+
+    // Predicción maratón
+    { const pm = dias.filter(d => d.maraton_seg);
+      const o = baseOpts(); o.scales.y.beginAtZero = false; o.scales.y.reverse = true;
+      o.scales.y.ticks.callback = v => hms(v); o.scales.y.ticks.maxTicksLimit = 6;
+      o.plugins.tooltip.callbacks = {label: c => 'Maratón: ' + hms(c.parsed.y)};
+      new Chart(document.getElementById('cMara'), {type:'line', data:{labels:pm.map(d => fmtCorta(d.fecha)), datasets:[{label:'Maratón', data:pm.map(d => d.maraton_seg), borderColor:css('--series-1'), backgroundColor:css('--series-1'), borderWidth:2, pointRadius:5, tension:0}]}, options:o});
+      document.getElementById('cMara').parentElement.insertAdjacentHTML('afterend', '<div class="sub">Eje invertido: más arriba = más rápido.</div>'); }
+
+    // Tablas
+    document.getElementById('tPred').innerHTML = '<tr><th>Distancia</th><th class="n">Tiempo</th><th class="n">Ritmo</th></tr>' +
+      pred.map(p => `<tr><td>${esc(p.distancia)}</td><td class="n">${esc(p.tiempo)}</td><td class="n">${ritmo(p.ritmo_seg_km)}</td></tr>`).join('');
+    document.getElementById('tAct').innerHTML = '<tr><th>Fecha</th><th>Hora</th><th>Actividad</th><th class="n">Km</th><th class="n">Min</th><th class="n">Ritmo</th><th class="n">FC prom</th><th class="n">FC máx</th><th class="n">kcal</th></tr>' +
+      [...acts].reverse().map(a => `<tr><td>${esc(fmtFecha(a.fecha))}</td><td>${esc(a.hora)}</td><td>${esc(a.tipo === 'carrera' ? 'Carrera · ' + a.nombre : a.nombre)}</td><td class="n">${a.km ?? '—'}</td><td class="n">${a.minutos}</td><td class="n">${a.ritmo_seg_km ? ritmo(a.ritmo_seg_km) : '—'}</td><td class="n">${a.fc_prom}</td><td class="n">${a.fc_max}</td><td class="n">${a.calorias}</td></tr>`).join('');
+    document.getElementById('tDias').innerHTML = '<tr><th>Fecha</th><th>Dormir</th><th>Despertar</th><th class="n">Sueño h</th><th class="n">Siesta h</th><th class="n">Puntaje</th><th class="n">HRV</th><th class="n">FC rep.</th><th class="n">Pasos</th></tr>' +
+      [...dias].reverse().map(d => `<tr><td>${esc(fmtFecha(d.fecha))}</td><td>${d.acostarse ?? '—'}</td><td>${d.levantarse ?? '—'}</td><td class="n">${d.sueno_h ?? '—'}</td><td class="n">${d.siesta_h ?? '—'}</td><td class="n">${d.sueno_puntaje ?? '—'}</td><td class="n">${d.hrv_ms ?? '—'}</td><td class="n">${d.fc_reposo ?? '—'}</td><td class="n">${d.pasos !== null ? d.pasos.toLocaleString('es-PE') : '—'}</td></tr>`).join('');
+  } catch (e) {
+    document.getElementById('consejo').innerHTML = `<div class="err">No se pudieron cargar los datos: ${esc(e.message)}</div>`;
+    console.error(e);
+  }
+})();
+</script>
+</body>
+</html>
