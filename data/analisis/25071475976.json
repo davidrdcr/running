@@ -1,0 +1,27 @@
+{
+ "id": "25071475976",
+ "fecha": "2026-11-13",
+ "escrito": "2026-11-14",
+ "veredicto": "Tu mejor salida hasta ahora: récord de distancia y, por primera vez, sin un final a fondo. Lo que falta es correrla más suave.",
+ "resumen": "8,92 km en 64,5 min a 7:14/km con 153 lpm de media y 174 de máxima. Efecto aeróbico 3,3 y anaeróbico 0,0: puro trabajo de base, sin el sprint que te costó un día de recuperación el 11. El pero es la intensidad: solo 6 de los 65 minutos estuvieron bajo 145 lpm, y la sesión pedía todo el rodaje por debajo de esa FC.",
+ "lo_bueno": [
+  "8,9 km: casi 2 km más que tu récord anterior, y 64 min en movimiento sin caminar casi nada (91% trotando).",
+  "Efecto anaeróbico 0,0: terminaste con un km más fuerte (165 lpm) en lugar de un sprint a 188. Esa es la diferencia entre sumar base y pagar un día de recuperación.",
+  "Arrancaste perfecto: el km 1 a 7:06 con 136 lpm de media. Ese es exactamente el pulso al que debería ir todo el rodaje."
+ ],
+ "a_mejorar": [
+  "Del km 2 en adelante la FC se quedó en 151–156 lpm y ya no bajó: 40 min en la franja de ritmo maratón cuando el día pedía suave (bajo 145).",
+  "Desacople de 9,2% entre la primera y la segunda mitad (misma velocidad, 6 lpm más): base aeróbica todavía fina, y 29 °C no ayudan.",
+  "Cadencia de 162 ppm trotando: mejor que los 159 del martes, pero aún te conviene acercarte a 168–170 con pasos más cortos."
+ ],
+ "datos": [
+  {"etiqueta": "Distancia", "valor": "8,92 km (récord)"},
+  {"etiqueta": "Ritmo / FC media", "valor": "7:14 /km, 153 lpm (máx 174)"},
+  {"etiqueta": "Tiempo bajo 145 lpm", "valor": "6 min de 65 (9%)"},
+  {"etiqueta": "Efecto aeróbico / anaeróbico", "valor": "3,3 / 0,0"},
+  {"etiqueta": "Desacople cardíaco (km 0–7)", "valor": "9,2%"},
+  {"etiqueta": "Cadencia trotando", "valor": "162 ppm"},
+  {"etiqueta": "Temperatura", "valor": "29 °C, salida 20:43"}
+ ],
+ "para_la_proxima": "Para que un rodaje suave se quede bajo 145 lpm hay que salir más lento de lo que te pide el cuerpo y aceptar 7:40–8:00 /km: el km 1 de esta salida (136 lpm) es tu referencia, no el km 3. Con alerta de FC a 145 y 1 min caminando cada vez que suene, el mismo recorrido te deja la mitad del cansancio."
+}
