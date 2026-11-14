@@ -1,0 +1,127 @@
+{
+ "timestamp": "2026-11-14T01:43:35+00:00",
+ "start_time": "2026-11-14T01:43:35+00:00",
+ "start_position_lat": -144039855,
+ "start_position_long": -919634422,
+ "total_elapsed_time": 4034.025,
+ "total_timer_time": 3870.998,
+ "total_distance": 8916.87,
+ "total_strides": 4964,
+ "nec_lat": -144038673,
+ "nec_long": -919564579,
+ "swc_lat": -144293050,
+ "swc_long": -919802582,
+ "unknown_38": -144052071,
+ "unknown_39": -919634863,
+ "total_work": 908676,
+ "unknown_110": "Carrera",
+ "avg_left_power_phase": [
+  null,
+  null,
+  null,
+  null
+ ],
+ "avg_left_power_phase_peak": [
+  null,
+  null,
+  null,
+  null
+ ],
+ "avg_right_power_phase": [
+  null,
+  null,
+  null,
+  null
+ ],
+ "avg_right_power_phase_peak": [
+  null,
+  null,
+  null,
+  null
+ ],
+ "avg_power_position": [
+  null,
+  null
+ ],
+ "max_power_position": [
+  null,
+  null
+ ],
+ "enhanced_avg_speed": 2.304,
+ "enhanced_max_speed": 3.536,
+ "unknown_152": 0,
+ "unknown_168": 6076973,
+ "unknown_211": 2295,
+ "message_index": 0,
+ "total_calories": 708,
+ "avg_power": 234,
+ "max_power": 358,
+ "total_ascent": 35,
+ "total_descent": 38,
+ "first_lap_index": 0,
+ "num_laps": 1,
+ "normalized_power": 249,
+ "avg_vertical_oscillation": 86.3,
+ "avg_stance_time": 282.5,
+ "avg_vertical_ratio": 9.62,
+ "avg_step_length": 901.5,
+ "unknown_151": 0,
+ "unknown_178": 1025,
+ "unknown_196": 90,
+ "event": "session",
+ "event_type": "stop",
+ "sport": "running",
+ "sub_sport": "generic",
+ "avg_heart_rate": 153,
+ "max_heart_rate": 174,
+ "avg_running_cadence": 75,
+ "max_running_cadence": 89,
+ "total_training_effect": 3.3,
+ "trigger": "activity_end",
+ "avg_temperature": 29,
+ "max_temperature": 31,
+ "unknown_81": 0,
+ "avg_fractional_cadence": 0.4531,
+ "max_fractional_cadence": 0.5,
+ "unknown_109": 0,
+ "avg_cadence_position": [
+  null,
+  null
+ ],
+ "max_cadence_position": [
+  null,
+  null
+ ],
+ "total_anaerobic_training_effect": 0.0,
+ "unknown_138": [
+  2,
+  0
+ ],
+ "unknown_150": 27,
+ "unknown_184": 0,
+ "unknown_188": 3,
+ "unknown_192": 75,
+ "unknown_193": 30,
+ "unknown_212": 1,
+ "_deporte": {
+  "name": "Carrera",
+  "unknown_10": [
+   248,
+   0,
+   72,
+   null
+  ],
+  "sport": "running",
+  "sub_sport": "generic",
+  "unknown_5": 1,
+  "unknown_6": 0,
+  "unknown_9": 0,
+  "unknown_13": 0,
+  "unknown_15": 1,
+  "unknown_19": [
+   null,
+   null,
+   null
+  ]
+ }
+}
