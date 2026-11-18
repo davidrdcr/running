@@ -1,0 +1,26 @@
+{
+ "id": "25115575431",
+ "fecha": "2026-11-17",
+ "escrito": "2026-11-18",
+ "veredicto": "Rodaje limpio y controlado, sin un solo pico, pero casi el doble de lo que pedía el plan y otra vez en ritmo maratón en vez de suave.",
+ "resumen": "7,27 km en 50,6 min a 6:58/km con 148 lpm de media y 158 de máxima, a 30 °C. Efecto aeróbico 3,0 y anaeróbico 0,0: cero sprint. Pero el plan pedía 4 km bajo 145 lpm, y solo 6 de los 51 minutos estuvieron por debajo de esa FC.",
+ "lo_bueno": [
+  "FC máxima de 158: la más baja de tus tres últimas salidas y sin ningún arreón final (en esta misma ruta el 11 terminaste a 188 lpm).",
+  "Mismo recorrido de Los Olivos que el 11, 8 s/km más rápido (6:58 frente a 7:06) con la misma FC media: señal temprana de que la base está respondiendo.",
+  "Ritmo muy parejo del km 2 al 5 (6:58–7:08) y 98% del tiempo trotando, sin paradas."
+ ],
+ "a_mejorar": [
+  "Volumen: 7,3 km cuando tocaban 4. A dos días del test de umbral, lo útil era llegar fresco, no sumar kilómetros.",
+  "Intensidad: 36 min entre 148 y 158 lpm (zona de ritmo maratón). Es la tercera salida seguida en la que el 'suave' se va por encima de 145.",
+  "Cadencia de 160 ppm trotando, un poco por debajo de los 162 del día 13; con 30 °C, pasos más cortos y rápidos te habrían ahorrado pulsaciones."
+ ],
+ "datos": [
+  {"etiqueta": "Distancia / plan", "valor": "7,27 km (plan: 4 km)"},
+  {"etiqueta": "Ritmo / FC media", "valor": "6:58 /km, 148 lpm (máx 158)"},
+  {"etiqueta": "Tiempo bajo 145 lpm", "valor": "6 min de 51 (12%)"},
+  {"etiqueta": "Efecto aeróbico / anaeróbico", "valor": "3,0 / 0,0"},
+  {"etiqueta": "Desacople cardíaco (desde 0,5 km)", "valor": "5,9% (148 → 152 lpm, algo más lento)"},
+  {"etiqueta": "Temperatura", "valor": "30 °C (hasta 32), salida 21:06"}
+ ],
+ "para_la_proxima": "El km 1 a 7:54 con 136 lpm es tu ritmo suave real con este calor; el salto a 7:05 en el km 2 fue lo que te subió a 147 y ya no bajó. En los rodajes suaves, bloquea ese primer ritmo durante todo el recorrido y corta en la distancia del plan aunque te sientas bien: el día suave sirve para que el día fuerte salga fuerte."
+}
