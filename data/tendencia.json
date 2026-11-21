@@ -1,15 +1,39 @@
 {
- "fecha": "2026-11-13",
- "periodo": "3 al 13 de noviembre de 2026 (11 días con el reloj)",
- "titulo": "Aún es pronto para decir que mejoras, pero ya hay dos señales buenas y un freno muy claro",
- "texto": "Con 11 días de datos esto es tu línea de base, no una tendencia. Lo prometedor: corres igual de rápido con menos pulso y tu FC en reposo va bajando. Lo que te frena no es el entrenamiento sino el sueño, y que casi todo lo corres demasiado fuerte. Si en diciembre duermes más y el 80% de tus salidas es suave, la mejora se va a notar en los números.",
+ "fecha": "2026-11-21",
+ "periodo": "3 al 20 de noviembre de 2026 (18 días con el reloj; primera semana del plan)",
+ "titulo": "Ya tienes zonas reales y duermes algo mejor; la tarea pendiente sigue siendo correr suave",
+ "texto": "Con menos de tres semanas de datos y solo cinco días de plan, todavía no se puede hablar de mejora física: VO2max, FC en reposo y HRV están estables. Lo importante de esta revisión es el test: tu FC de umbral es 172 lpm, así que todas las zonas suben 3–4 lpm. El sueño mejoró (de 4,5 a 5,6 h de media), pero en los rodajes 'suaves' sigues pasando la mayor parte del tiempo por encima de la zona suave.",
  "puntos": [
-  {"tendencia": "mejora", "titulo": "Eficiencia", "texto": "El 8 de noviembre corriste a 5:14/km con 158 lpm; el 3 de noviembre, a 5:16/km con 166 lpm. Mismo ritmo con 8 lpm menos: ~5% más eficiente."},
-  {"tendencia": "mejora", "titulo": "FC en reposo", "texto": "De 53–56 lpm en los primeros días a 48–49 lpm en los últimos. Ojo: las primeras noches con un reloj nuevo suelen ser menos precisas."},
-  {"tendencia": "estable", "titulo": "VO2max", "texto": "53,3 → 53,8. Cambios menores a 0,5 son ruido; hay que mirarlo en bloques de 4–6 semanas."},
-  {"tendencia": "alerta", "titulo": "Sueño", "texto": "4,5 h de media; 7 de 11 noches bajo 5 h y ninguna de 7 h. Es tu mayor limitante: con este sueño, el cuerpo no termina de asimilar el entrenamiento."},
-  {"tendencia": "alerta", "titulo": "Intensidad", "texto": "3 de tus 4 carreras fueron casi enteras en zona 4–5: el 56% de tu tiempo corriendo fue fuerte. La meta del plan es ~80% suave."},
-  {"tendencia": "estable", "titulo": "Volumen", "texto": "~15 km por semana en 3 salidas de 4–7 km. Es un buen punto de partida: el plan lo lleva a ~30 km en enero."}
+  {
+   "tendencia": "estable",
+   "titulo": "Umbral medido",
+   "texto": "30 min a 5:11 /km con 172 lpm en los últimos 20 min. Es tu línea de base, no una mejora todavía: en el test de 10K de la semana 12 la señal de progreso será ir más rápido con la misma FC."
+  },
+  {
+   "tendencia": "mejora",
+   "titulo": "Sueño",
+   "texto": "De 4,5 h de media (3–13 nov) a 5,6 h (14–20 nov), con una noche de 9,5 h. Aún solo 1 de 6 noches llegó a 7 h: sigue siendo tu mayor margen."
+  },
+  {
+   "tendencia": "estable",
+   "titulo": "FC en reposo y HRV",
+   "texto": "FC en reposo de 52 a 51 lpm de media y HRV de 46 a 48 ms entre las dos mitades del periodo. Diferencias dentro del ruido normal."
+  },
+  {
+   "tendencia": "estable",
+   "titulo": "VO2max",
+   "texto": "53,3 → 53,4 (con un pico de 53,8). Hay que mirarlo en bloques de 4–6 semanas."
+  },
+  {
+   "tendencia": "alerta",
+   "titulo": "Intensidad de los rodajes",
+   "texto": "Con la nueva zona suave (bajo 148 lpm), el rodaje del 17 estuvo solo 30% del tiempo en suave y el del 13, 16%. La meta es que casi todo el rodaje esté bajo 148."
+  },
+  {
+   "tendencia": "estable",
+   "titulo": "Volumen",
+   "texto": "Semana 1: 14,6 km hasta el viernes (plan: 18 km con el largo del domingo). Vas en línea; el plan de volumen no cambia."
+  }
  ],
  "proxima_revision": "2026-12-13"
 }

@@ -1,37 +1,37 @@
 {
  "creado": "2026-11-13",
- "version": 1,
+ "version": 2,
  "objetivo": {
   "carrera": "Maratón adidas RÍMAC Lima 42K",
   "fecha": "2027-05-23",
   "lugar": "Lima (salida en Miraflores)",
   "meta": "Terminar fuerte y sin lesiones. Meta tentativa: 3:55–4:10 (5:35–5:55 /km). Se fija en abril con la media maratón de prueba.",
-  "nota_meta": "La predicción de Garmin (3:56) supone un volumen que aún no tienes: con ~15 km/semana hoy, cualquier meta se define con datos reales del bloque específico."
+  "nota_meta": "La predicción de Garmin supone un volumen que aún no tienes. El test del 20 nov (umbral a 5:11 /km) es compatible con 3:55–4:10 si el volumen llega a ~50–60 km/semana; la meta se fija con la media maratón de abril."
  },
  "punto_de_partida": "Al 13 nov 2026: ~15 km/semana en 3 salidas de 4–7 km, casi todas en zona 4–5; VO2max 53,8; FC en reposo 48–53 lpm; sueño medio 4,5 h.",
  "zonas": [
   {
    "nombre": "Suave",
-   "fc": "bajo 145 lpm",
+   "fc": "bajo 148 lpm",
    "uso": "Rodajes y largos (≈80% del tiempo). Debes poder hablar en frases completas."
   },
   {
    "nombre": "Ritmo maratón",
-   "fc": "148–158 lpm",
+   "fc": "151–162 lpm",
    "uso": "Tramos específicos desde la semana 17."
   },
   {
    "nombre": "Umbral",
-   "fc": "160–168 lpm",
+   "fc": "163–172 lpm",
    "uso": "Bloques de 6–25 min, una vez por semana desde la semana 9."
   },
   {
    "nombre": "Intervalos",
-   "fc": "170+ lpm",
+   "fc": "174+ lpm",
    "uso": "Repeticiones de 1–1,6 km en la fase específica."
   }
  ],
- "nota_zonas": "Provisionales: estimadas con tus salidas rápidas (FC de 165–170 sostenida ~20 min). Se recalibran con el test de umbral del jueves 19 de noviembre. Estas zonas, no las de Garmin por % de FC máxima, son las que usa el plan.",
+ "nota_zonas": "Calibradas con el test de umbral del viernes 20 de noviembre: 30 min a 5:11 /km con una FC media de 172 lpm en los últimos 20 min (FC de umbral, FCU). Suave < 86% de la FCU, ritmo maratón 88–94%, umbral 95–100%, intervalos > 101%. Se vuelven a revisar con el test de 10K de la semana 12. Estas zonas, no las de Garmin por % de FC máxima, son las que usa el plan.",
  "fases": [
   {
    "nombre": "Base aeróbica",
@@ -150,18 +150,18 @@
     {
      "fecha": "2026-11-19",
      "dia": "jue",
-     "tipo": "calidad",
-     "km": 6,
-     "titulo": "Test de umbral 30 min",
-     "detalle": "15 min suaves de calentamiento. Luego 30 min al máximo esfuerzo que puedas sostener de forma pareja (como una carrera de 30 min, sin salir fuerte). Pulsa vuelta a los 10 min: la FC media de los últimos 20 min es tu FC de umbral. Con ese dato recalibro todas las zonas. 10 min suaves de vuelta a la calma."
-    },
-    {
-     "fecha": "2026-11-20",
-     "dia": "vie",
      "tipo": "fuerza",
      "km": 0,
      "titulo": "Fuerza (tu rutina)",
      "detalle": "Día reservado para tu rutina de fuerza: el contenido lo decides tú. A tu criterio: no se registra ni se evalúa."
+    },
+    {
+     "fecha": "2026-11-20",
+     "dia": "vie",
+     "tipo": "calidad",
+     "km": 6,
+     "titulo": "Test de umbral 30 min",
+     "detalle": "15 min suaves de calentamiento. Luego 30 min al máximo esfuerzo que puedas sostener de forma pareja (como una carrera de 30 min, sin salir fuerte). Pulsa vuelta a los 10 min: la FC media de los últimos 20 min es tu FC de umbral. Con ese dato recalibro todas las zonas. 10 min suaves de vuelta a la calma. Hecho el viernes 20: 10 min suaves + 30 min de test. Resultado: FC de umbral 172 lpm a 5:11 /km."
     },
     {
      "fecha": "2026-11-21",
@@ -177,7 +177,7 @@
      "tipo": "largo",
      "km": 8,
      "titulo": "Largo 8 km",
-     "detalle": "8 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "8 km en FC bajo 148 lpm, ritmo conversacional."
     }
    ]
   },
@@ -204,7 +204,7 @@
      "tipo": "suave",
      "km": 5.5,
      "titulo": "Rodaje suave 5.5 km",
-     "detalle": "5.5 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "5.5 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2026-11-25",
@@ -220,7 +220,7 @@
      "tipo": "suave",
      "km": 5.5,
      "titulo": "Rodaje suave 5.5 km",
-     "detalle": "5.5 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+     "detalle": "5.5 km en FC bajo 148 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
     },
     {
      "fecha": "2026-11-27",
@@ -244,7 +244,7 @@
      "tipo": "largo",
      "km": 9,
      "titulo": "Largo 9 km",
-     "detalle": "9 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "9 km en FC bajo 148 lpm, ritmo conversacional."
     }
    ]
   },
@@ -271,7 +271,7 @@
      "tipo": "suave",
      "km": 6.5,
      "titulo": "Rodaje suave 6.5 km",
-     "detalle": "6.5 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "6.5 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2026-12-02",
@@ -287,7 +287,7 @@
      "tipo": "suave",
      "km": 6.5,
      "titulo": "Rodaje suave 6.5 km",
-     "detalle": "6.5 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+     "detalle": "6.5 km en FC bajo 148 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
     },
     {
      "fecha": "2026-12-04",
@@ -311,7 +311,7 @@
      "tipo": "largo",
      "km": 10,
      "titulo": "Largo 10 km",
-     "detalle": "10 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "10 km en FC bajo 148 lpm, ritmo conversacional."
     }
    ]
   },
@@ -338,7 +338,7 @@
      "tipo": "suave",
      "km": 5,
      "titulo": "Rodaje suave 5 km",
-     "detalle": "5 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "5 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2026-12-09",
@@ -354,7 +354,7 @@
      "tipo": "suave",
      "km": 5,
      "titulo": "Rodaje suave 5 km",
-     "detalle": "5 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+     "detalle": "5 km en FC bajo 148 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
     },
     {
      "fecha": "2026-12-11",
@@ -378,7 +378,7 @@
      "tipo": "largo",
      "km": 8,
      "titulo": "Largo 8 km",
-     "detalle": "8 km en FC bajo 145 lpm, ritmo conversacional. Semana de descarga: termina con ganas de más."
+     "detalle": "8 km en FC bajo 148 lpm, ritmo conversacional. Semana de descarga: termina con ganas de más."
     }
    ]
   },
@@ -405,7 +405,7 @@
      "tipo": "suave",
      "km": 5,
      "titulo": "Rodaje suave 5 km",
-     "detalle": "5 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "5 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2026-12-16",
@@ -421,7 +421,7 @@
      "tipo": "suave",
      "km": 5,
      "titulo": "Rodaje suave 5 km",
-     "detalle": "5 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+     "detalle": "5 km en FC bajo 148 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
     },
     {
      "fecha": "2026-12-18",
@@ -437,7 +437,7 @@
      "tipo": "suave",
      "km": 4,
      "titulo": "Rodaje suave 4 km",
-     "detalle": "4 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "4 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2026-12-20",
@@ -445,7 +445,7 @@
      "tipo": "largo",
      "km": 11,
      "titulo": "Largo 11 km",
-     "detalle": "11 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "11 km en FC bajo 148 lpm, ritmo conversacional."
     }
    ]
   },
@@ -472,7 +472,7 @@
      "tipo": "suave",
      "km": 6,
      "titulo": "Rodaje suave 6 km",
-     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "6 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2026-12-23",
@@ -488,7 +488,7 @@
      "tipo": "suave",
      "km": 6,
      "titulo": "Rodaje suave 6 km",
-     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+     "detalle": "6 km en FC bajo 148 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
     },
     {
      "fecha": "2026-12-25",
@@ -504,7 +504,7 @@
      "tipo": "suave",
      "km": 4,
      "titulo": "Rodaje suave 4 km",
-     "detalle": "4 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "4 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2026-12-27",
@@ -512,7 +512,7 @@
      "tipo": "largo",
      "km": 12,
      "titulo": "Largo 12 km",
-     "detalle": "12 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "12 km en FC bajo 148 lpm, ritmo conversacional."
     }
    ]
   },
@@ -539,7 +539,7 @@
      "tipo": "suave",
      "km": 7,
      "titulo": "Rodaje suave 7 km",
-     "detalle": "7 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "7 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2026-12-30",
@@ -555,7 +555,7 @@
      "tipo": "suave",
      "km": 6,
      "titulo": "Rodaje suave 6 km",
-     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+     "detalle": "6 km en FC bajo 148 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
     },
     {
      "fecha": "2027-01-01",
@@ -571,7 +571,7 @@
      "tipo": "suave",
      "km": 5,
      "titulo": "Rodaje suave 5 km",
-     "detalle": "5 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "5 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2027-01-03",
@@ -579,7 +579,7 @@
      "tipo": "largo",
      "km": 13,
      "titulo": "Largo 13 km",
-     "detalle": "13 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "13 km en FC bajo 148 lpm, ritmo conversacional."
     }
    ]
   },
@@ -606,7 +606,7 @@
      "tipo": "suave",
      "km": 5,
      "titulo": "Rodaje suave 5 km",
-     "detalle": "5 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "5 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2027-01-06",
@@ -622,7 +622,7 @@
      "tipo": "suave",
      "km": 5,
      "titulo": "Rodaje suave 5 km",
-     "detalle": "5 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+     "detalle": "5 km en FC bajo 148 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
     },
     {
      "fecha": "2027-01-08",
@@ -638,7 +638,7 @@
      "tipo": "suave",
      "km": 4,
      "titulo": "Rodaje suave 4 km",
-     "detalle": "4 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "4 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2027-01-10",
@@ -646,7 +646,7 @@
      "tipo": "largo",
      "km": 10,
      "titulo": "Largo 10 km",
-     "detalle": "10 km en FC bajo 145 lpm, ritmo conversacional. Semana de descarga."
+     "detalle": "10 km en FC bajo 148 lpm, ritmo conversacional. Semana de descarga."
     }
    ]
   },
@@ -673,7 +673,7 @@
      "tipo": "calidad",
      "km": 7,
      "titulo": "Umbral 3 × 6 min",
-     "detalle": "15 min suaves de calentamiento. 3 × 6 min en umbral, FC 160–168 lpm, con 2 min de trote suave entre bloques. 10 min suaves de vuelta a la calma."
+     "detalle": "15 min suaves de calentamiento. 3 × 6 min en umbral, FC 163–172 lpm, con 2 min de trote suave entre bloques. 10 min suaves de vuelta a la calma."
     },
     {
      "fecha": "2027-01-13",
@@ -689,7 +689,7 @@
      "tipo": "suave",
      "km": 6,
      "titulo": "Rodaje suave 6 km",
-     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+     "detalle": "6 km en FC bajo 148 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
     },
     {
      "fecha": "2027-01-15",
@@ -705,7 +705,7 @@
      "tipo": "suave",
      "km": 6,
      "titulo": "Rodaje suave 6 km",
-     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "6 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2027-01-17",
@@ -713,7 +713,7 @@
      "tipo": "largo",
      "km": 14,
      "titulo": "Largo 14 km",
-     "detalle": "14 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "14 km en FC bajo 148 lpm, ritmo conversacional."
     }
    ]
   },
@@ -740,7 +740,7 @@
      "tipo": "calidad",
      "km": 8,
      "titulo": "Umbral 3 × 8 min",
-     "detalle": "15 min suaves de calentamiento. 3 × 8 min en umbral, FC 160–168 lpm, con 2 min de trote suave entre bloques. 10 min suaves de vuelta a la calma."
+     "detalle": "15 min suaves de calentamiento. 3 × 8 min en umbral, FC 163–172 lpm, con 2 min de trote suave entre bloques. 10 min suaves de vuelta a la calma."
     },
     {
      "fecha": "2027-01-20",
@@ -756,7 +756,7 @@
      "tipo": "suave",
      "km": 6,
      "titulo": "Rodaje suave 6 km",
-     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+     "detalle": "6 km en FC bajo 148 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
     },
     {
      "fecha": "2027-01-22",
@@ -772,7 +772,7 @@
      "tipo": "suave",
      "km": 6,
      "titulo": "Rodaje suave 6 km",
-     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "6 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2027-01-24",
@@ -780,7 +780,7 @@
      "tipo": "largo",
      "km": 16,
      "titulo": "Largo 16 km",
-     "detalle": "16 km en FC bajo 145 lpm, ritmo conversacional. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45."
+     "detalle": "16 km en FC bajo 148 lpm, ritmo conversacional. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45."
     }
    ]
   },
@@ -807,7 +807,7 @@
      "tipo": "calidad",
      "km": 8,
      "titulo": "Umbral 4 × 8 min",
-     "detalle": "15 min suaves de calentamiento. 4 × 8 min en umbral, FC 160–168 lpm, con 2 min de trote suave entre bloques. 10 min suaves de vuelta a la calma."
+     "detalle": "15 min suaves de calentamiento. 4 × 8 min en umbral, FC 163–172 lpm, con 2 min de trote suave entre bloques. 10 min suaves de vuelta a la calma."
     },
     {
      "fecha": "2027-01-27",
@@ -823,7 +823,7 @@
      "tipo": "suave",
      "km": 7,
      "titulo": "Rodaje suave 7 km",
-     "detalle": "7 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+     "detalle": "7 km en FC bajo 148 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
     },
     {
      "fecha": "2027-01-29",
@@ -839,7 +839,7 @@
      "tipo": "suave",
      "km": 7,
      "titulo": "Rodaje suave 7 km",
-     "detalle": "7 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "7 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2027-01-31",
@@ -847,7 +847,7 @@
      "tipo": "largo",
      "km": 17,
      "titulo": "Largo 17 km",
-     "detalle": "17 km en FC bajo 145 lpm, ritmo conversacional. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45."
+     "detalle": "17 km en FC bajo 148 lpm, ritmo conversacional. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45."
     }
    ]
   },
@@ -874,7 +874,7 @@
      "tipo": "suave",
      "km": 6,
      "titulo": "Rodaje suave 6 km",
-     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+     "detalle": "6 km en FC bajo 148 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
     },
     {
      "fecha": "2027-02-03",
@@ -890,7 +890,7 @@
      "tipo": "calidad",
      "km": 6,
      "titulo": "Activación 3 × 3 min",
-     "detalle": "15 min suaves de calentamiento. 3 × 3 min en umbral, FC 160–168 lpm con 2 min suaves. 10 min suaves de vuelta a la calma."
+     "detalle": "15 min suaves de calentamiento. 3 × 3 min en umbral, FC 163–172 lpm con 2 min suaves. 10 min suaves de vuelta a la calma."
     },
     {
      "fecha": "2027-02-05",
@@ -906,7 +906,7 @@
      "tipo": "suave",
      "km": 4,
      "titulo": "Rodaje suave 4 km",
-     "detalle": "4 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "4 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2027-02-07",
@@ -941,7 +941,7 @@
      "tipo": "calidad",
      "km": 9,
      "titulo": "Umbral 2 × 15 min",
-     "detalle": "15 min suaves de calentamiento. 2 × 15 min en umbral, FC 160–168 lpm, con 2 min de trote suave entre bloques. 10 min suaves de vuelta a la calma."
+     "detalle": "15 min suaves de calentamiento. 2 × 15 min en umbral, FC 163–172 lpm, con 2 min de trote suave entre bloques. 10 min suaves de vuelta a la calma."
     },
     {
      "fecha": "2027-02-10",
@@ -957,7 +957,7 @@
      "tipo": "suave",
      "km": 7,
      "titulo": "Rodaje suave 7 km",
-     "detalle": "7 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+     "detalle": "7 km en FC bajo 148 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
     },
     {
      "fecha": "2027-02-12",
@@ -973,7 +973,7 @@
      "tipo": "suave",
      "km": 6,
      "titulo": "Rodaje suave 6 km",
-     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "6 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2027-02-14",
@@ -981,7 +981,7 @@
      "tipo": "largo",
      "km": 19,
      "titulo": "Largo 19 km",
-     "detalle": "19 km en FC bajo 145 lpm, ritmo conversacional. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45."
+     "detalle": "19 km en FC bajo 148 lpm, ritmo conversacional. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45."
     }
    ]
   },
@@ -1008,7 +1008,7 @@
      "tipo": "calidad",
      "km": 10,
      "titulo": "Umbral 3 × 12 min",
-     "detalle": "15 min suaves de calentamiento. 3 × 12 min en umbral, FC 160–168 lpm, con 2 min de trote suave entre bloques. 10 min suaves de vuelta a la calma."
+     "detalle": "15 min suaves de calentamiento. 3 × 12 min en umbral, FC 163–172 lpm, con 2 min de trote suave entre bloques. 10 min suaves de vuelta a la calma."
     },
     {
      "fecha": "2027-02-17",
@@ -1024,7 +1024,7 @@
      "tipo": "suave",
      "km": 7,
      "titulo": "Rodaje suave 7 km",
-     "detalle": "7 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+     "detalle": "7 km en FC bajo 148 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
     },
     {
      "fecha": "2027-02-19",
@@ -1040,7 +1040,7 @@
      "tipo": "suave",
      "km": 6,
      "titulo": "Rodaje suave 6 km",
-     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "6 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2027-02-21",
@@ -1048,7 +1048,7 @@
      "tipo": "largo",
      "km": 21,
      "titulo": "Largo 21 km",
-     "detalle": "21 km en FC bajo 145 lpm, ritmo conversacional. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45."
+     "detalle": "21 km en FC bajo 148 lpm, ritmo conversacional. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45."
     }
    ]
   },
@@ -1075,7 +1075,7 @@
      "tipo": "calidad",
      "km": 10,
      "titulo": "Umbral continuo 25 min",
-     "detalle": "15 min suaves de calentamiento. 25 min seguidos en umbral, FC 160–168 lpm. 10 min suaves de vuelta a la calma."
+     "detalle": "15 min suaves de calentamiento. 25 min seguidos en umbral, FC 163–172 lpm. 10 min suaves de vuelta a la calma."
     },
     {
      "fecha": "2027-02-24",
@@ -1091,7 +1091,7 @@
      "tipo": "suave",
      "km": 8,
      "titulo": "Rodaje suave 8 km",
-     "detalle": "8 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+     "detalle": "8 km en FC bajo 148 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
     },
     {
      "fecha": "2027-02-26",
@@ -1107,7 +1107,7 @@
      "tipo": "suave",
      "km": 7,
      "titulo": "Rodaje suave 7 km",
-     "detalle": "7 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "7 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2027-02-28",
@@ -1115,7 +1115,7 @@
      "tipo": "largo",
      "km": 22,
      "titulo": "Largo 22 km",
-     "detalle": "22 km en FC bajo 145 lpm, ritmo conversacional. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45."
+     "detalle": "22 km en FC bajo 148 lpm, ritmo conversacional. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45."
     }
    ]
   },
@@ -1142,7 +1142,7 @@
      "tipo": "calidad",
      "km": 8,
      "titulo": "Umbral 3 × 8 min",
-     "detalle": "15 min suaves de calentamiento. 3 × 8 min en umbral, FC 160–168 lpm, con 2 min de trote suave entre bloques. 10 min suaves de vuelta a la calma."
+     "detalle": "15 min suaves de calentamiento. 3 × 8 min en umbral, FC 163–172 lpm, con 2 min de trote suave entre bloques. 10 min suaves de vuelta a la calma."
     },
     {
      "fecha": "2027-03-03",
@@ -1158,7 +1158,7 @@
      "tipo": "suave",
      "km": 7,
      "titulo": "Rodaje suave 7 km",
-     "detalle": "7 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+     "detalle": "7 km en FC bajo 148 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
     },
     {
      "fecha": "2027-03-05",
@@ -1174,7 +1174,7 @@
      "tipo": "suave",
      "km": 6,
      "titulo": "Rodaje suave 6 km",
-     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "6 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2027-03-07",
@@ -1182,7 +1182,7 @@
      "tipo": "largo",
      "km": 16,
      "titulo": "Largo 16 km",
-     "detalle": "16 km en FC bajo 145 lpm, ritmo conversacional. Semana de descarga."
+     "detalle": "16 km en FC bajo 148 lpm, ritmo conversacional. Semana de descarga."
     }
    ]
   },
@@ -1209,7 +1209,7 @@
      "tipo": "calidad",
      "km": 10,
      "titulo": "Intervalos 5 × 1 km",
-     "detalle": "15 min suaves de calentamiento. 5 × 1 km en intervalos, FC 170+ lpm al final de cada repetición, con 2–3 min de trote muy suave entre repeticiones. 10 min suaves de vuelta a la calma."
+     "detalle": "15 min suaves de calentamiento. 5 × 1 km en intervalos, FC 174+ lpm al final de cada repetición, con 2–3 min de trote muy suave entre repeticiones. 10 min suaves de vuelta a la calma."
     },
     {
      "fecha": "2027-03-10",
@@ -1225,7 +1225,7 @@
      "tipo": "calidad",
      "km": 10,
      "titulo": "Ritmo maratón 6 km",
-     "detalle": "15 min suaves de calentamiento. 6 km a ritmo maratón, FC 148–158 lpm. 10 min suaves de vuelta a la calma."
+     "detalle": "15 min suaves de calentamiento. 6 km a ritmo maratón, FC 151–162 lpm. 10 min suaves de vuelta a la calma."
     },
     {
      "fecha": "2027-03-12",
@@ -1241,7 +1241,7 @@
      "tipo": "suave",
      "km": 6,
      "titulo": "Rodaje suave 6 km",
-     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "6 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2027-03-14",
@@ -1249,7 +1249,7 @@
      "tipo": "largo",
      "km": 24,
      "titulo": "Largo 24 km",
-     "detalle": "24 km en FC bajo 145 lpm, ritmo conversacional. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45. Sal entre 5:30 y 6:00, como el día de la maratón, con el mismo desayuno que piensas usar."
+     "detalle": "24 km en FC bajo 148 lpm, ritmo conversacional. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45. Sal entre 5:30 y 6:00, como el día de la maratón, con el mismo desayuno que piensas usar."
     }
    ]
   },
@@ -1276,7 +1276,7 @@
      "tipo": "calidad",
      "km": 11,
      "titulo": "Intervalos 6 × 1 km",
-     "detalle": "15 min suaves de calentamiento. 6 × 1 km en intervalos, FC 170+ lpm al final de cada repetición, con 2–3 min de trote muy suave entre repeticiones. 10 min suaves de vuelta a la calma."
+     "detalle": "15 min suaves de calentamiento. 6 × 1 km en intervalos, FC 174+ lpm al final de cada repetición, con 2–3 min de trote muy suave entre repeticiones. 10 min suaves de vuelta a la calma."
     },
     {
      "fecha": "2027-03-17",
@@ -1292,7 +1292,7 @@
      "tipo": "calidad",
      "km": 11,
      "titulo": "Ritmo maratón 8 km",
-     "detalle": "15 min suaves de calentamiento. 8 km a ritmo maratón, FC 148–158 lpm. 10 min suaves de vuelta a la calma."
+     "detalle": "15 min suaves de calentamiento. 8 km a ritmo maratón, FC 151–162 lpm. 10 min suaves de vuelta a la calma."
     },
     {
      "fecha": "2027-03-19",
@@ -1308,7 +1308,7 @@
      "tipo": "suave",
      "km": 6,
      "titulo": "Rodaje suave 6 km",
-     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "6 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2027-03-21",
@@ -1316,7 +1316,7 @@
      "tipo": "largo",
      "km": 25,
      "titulo": "Largo 25 km",
-     "detalle": "25 km en FC bajo 145 lpm, ritmo conversacional. Los últimos 5 km a ritmo maratón, FC 148–158 lpm. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45. Sal entre 5:30 y 6:00, como el día de la maratón, con el mismo desayuno que piensas usar."
+     "detalle": "25 km en FC bajo 148 lpm, ritmo conversacional. Los últimos 5 km a ritmo maratón, FC 151–162 lpm. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45. Sal entre 5:30 y 6:00, como el día de la maratón, con el mismo desayuno que piensas usar."
     }
    ]
   },
@@ -1343,7 +1343,7 @@
      "tipo": "calidad",
      "km": 12,
      "titulo": "Umbral 2 × 20 min",
-     "detalle": "15 min suaves de calentamiento. 2 × 20 min en umbral, FC 160–168 lpm, con 2 min de trote suave entre bloques. 10 min suaves de vuelta a la calma."
+     "detalle": "15 min suaves de calentamiento. 2 × 20 min en umbral, FC 163–172 lpm, con 2 min de trote suave entre bloques. 10 min suaves de vuelta a la calma."
     },
     {
      "fecha": "2027-03-24",
@@ -1351,7 +1351,7 @@
      "tipo": "suave",
      "km": 5,
      "titulo": "Rodaje suave 5 km",
-     "detalle": "5 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "5 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2027-03-25",
@@ -1359,7 +1359,7 @@
      "tipo": "suave",
      "km": 6,
      "titulo": "Rodaje suave 6 km",
-     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+     "detalle": "6 km en FC bajo 148 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
     },
     {
      "fecha": "2027-03-26",
@@ -1375,7 +1375,7 @@
      "tipo": "suave",
      "km": 6,
      "titulo": "Rodaje suave 6 km",
-     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "6 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2027-03-28",
@@ -1383,7 +1383,7 @@
      "tipo": "largo",
      "km": 27,
      "titulo": "Largo 27 km",
-     "detalle": "27 km en FC bajo 145 lpm, ritmo conversacional. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45. Sal entre 5:30 y 6:00, como el día de la maratón, con el mismo desayuno que piensas usar."
+     "detalle": "27 km en FC bajo 148 lpm, ritmo conversacional. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45. Sal entre 5:30 y 6:00, como el día de la maratón, con el mismo desayuno que piensas usar."
     }
    ]
   },
@@ -1410,7 +1410,7 @@
      "tipo": "calidad",
      "km": 9,
      "titulo": "Intervalos 4 × 1 km",
-     "detalle": "15 min suaves de calentamiento. 4 × 1 km en intervalos, FC 170+ lpm al final de cada repetición, con 2–3 min de trote muy suave entre repeticiones. 10 min suaves de vuelta a la calma."
+     "detalle": "15 min suaves de calentamiento. 4 × 1 km en intervalos, FC 174+ lpm al final de cada repetición, con 2–3 min de trote muy suave entre repeticiones. 10 min suaves de vuelta a la calma."
     },
     {
      "fecha": "2027-03-31",
@@ -1426,7 +1426,7 @@
      "tipo": "calidad",
      "km": 8,
      "titulo": "Ritmo maratón 3 km",
-     "detalle": "15 min suaves de calentamiento. 3 km a ritmo maratón, FC 148–158 lpm. 10 min suaves de vuelta a la calma."
+     "detalle": "15 min suaves de calentamiento. 3 km a ritmo maratón, FC 151–162 lpm. 10 min suaves de vuelta a la calma."
     },
     {
      "fecha": "2027-04-02",
@@ -1442,7 +1442,7 @@
      "tipo": "suave",
      "km": 4,
      "titulo": "Rodaje suave 4 km",
-     "detalle": "4 km en FC bajo 145 lpm, ritmo conversacional. Solo para soltar piernas."
+     "detalle": "4 km en FC bajo 148 lpm, ritmo conversacional. Solo para soltar piernas."
     },
     {
      "fecha": "2027-04-04",
@@ -1477,7 +1477,7 @@
      "tipo": "suave",
      "km": 8,
      "titulo": "Rodaje suave 8 km",
-     "detalle": "8 km en FC bajo 145 lpm, ritmo conversacional. Recuperación de la media maratón."
+     "detalle": "8 km en FC bajo 148 lpm, ritmo conversacional. Recuperación de la media maratón."
     },
     {
      "fecha": "2027-04-07",
@@ -1485,7 +1485,7 @@
      "tipo": "suave",
      "km": 5,
      "titulo": "Rodaje suave 5 km",
-     "detalle": "5 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "5 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2027-04-08",
@@ -1493,7 +1493,7 @@
      "tipo": "calidad",
      "km": 10,
      "titulo": "Umbral 3 × 10 min",
-     "detalle": "15 min suaves de calentamiento. 3 × 10 min en umbral, FC 160–168 lpm, con 2 min de trote suave entre bloques. 10 min suaves de vuelta a la calma."
+     "detalle": "15 min suaves de calentamiento. 3 × 10 min en umbral, FC 163–172 lpm, con 2 min de trote suave entre bloques. 10 min suaves de vuelta a la calma."
     },
     {
      "fecha": "2027-04-09",
@@ -1509,7 +1509,7 @@
      "tipo": "suave",
      "km": 5,
      "titulo": "Rodaje suave 5 km",
-     "detalle": "5 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "5 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2027-04-11",
@@ -1517,7 +1517,7 @@
      "tipo": "largo",
      "km": 28,
      "titulo": "Largo 28 km",
-     "detalle": "28 km en FC bajo 145 lpm, ritmo conversacional. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45. Sal entre 5:30 y 6:00, como el día de la maratón, con el mismo desayuno que piensas usar."
+     "detalle": "28 km en FC bajo 148 lpm, ritmo conversacional. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45. Sal entre 5:30 y 6:00, como el día de la maratón, con el mismo desayuno que piensas usar."
     }
    ]
   },
@@ -1544,7 +1544,7 @@
      "tipo": "calidad",
      "km": 12,
      "titulo": "Intervalos 5 × 1,6 km",
-     "detalle": "15 min suaves de calentamiento. 5 × 1,6 km en intervalos, FC 170+ lpm al final de cada repetición, con 2–3 min de trote muy suave entre repeticiones. 10 min suaves de vuelta a la calma."
+     "detalle": "15 min suaves de calentamiento. 5 × 1,6 km en intervalos, FC 174+ lpm al final de cada repetición, con 2–3 min de trote muy suave entre repeticiones. 10 min suaves de vuelta a la calma."
     },
     {
      "fecha": "2027-04-14",
@@ -1552,7 +1552,7 @@
      "tipo": "suave",
      "km": 6,
      "titulo": "Rodaje suave 6 km",
-     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "6 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2027-04-15",
@@ -1560,7 +1560,7 @@
      "tipo": "suave",
      "km": 6,
      "titulo": "Rodaje suave 6 km",
-     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "6 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2027-04-16",
@@ -1576,7 +1576,7 @@
      "tipo": "suave",
      "km": 6,
      "titulo": "Rodaje suave 6 km",
-     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "6 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2027-04-18",
@@ -1584,7 +1584,7 @@
      "tipo": "largo",
      "km": 30,
      "titulo": "Largo 30 km",
-     "detalle": "30 km en FC bajo 145 lpm, ritmo conversacional. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45. Sal entre 5:30 y 6:00, como el día de la maratón, con el mismo desayuno que piensas usar."
+     "detalle": "30 km en FC bajo 148 lpm, ritmo conversacional. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45. Sal entre 5:30 y 6:00, como el día de la maratón, con el mismo desayuno que piensas usar."
     }
    ]
   },
@@ -1611,7 +1611,7 @@
      "tipo": "calidad",
      "km": 12,
      "titulo": "Umbral 2 × 20 min",
-     "detalle": "15 min suaves de calentamiento. 2 × 20 min en umbral, FC 160–168 lpm, con 2 min de trote suave entre bloques. 10 min suaves de vuelta a la calma."
+     "detalle": "15 min suaves de calentamiento. 2 × 20 min en umbral, FC 163–172 lpm, con 2 min de trote suave entre bloques. 10 min suaves de vuelta a la calma."
     },
     {
      "fecha": "2027-04-21",
@@ -1619,7 +1619,7 @@
      "tipo": "suave",
      "km": 7,
      "titulo": "Rodaje suave 7 km",
-     "detalle": "7 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "7 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2027-04-22",
@@ -1627,7 +1627,7 @@
      "tipo": "suave",
      "km": 10,
      "titulo": "Rodaje suave 10 km",
-     "detalle": "10 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+     "detalle": "10 km en FC bajo 148 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
     },
     {
      "fecha": "2027-04-23",
@@ -1643,7 +1643,7 @@
      "tipo": "suave",
      "km": 8,
      "titulo": "Rodaje suave 8 km",
-     "detalle": "8 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "8 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2027-04-25",
@@ -1651,7 +1651,7 @@
      "tipo": "largo",
      "km": 26,
      "titulo": "Largo 26 km",
-     "detalle": "26 km en FC bajo 145 lpm, ritmo conversacional. Los km 8 a 24 a ritmo maratón, FC 148–158 lpm: el ensayo más importante del plan. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45. Sal entre 5:30 y 6:00, como el día de la maratón, con el mismo desayuno que piensas usar."
+     "detalle": "26 km en FC bajo 148 lpm, ritmo conversacional. Los km 8 a 24 a ritmo maratón, FC 151–162 lpm: el ensayo más importante del plan. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45. Sal entre 5:30 y 6:00, como el día de la maratón, con el mismo desayuno que piensas usar."
     }
    ]
   },
@@ -1678,7 +1678,7 @@
      "tipo": "calidad",
      "km": 11,
      "titulo": "Intervalos 6 × 1 km",
-     "detalle": "15 min suaves de calentamiento. 6 × 1 km en intervalos, FC 170+ lpm al final de cada repetición, con 2–3 min de trote muy suave entre repeticiones. 10 min suaves de vuelta a la calma."
+     "detalle": "15 min suaves de calentamiento. 6 × 1 km en intervalos, FC 174+ lpm al final de cada repetición, con 2–3 min de trote muy suave entre repeticiones. 10 min suaves de vuelta a la calma."
     },
     {
      "fecha": "2027-04-28",
@@ -1686,7 +1686,7 @@
      "tipo": "suave",
      "km": 6,
      "titulo": "Rodaje suave 6 km",
-     "detalle": "6 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "6 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2027-04-29",
@@ -1694,7 +1694,7 @@
      "tipo": "suave",
      "km": 8,
      "titulo": "Rodaje suave 8 km",
-     "detalle": "8 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "8 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2027-04-30",
@@ -1710,7 +1710,7 @@
      "tipo": "suave",
      "km": 5,
      "titulo": "Rodaje suave 5 km",
-     "detalle": "5 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "5 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2027-05-02",
@@ -1718,7 +1718,7 @@
      "tipo": "largo",
      "km": 30,
      "titulo": "Largo 30 km",
-     "detalle": "30 km en FC bajo 145 lpm, ritmo conversacional. Último largo. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45. Sal entre 5:30 y 6:00, como el día de la maratón, con el mismo desayuno que piensas usar."
+     "detalle": "30 km en FC bajo 148 lpm, ritmo conversacional. Último largo. Practica la nutrición: un gel o 30–40 g de carbohidrato cada 30–40 min desde el minuto 45. Sal entre 5:30 y 6:00, como el día de la maratón, con el mismo desayuno que piensas usar."
     }
    ]
   },
@@ -1745,7 +1745,7 @@
      "tipo": "calidad",
      "km": 10,
      "titulo": "Umbral 3 × 2 km",
-     "detalle": "15 min suaves de calentamiento. 3 × 2 km en umbral, FC 160–168 lpm con 2 min suaves. 10 min suaves de vuelta a la calma."
+     "detalle": "15 min suaves de calentamiento. 3 × 2 km en umbral, FC 163–172 lpm con 2 min suaves. 10 min suaves de vuelta a la calma."
     },
     {
      "fecha": "2027-05-05",
@@ -1761,7 +1761,7 @@
      "tipo": "calidad",
      "km": 9,
      "titulo": "Ritmo maratón 5 km",
-     "detalle": "15 min suaves de calentamiento. 5 km a ritmo maratón, FC 148–158 lpm. 10 min suaves de vuelta a la calma."
+     "detalle": "15 min suaves de calentamiento. 5 km a ritmo maratón, FC 151–162 lpm. 10 min suaves de vuelta a la calma."
     },
     {
      "fecha": "2027-05-07",
@@ -1777,7 +1777,7 @@
      "tipo": "suave",
      "km": 5,
      "titulo": "Rodaje suave 5 km",
-     "detalle": "5 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "5 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2027-05-09",
@@ -1785,7 +1785,7 @@
      "tipo": "largo",
      "km": 21,
      "titulo": "Largo 21 km",
-     "detalle": "21 km en FC bajo 145 lpm, ritmo conversacional. Los km 8 a 18 a ritmo maratón, FC 148–158 lpm. Sal entre 5:30 y 6:00, como el día de la maratón, con el mismo desayuno que piensas usar."
+     "detalle": "21 km en FC bajo 148 lpm, ritmo conversacional. Los km 8 a 18 a ritmo maratón, FC 151–162 lpm. Sal entre 5:30 y 6:00, como el día de la maratón, con el mismo desayuno que piensas usar."
     }
    ]
   },
@@ -1812,7 +1812,7 @@
      "tipo": "calidad",
      "km": 8,
      "titulo": "Umbral 4 × 1 km",
-     "detalle": "15 min suaves de calentamiento. 4 × 1 km en umbral, FC 160–168 lpm con 2 min suaves. 10 min suaves de vuelta a la calma."
+     "detalle": "15 min suaves de calentamiento. 4 × 1 km en umbral, FC 163–172 lpm con 2 min suaves. 10 min suaves de vuelta a la calma."
     },
     {
      "fecha": "2027-05-12",
@@ -1828,7 +1828,7 @@
      "tipo": "calidad",
      "km": 7,
      "titulo": "Ritmo maratón 4 km",
-     "detalle": "15 min suaves de calentamiento. 4 km a ritmo maratón, FC 148–158 lpm. 10 min suaves de vuelta a la calma."
+     "detalle": "15 min suaves de calentamiento. 4 km a ritmo maratón, FC 151–162 lpm. 10 min suaves de vuelta a la calma."
     },
     {
      "fecha": "2027-05-14",
@@ -1844,7 +1844,7 @@
      "tipo": "suave",
      "km": 3,
      "titulo": "Rodaje suave 3 km",
-     "detalle": "3 km en FC bajo 145 lpm, ritmo conversacional."
+     "detalle": "3 km en FC bajo 148 lpm, ritmo conversacional."
     },
     {
      "fecha": "2027-05-16",
@@ -1852,7 +1852,7 @@
      "tipo": "largo",
      "km": 16,
      "titulo": "Largo 16 km",
-     "detalle": "16 km en FC bajo 145 lpm, ritmo conversacional. Suave, sin forzar."
+     "detalle": "16 km en FC bajo 148 lpm, ritmo conversacional. Suave, sin forzar."
     }
    ]
   },
@@ -1879,7 +1879,7 @@
      "tipo": "calidad",
      "km": 6,
      "titulo": "Activación 3 × 1 km",
-     "detalle": "10 min suaves, 3 × 1 km a ritmo maratón, FC 148–158 lpm con 2 min suaves, 5 min de vuelta a la calma."
+     "detalle": "10 min suaves, 3 × 1 km a ritmo maratón, FC 151–162 lpm con 2 min suaves, 5 min de vuelta a la calma."
     },
     {
      "fecha": "2027-05-19",
@@ -1895,7 +1895,7 @@
      "tipo": "suave",
      "km": 5,
      "titulo": "Rodaje suave 5 km",
-     "detalle": "5 km en FC bajo 145 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
+     "detalle": "5 km en FC bajo 148 lpm, ritmo conversacional. Al final, 6 progresivos de 20 s (rápidos pero relajados) con 1 min caminando entre cada uno."
     },
     {
      "fecha": "2027-05-21",
@@ -1911,7 +1911,7 @@
      "tipo": "suave",
      "km": 3,
      "titulo": "Rodaje suave 3 km",
-     "detalle": "3 km en FC bajo 145 lpm, ritmo conversacional. Solo 15–20 min para soltar piernas. Recoge el kit, prepara todo y acuéstate temprano."
+     "detalle": "3 km en FC bajo 148 lpm, ritmo conversacional. Solo 15–20 min para soltar piernas. Recoge el kit, prepara todo y acuéstate temprano."
     },
     {
      "fecha": "2027-05-23",
@@ -1924,7 +1924,7 @@
    ]
   }
  ],
- "ultima_revision": "2026-11-13",
+ "ultima_revision": "2026-11-21",
  "historial_revisiones": [
   {
    "fecha": "2026-11-13",
@@ -1937,6 +1937,10 @@
   {
    "fecha": "2026-11-13",
    "cambios": "La fuerza queda a criterio de David: se mantiene en el calendario, pero no se registra ni se evalúa."
+  },
+  {
+   "fecha": "2026-11-21",
+   "cambios": "Revisión tras el test de umbral (hecho el viernes 20, no el jueves 19: se corrigió la fecha en la semana 1 y la fuerza pasó al jueves). FC de umbral 172 lpm. Zonas recalibradas: suave bajo 148 (antes 145), ritmo maratón 151–162 (antes 148–158), umbral 163–172 (antes 160–168), intervalos 174+ (antes 170+). Volumen y estructura sin cambios: la semana 1 va en línea con lo planificado; el problema sigue siendo la intensidad, no los kilómetros."
   }
  ],
  "nota_fuerza": "Las sesiones de fuerza quedan en el plan como referencia, pero son responsabilidad de David: no se registran, no se analizan y no cuentan en las revisiones."

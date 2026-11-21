@@ -1,0 +1,44 @@
+{
+ "id": "25147205392",
+ "fecha": "2026-11-20",
+ "escrito": "2026-11-21",
+ "veredicto": "Test bien ejecutado y valiente: 30 minutos sostenidos a 5:11 /km que te dan, por fin, una FC de umbral real de 172 lpm.",
+ "resumen": "10 min suaves (6:42 /km, 131 lpm) y 30 min de test: 5,79 km a 5:11 /km con 169 lpm de media. La FC media de los últimos 20 min fue 172 lpm (171 sin el arreón final): esa es tu FC de umbral. Efecto aeróbico 4,3 y anaeróbico 0,2, justo lo que se espera de un esfuerzo de umbral.",
+ "lo_bueno": [
+  "Llegaste fresco: tres días sin correr desde el rodaje del 17, 6,1 h de sueño la noche anterior y 79 de preparación. Así el dato del test es fiable.",
+  "Ritmo muy constante en los primeros 20 min del test (5:10 y 5:08 /km por tramos de 10 min) y cadencia de 173 ppm, 12 más que en el calentamiento.",
+  "Cero componente anaeróbico (0,2): no lo convertiste en una serie de sprints, que es el error más común en este test."
+ ],
+ "a_mejorar": [
+  "Saliste un pelo rápido: la FC subió de 162 a 170 lpm entre los minutos 10–20 y 20–30 del test y entre los minutos 30 y 37 el ritmo cayó a 5:24 /km con 174 lpm.",
+  "El arreón final (min 37–40 a 5:00 /km y 179 lpm) infla la FC de umbral en ~1 lpm; en un test conviene terminar parejo.",
+  "Calentamiento de 10 min en vez de 15, y sin vuelta a la calma registrada: en la próxima prueba fuerte, haz los dos completos."
+ ],
+ "datos": [
+  {
+   "etiqueta": "FC de umbral (últimos 20 min)",
+   "valor": "172 lpm (171 sin el arreón final)"
+  },
+  {
+   "etiqueta": "Test de 30 min",
+   "valor": "5,79 km a 5:11 /km, 169 lpm de media"
+  },
+  {
+   "etiqueta": "Calentamiento (10 min)",
+   "valor": "1,49 km a 6:42 /km, 131 lpm"
+  },
+  {
+   "etiqueta": "Deriva dentro del test",
+   "valor": "Min 10–25: 5:09 /km con 164 lpm → min 25–40: 5:14 /km con 174 lpm (eficiencia −7%)"
+  },
+  {
+   "etiqueta": "Efecto aeróbico / anaeróbico",
+   "valor": "4,3 / 0,2"
+  },
+  {
+   "etiqueta": "Potencia y cadencia en el test",
+   "valor": "327 W, 173 ppm"
+  }
+ ],
+ "para_la_proxima": "En el test de 10K de la semana 12, usa estos números como freno: los primeros 2 km nunca por encima de ~165 lpm aunque el ritmo te parezca lento. Si a mitad de prueba la FC ya está en 172, vas por encima de tu umbral y lo vas a pagar al final, como pasó entre los minutos 30 y 37."
+}
