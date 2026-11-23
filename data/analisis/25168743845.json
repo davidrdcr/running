@@ -1,0 +1,44 @@
+{
+ "id": "25168743845",
+ "fecha": "2026-11-22",
+ "escrito": "2026-11-22",
+ "veredicto": "Tu rodaje mejor controlado hasta ahora (10 km a 6:52 /km sin pasar de 155 lpm), pero era un día para descansar y corriste más de lo que pedía incluso el plan original.",
+ "resumen": "10,22 km en 70 min a 6:52 /km con 145 lpm de media y 155 de máxima, con 30 °C en el reloj. El 63% del tiempo bajo 148 lpm, solo 4 min en ritmo maratón y efecto anaeróbico 0,0. Pero el plan pedía 8 km y, con 7,3 h de sueño en dos noches y preparación 19, la recomendación era descansar: a los 55 min ya llevabas los 8 km y seguiste 15 min más.",
+ "lo_bueno": [
+  "Por fin un suave de verdad: FC máxima 155, 44 de los 70 min bajo 148 lpm (63%, frente al 30% del día 17) y ni un minuto por encima de 155. Sin arreón final.",
+  "La mejor eficiencia de tus rodajes: en la misma ruta de Los Olivos que el 17, con 3 km más, 6 s/km más rápido y 3 lpm menos (+4% de metros por latido).",
+  "Tu salida más larga registrada y sin deriva: desacople de solo 3,0% y la FC por km entre 145 y 148 del km 2 al 10, aunque los últimos 3 km tenían 26 m de subida."
+ ],
+ "a_mejorar": [
+  "La decisión: preparación 19, 4,6 h de sueño después de 2,7 h y aún ~22 h de recuperación pendientes del test. El día pedía descanso y, si corrías, 8 km; fueron 10,2. La semana 1 cierra con 24,8 km frente a 18 del plan (+38%).",
+  "Salida rápida: el km 1 a 5:49 /km (en bajada), con la FC todavía subiendo (llegó a 146 recién al minuto 4), y los primeros 10 min a 5:54 /km. Del km 3 en adelante, esos mismos 145–147 lpm ya eran 6:52–7:25 /km.",
+  "Pegado al techo: 26 min (37%) por encima de 148, casi todos entre 148 y 150. Con el suave a 147 no te queda margen para el calor ni la deriva."
+ ],
+ "datos": [
+  {
+   "etiqueta": "Distancia / plan",
+   "valor": "10,22 km en 70 min (plan: 8 km; recomendación del día: descanso)"
+  },
+  {
+   "etiqueta": "Ritmo / FC media",
+   "valor": "6:52 /km, 145 lpm (máx 155)"
+  },
+  {
+   "etiqueta": "Tiempo por zona del plan",
+   "valor": "Suave bajo 148: 44 min (63%) · 148–150: 22 min · ritmo maratón: 4 min"
+  },
+  {
+   "etiqueta": "Desacople cardíaco (desde 0,5 km)",
+   "valor": "3,0% (6:48 → 7:00 /km con 146 lpm en ambas mitades)"
+  },
+  {
+   "etiqueta": "Frente al 17 nov (misma ruta)",
+   "valor": "+3 km, 6:52 frente a 6:58 /km, 145 frente a 148 lpm"
+  },
+  {
+   "etiqueta": "Cadencia y condiciones",
+   "valor": "162 ppm · 30 °C en el reloj (hasta 32), salida 20:11"
+  }
+ ],
+ "para_la_proxima": "La FC tarda unos minutos en reflejar el esfuerzo, y en bajada engaña más: el km 1 a 5:49 no era suave aunque el pulso lo dejara. En los rodajes, los primeros 10 min guíate por ritmo (no más rápido de ~7:15 /km; el día 17 el km 1 a 7:54 te dejó en 136 lpm) y recién después por la FC, apuntando a 140–145 en vez de rozar 148. Ese margen absorbe el calor y la deriva, y el ritmo sale parejo en vez de 5:49 al inicio y 7:25 al final."
+}
