@@ -34,5 +34,14 @@
   "antes": "Si corres en la noche, una comida ligera 1,5–2 h antes (pan con plátano o avena) y un vaso de agua. Nada de café a esta hora.",
   "despues": "Estira pantorrillas, isquios y cuádriceps 5–10 min, cena con proteína y acuéstate antes de medianoche. Mañana toca tu fuerza y el martes el primer rodaje del plan (4 km bajo 145 lpm). El jueves 19 es el test de umbral: llegar con dos o tres noches de 7 h vale más que cualquier sesión de esta semana.",
   "si_no": "Si te sientes cansado o tienes poco tiempo, camina 30 min a paso cómodo con la FC bajo 115 lpm y prioriza dormir temprano. Si ya es tarde cuando lees esto, mejor no corras y acuéstate: hoy el sueño vale más que el trote."
+ },
+ {
+  "fecha": "2026-11-22",
+  "titulo": "Domingo: descanso en vez del largo de 8 km (si caminas, FC bajo 115 lpm)",
+  "que_hacer": "Hoy no corras: el largo de 8 km bajo 148 lpm (zona suave) se cambia por descanso total y a dormir temprano. Si quieres moverte, 10–15 min de caminata tranquila con la FC bajo 115 lpm, muy por debajo de la zona suave. No recuperes estos 8 km en la semana: la semana 2 empieza mañana tal como está en el plan.",
+  "por_que": "El plan pedía el largo de 8 km en zona suave, pero amaneciste con preparación 19/100: dormiste 4,6 h (de 06:28 a 11:04) después de 2,7 h la noche anterior, 7,3 h en dos noches, y al mediodía aún te quedaban unas 22 h de recuperación del test del viernes. HRV (47 ms frente a 50 de promedio semanal), FC en reposo (49 frente a 50) y Body Battery (99 al despertar) están bien, así que no es sobrecarga ni enfermedad: el problema es el sueño, y con preparación < 25 y menos de 5 h dormidas toca bajar un escalón. Cierras la semana 1 con 14,6 km de 18: perder un largo suave no cambia nada, acumularlo sí podría.",
+  "antes": "Cena normal con proteína y algo de carbohidrato (arroz, papa o pasta) y un vaso de agua. Nada de café, y pantallas fuera 30 min antes de acostarte.",
+  "despues": "Acuéstate antes de medianoche y busca 7 h o más; intenta levantarte a la misma hora mañana para empezar a ordenar el horario. Mañana lunes queda tu día de fuerza, a tu criterio. El martes vuelve el rodaje de 5,5 km bajo 148 lpm: sal a ~7:50 /km, como el km 1 del día 17, y corta en 5,5 km aunque te sientas bien.",
+  "si_no": "Si te sientes inquieto, haz 10 min de movilidad suave en casa (cadera, pantorrillas, isquios) en lugar de salir. Si no logras dormirte temprano, al menos levántate a una hora fija mañana y evita una siesta de más de 30 min."
  }
 ]
