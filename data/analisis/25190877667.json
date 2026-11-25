@@ -1,0 +1,44 @@
+{
+ "id": "25190877667",
+ "fecha": "2026-11-24",
+ "escrito": "2026-11-24",
+ "veredicto": "Terminaste los 10 km sin un solo pico de pulso, pero sí te cansaste: con la misma FC, la segunda mitad fue casi un minuto por km más lenta. Y el plan pedía 5,5 km.",
+ "resumen": "10,1 km en 72 min a 7:10 /km, con 147 lpm de media y 157 de máxima, a 30 °C. Del km 0,5 a la mitad ibas a 6:46 /km con 147 lpm. En la segunda mitad bajaste a 7:41 /km con 149 lpm: un desacople de 13%, frente a 3,5% el domingo en la misma ruta y con el mismo desnivel. Llegaste con 3,4 h de sueño y sin sueño registrado la noche anterior. El plan pedía un rodaje de 5,5 km bajo 148 lpm.",
+ "lo_bueno": [
+  "Control del pulso: máxima de 157 lpm, ni un minuto por encima de 162 y efecto anaeróbico 0,2. A inicios de mes tus salidas de 4–6 km iban con 158–166 lpm de media. Hoy fueron 10 km con 147 de media y sin entrar nunca en umbral.",
+  "La cadencia se mantuvo de principio a fin (162 ppm en la primera mitad, 161 en la segunda) y solo estuviste 13 s detenido: fueron 72 min de trote continuo.",
+  "Llegaste con buena base cardiovascular: HRV de 58 ms (tu promedio semanal es 50) y FC en reposo de 45, las mejores que has registrado. El límite de hoy no fue el corazón."
+ ],
+ "a_mejorar": [
+  "Volumen: corriste 10,1 km cuando el plan pedía 5,5, aunque la recomendación del domingo decía cortar en 5,5 si te sentías bien. Es la segunda sesión seguida que doblas: 20,3 km en tres días, más que toda la semana 2 del plan (20 km).",
+  "Otra vez saliste rápido: el km 1 a 5:48 /km y los primeros 10 min a 5:57 /km, igual que el domingo (5:49), aunque la lección era no ir a menos de ~7:15 /km al inicio. La FC tardó 4,5 min en llegar a 146, así que el reloj todavía no reflejaba lo que estabas gastando.",
+  "La fatiga apareció en las piernas: entre la primera y la segunda mitad, la zancada pasó de 92 a 81 cm (−12%; el domingo bajó 5%) y la potencia de 262 a 227 W, mientras la FC subía de 147 a 149. Los km 8–10 fueron a 7:54–8:08 /km. Con 3,4 h de sueño era de esperar."
+ ],
+ "datos": [
+  {
+   "etiqueta": "Distancia / plan",
+   "valor": "10,1 km en 72 min (plan: rodaje suave de 5,5 km)"
+  },
+  {
+   "etiqueta": "Ritmo / FC media",
+   "valor": "7:10 /km, 147 lpm (máx 157)"
+  },
+  {
+   "etiqueta": "Tiempo por zona del plan",
+   "valor": "Suave bajo 148: 29 min (40%) · 148–150: 30 min · ritmo maratón: 14 min"
+  },
+  {
+   "etiqueta": "Desacople cardíaco (desde 0,5 km)",
+   "valor": "13,1% (6:46 → 7:41 /km con 147 → 149 lpm); el domingo, 3,5%"
+  },
+  {
+   "etiqueta": "Zancada / potencia (1.ª → 2.ª mitad)",
+   "valor": "92 → 81 cm · 262 → 227 W · cadencia 162 → 161 ppm"
+  },
+  {
+   "etiqueta": "Sueño y condiciones",
+   "valor": "3,4 h la noche previa (sin registro la anterior) · 30 °C (hasta 32), salida 21:01"
+  }
+ ],
+ "para_la_proxima": "Sentirte bien no mide la fatiga; el ritmo que sacas con la misma FC sí. Hoy el aliento y el pulso casi no cambiaron, pero en la segunda mitad ese mismo pulso te dio 55 s/km menos y la zancada se acortó 11 cm. Eso es cansancio muscular: no se nota en el momento, pero lo pagan los tendones y la sesión siguiente. En los rodajes suaves, si a la misma FC el ritmo cae más de ~20 s/km frente a tus primeros kilómetros, ya sacaste lo útil de la sesión."
+}

@@ -43,5 +43,14 @@
   "antes": "Cena normal con proteína y algo de carbohidrato (arroz, papa o pasta) y un vaso de agua. Nada de café, y pantallas fuera 30 min antes de acostarte.",
   "despues": "Acuéstate antes de medianoche y busca 7 h o más; intenta levantarte a la misma hora mañana para empezar a ordenar el horario. Mañana lunes queda tu día de fuerza, a tu criterio. El martes vuelve el rodaje de 5,5 km bajo 148 lpm: sal a ~7:50 /km, como el km 1 del día 17, y corta en 5,5 km aunque te sientas bien.",
   "si_no": "Si te sientes inquieto, haz 10 min de movilidad suave en casa (cadera, pantorrillas, isquios) en lugar de salir. Si no logras dormirte temprano, al menos levántate a una hora fija mañana y evita una siesta de más de 30 min."
+ },
+ {
+  "fecha": "2026-11-25",
+  "titulo": "Miércoles: descanso. Si caminas, 20–30 min con la FC bajo 115 lpm",
+  "que_hacer": "Hoy no corras: el plan pone descanso y, después de los 10,1 km de anoche, es justo lo que toca. Si quieres moverte, camina 20–30 min a paso cómodo con la FC bajo 115 lpm, muy por debajo de la zona suave (bajo 148 lpm). Termina con 10 min de movilidad de cadera, pantorrillas e isquios.",
+  "por_que": "El plan pedía descanso y lo mantengo; lo escribo la noche anterior porque no depende de cómo amanezcas. El martes tocaban 5,5 km y fueron 10,1, y con el domingo llevas 20,3 km en tres días, más que toda la semana 2 (20 km). Tu HRV (58 ms frente a 50 de promedio) y tu FC en reposo (45) muestran que el corazón lo asimila bien. Pero en la segunda mitad perdiste casi un minuto por km a la misma FC y dormiste 3,4 h: el cansancio está en las piernas y en el sueño. Tendones y huesos se adaptan más lento que el corazón, y lo hacen en los días de descanso.",
+  "antes": "Esta noche: si aún no cenaste, come algo con proteína y carbohidrato (arroz, papa o pan) y toma agua; luego a dormir. Anoche dormiste 3,4 h y la noche anterior el reloj no registró sueño. Siete horas hoy te dan más que cualquier kilómetro extra.",
+  "despues": "El jueves vuelve el rodaje de 5,5 km bajo 148 lpm, con 6 progresivos de 20 s al final. Los primeros 10 min no vayas a menos de 7:15 /km, y corta en 5,5 km aunque te sientas bien. El domingo toca el largo de 9 km. Así la semana 2 cierra en ~24,6 km, igual que la 1: no sube, y está bien que no suba.",
+  "si_no": "Si amaneces muy cansado, descanso total, sin caminata, y una siesta de 20–30 min como máximo. Si tienes dolor en tibias, tendón de Aquiles, rodillas o planta del pie que no se va al caminar, no corras el jueves y avísame."
  }
 ]
