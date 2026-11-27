@@ -1,0 +1,26 @@
+{
+ "id": "25215154016",
+ "fecha": "2026-11-26",
+ "escrito": "2026-11-27",
+ "veredicto": "La mejor ejecución de tus tres salidas de 10 km: saliste más calmado y aguantaste parejo a 32 °C. Pero el plan pedía 5,5 km con progresivos, y van tres sesiones seguidas que casi duplicas.",
+ "resumen": "10,0 km en 69 min a 6:56 /km, con 148 lpm de media y 155 de máxima, a 32 °C (hasta 33). La primera mitad fue a 6:56 /km con 147 lpm y la segunda a 7:03 con 149: un desacople de 3,1%, contra 13,1% el martes en la misma ruta. Llegaste con 3,8 h de sueño y 25.800 pasos en el día. El plan pedía 5,5 km bajo 148 lpm y 6 progresivos de 20 s, que no aparecen en el registro.",
+ "lo_bueno": [
+  "Mejor arranque: el km 1 fue a 6:13 /km y los primeros 10 min a 6:23 /km, contra 5:48 y 5:58 el martes. Sigue siendo más rápido de lo ideal, pero es la primera vez que no sales lanzado.",
+  "Ritmo parejo y sin fatiga muscular visible: 3,1% de desacople, la zancada casi no cambió (90 → 89 cm, −1,6%; el martes −11%) y los km 6–10 fueron a 6:47–7:37 /km sin hundirse como el martes (7:54–8:08).",
+  "Cero minutos por encima de 162 lpm, máxima de 155 y efecto anaeróbico 0,0: fue de verdad una sesión aeróbica, con calor y poco sueño."
+ ],
+ "a_mejorar": [
+  "Volumen: 10,0 km cuando el plan pedía 5,5. Llevas 30,3 km en cinco días (domingo, martes y jueves) cuando la semana 2 completa del plan son 20 km, y el salto desde los ~15 km/semana de inicios de mes es justo lo que más se asocia a lesiones en corredores nuevos.",
+  "Pulso pegado al techo: solo 27 de 70 min (38%) estuviste bajo 148 lpm; 32 min fueron a 148–150 y 11 min en ritmo maratón (151–162). Tu media de 148 está en el límite de la zona suave: con el calor, tocaba bajar a 7:15–7:30 /km para quedarte debajo.",
+  "Faltaron los 6 progresivos de 20 s: el tramo más rápido de 20 s fue a 5:39 /km en el minuto 2. Son el único estímulo de velocidad de esta fase y cuestan 10 minutos; valen más que los 4,5 km extra."
+ ],
+ "datos": [
+  {"etiqueta": "Distancia / plan", "valor": "10,0 km en 69 min (plan: 5,5 km suave + 6 progresivos de 20 s)"},
+  {"etiqueta": "Ritmo / FC media", "valor": "6:56 /km, 148 lpm (máx 155)"},
+  {"etiqueta": "Tiempo por zona del plan", "valor": "Suave bajo 148: 27 min (38%) · 148–150: 32 min · ritmo maratón: 11 min"},
+  {"etiqueta": "Desacople cardíaco (desde 0,5 km)", "valor": "3,1% (6:56 → 7:03 /km con 147 → 149 lpm); el martes, 13,1%"},
+  {"etiqueta": "Arranque (km 1 / primeros 10 min)", "valor": "6:13 /km y 6:23 /km (martes: 5:48 y 5:58)"},
+  {"etiqueta": "Sueño y condiciones", "valor": "3,8 h la noche previa · 32 °C (hasta 33), salida 21:48 · 25.800 pasos en el día"}
+ ],
+ "para_la_proxima": "Salir más lento funcionó: con un km 1 a 6:13 en vez de 5:48, la segunda mitad casi no se te cayó, aun con más calor y el mismo poco sueño. El próximo paso es que el pulso, no la distancia, ponga el ritmo: en noches de 30 °C o más, la misma FC te da 15–20 s/km menos, así que fija la alerta en 148 lpm y acepta 7:15–7:30 /km. Y si la sesión trae progresivos, hazlos al final aunque la distancia sea corta: son la parte que no se reemplaza con más kilómetros."
+}
